@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "Antlr4",
+      "reason": null,
+      "repositoryURL": "https://github.com/johndpope/ANTLR4Swift.git",
+      "version": "0.1.3"
+    }
+  ],
+  "version": 1
+}
