@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/java8/Java8.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/java8/Java8.g4 by ANTLR 4.5.1
 import Antlr4
 
 open class Java8Lexer: Lexer {
@@ -33,10 +33,6 @@ open class Java8Lexer: Lexer {
                    OR_ASSIGN=96, XOR_ASSIGN=97, MOD_ASSIGN=98, LSHIFT_ASSIGN=99, 
                    RSHIFT_ASSIGN=100, URSHIFT_ASSIGN=101, Identifier=102, 
                    AT=103, ELLIPSIS=104, WS=105, COMMENT=106, LINE_COMMENT=107
-	public static let channelNames: [String] = [
-		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
-	]
-
 	public static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
@@ -135,7 +131,7 @@ open class Java8Lexer: Lexer {
     }
 
 	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	    RuntimeMetaData.checkVersion("4.5.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, Java8Lexer._ATN, Java8Lexer._decisionToDFA, Java8Lexer._sharedContextCache)
 	}
@@ -150,39 +146,12 @@ open class Java8Lexer: Lexer {
 	open func getSerializedATN() -> String { return Java8Lexer._serializedATN }
 
 	override
-	open func getChannelNames() -> [String] { return Java8Lexer.channelNames }
-
-	override
 	open func getModeNames() -> [String] { return Java8Lexer.modeNames }
 
 	override
 	open func getATN() -> ATN { return Java8Lexer._ATN }
 
-	override
-	open func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool{
-		switch (ruleIndex) {
-		case 146:
-			return try JavaLetter_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 147:
-			return try JavaLetterOrDigit_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		default: return true
-		}
-	}
-	private func JavaLetter_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
-		switch (predIndex) {
-		    case 0:return Character.isJavaIdentifierStart(_input.LA(-1))
-		    case 1:return Character.isJavaIdentifierStart(Character.toCodePoint((char)_input.LA(-2), (char)_input.LA(-1)))
-		    default: return true
-		}
-	}
-	private func JavaLetterOrDigit_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
-		switch (predIndex) {
-		    case 2:return Character.isJavaIdentifierPart(_input!.LA(-1))
-		    case 3:return Character.isJavaIdentifierPart(Character.toCodePoint((char)_input.LA(-2), (char)_input.LA(-1)))
-		    default: return true
-		}
-	}
-
     public static let _serializedATN: String = Java8LexerATN().jsonString
 	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
 }

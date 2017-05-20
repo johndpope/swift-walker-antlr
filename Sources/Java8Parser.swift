@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/java8/Java8.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/java8/Java8.g4 by ANTLR 4.5.1
 import Antlr4
 
 open class Java8Parser: Parser {
@@ -12,208 +12,177 @@ open class Java8Parser: Parser {
            return decisionToDFA
      }()
 	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
-		case EOF = -1, ABSTRACT = 1, ASSERT = 2, BOOLEAN = 3, BREAK = 4, BYTE = 5, 
-                 CASE = 6, CATCH = 7, CHAR = 8, CLASS = 9, CONST = 10, CONTINUE = 11, 
-                 DEFAULT = 12, DO = 13, DOUBLE = 14, ELSE = 15, ENUM = 16, 
-                 EXTENDS = 17, FINAL = 18, FINALLY = 19, FLOAT = 20, FOR = 21, 
-                 IF = 22, GOTO = 23, IMPLEMENTS = 24, IMPORT = 25, INSTANCEOF = 26, 
-                 INT = 27, INTERFACE = 28, LONG = 29, NATIVE = 30, NEW = 31, 
-                 PACKAGE = 32, PRIVATE = 33, PROTECTED = 34, PUBLIC = 35, 
-                 RETURN = 36, SHORT = 37, STATIC = 38, STRICTFP = 39, SUPER = 40, 
-                 SWITCH = 41, SYNCHRONIZED = 42, THIS = 43, THROW = 44, 
-                 THROWS = 45, TRANSIENT = 46, TRY = 47, VOID = 48, VOLATILE = 49, 
-                 WHILE = 50, IntegerLiteral = 51, FloatingPointLiteral = 52, 
-                 BooleanLiteral = 53, CharacterLiteral = 54, StringLiteral = 55, 
-                 NullLiteral = 56, LPAREN = 57, RPAREN = 58, LBRACE = 59, 
-                 RBRACE = 60, LBRACK = 61, RBRACK = 62, SEMI = 63, COMMA = 64, 
-                 DOT = 65, ASSIGN = 66, GT = 67, LT = 68, BANG = 69, TILDE = 70, 
-                 QUESTION = 71, COLON = 72, EQUAL = 73, LE = 74, GE = 75, 
-                 NOTEQUAL = 76, AND = 77, OR = 78, INC = 79, DEC = 80, ADD = 81, 
-                 SUB = 82, MUL = 83, DIV = 84, BITAND = 85, BITOR = 86, 
-                 CARET = 87, MOD = 88, ARROW = 89, COLONCOLON = 90, ADD_ASSIGN = 91, 
-                 SUB_ASSIGN = 92, MUL_ASSIGN = 93, DIV_ASSIGN = 94, AND_ASSIGN = 95, 
-                 OR_ASSIGN = 96, XOR_ASSIGN = 97, MOD_ASSIGN = 98, LSHIFT_ASSIGN = 99, 
-                 RSHIFT_ASSIGN = 100, URSHIFT_ASSIGN = 101, Identifier = 102, 
-                 AT = 103, ELLIPSIS = 104, WS = 105, COMMENT = 106, LINE_COMMENT = 107
-	}
+	public static let ABSTRACT=1, ASSERT=2, BOOLEAN=3, BREAK=4, BYTE=5, CASE=6, 
+                   CATCH=7, CHAR=8, CLASS=9, CONST=10, CONTINUE=11, DEFAULT=12, 
+                   DO=13, DOUBLE=14, ELSE=15, ENUM=16, EXTENDS=17, FINAL=18, 
+                   FINALLY=19, FLOAT=20, FOR=21, IF=22, GOTO=23, IMPLEMENTS=24, 
+                   IMPORT=25, INSTANCEOF=26, INT=27, INTERFACE=28, LONG=29, 
+                   NATIVE=30, NEW=31, PACKAGE=32, PRIVATE=33, PROTECTED=34, 
+                   PUBLIC=35, RETURN=36, SHORT=37, STATIC=38, STRICTFP=39, 
+                   SUPER=40, SWITCH=41, SYNCHRONIZED=42, THIS=43, THROW=44, 
+                   THROWS=45, TRANSIENT=46, TRY=47, VOID=48, VOLATILE=49, 
+                   WHILE=50, IntegerLiteral=51, FloatingPointLiteral=52, 
+                   BooleanLiteral=53, CharacterLiteral=54, StringLiteral=55, 
+                   NullLiteral=56, LPAREN=57, RPAREN=58, LBRACE=59, RBRACE=60, 
+                   LBRACK=61, RBRACK=62, SEMI=63, COMMA=64, DOT=65, ASSIGN=66, 
+                   GT=67, LT=68, BANG=69, TILDE=70, QUESTION=71, COLON=72, 
+                   EQUAL=73, LE=74, GE=75, NOTEQUAL=76, AND=77, OR=78, INC=79, 
+                   DEC=80, ADD=81, SUB=82, MUL=83, DIV=84, BITAND=85, BITOR=86, 
+                   CARET=87, MOD=88, ARROW=89, COLONCOLON=90, ADD_ASSIGN=91, 
+                   SUB_ASSIGN=92, MUL_ASSIGN=93, DIV_ASSIGN=94, AND_ASSIGN=95, 
+                   OR_ASSIGN=96, XOR_ASSIGN=97, MOD_ASSIGN=98, LSHIFT_ASSIGN=99, 
+                   RSHIFT_ASSIGN=100, URSHIFT_ASSIGN=101, Identifier=102, 
+                   AT=103, ELLIPSIS=104, WS=105, COMMENT=106, LINE_COMMENT=107
 	public static let RULE_literal = 0, RULE_type = 1, RULE_primitiveType = 2, 
                    RULE_numericType = 3, RULE_integralType = 4, RULE_floatingPointType = 5, 
                    RULE_referenceType = 6, RULE_classOrInterfaceType = 7, 
-                   RULE_classType = 8, RULE_classType_lf_classOrInterfaceType = 9, 
-                   RULE_classType_lfno_classOrInterfaceType = 10, RULE_interfaceType = 11, 
-                   RULE_interfaceType_lf_classOrInterfaceType = 12, RULE_interfaceType_lfno_classOrInterfaceType = 13, 
-                   RULE_typeVariable = 14, RULE_arrayType = 15, RULE_dims = 16, 
-                   RULE_typeParameter = 17, RULE_typeParameterModifier = 18, 
-                   RULE_typeBound = 19, RULE_additionalBound = 20, RULE_typeArguments = 21, 
-                   RULE_typeArgumentList = 22, RULE_typeArgument = 23, RULE_wildcard = 24, 
-                   RULE_wildcardBounds = 25, RULE_packageName = 26, RULE_typeName = 27, 
-                   RULE_packageOrTypeName = 28, RULE_expressionName = 29, 
-                   RULE_methodName = 30, RULE_ambiguousName = 31, RULE_compilationUnit = 32, 
-                   RULE_packageDeclaration = 33, RULE_packageModifier = 34, 
-                   RULE_importDeclaration = 35, RULE_singleTypeImportDeclaration = 36, 
-                   RULE_typeImportOnDemandDeclaration = 37, RULE_singleStaticImportDeclaration = 38, 
-                   RULE_staticImportOnDemandDeclaration = 39, RULE_typeDeclaration = 40, 
-                   RULE_classDeclaration = 41, RULE_normalClassDeclaration = 42, 
-                   RULE_classModifier = 43, RULE_typeParameters = 44, RULE_typeParameterList = 45, 
-                   RULE_superclass = 46, RULE_superinterfaces = 47, RULE_interfaceTypeList = 48, 
-                   RULE_classBody = 49, RULE_classBodyDeclaration = 50, 
-                   RULE_classMemberDeclaration = 51, RULE_fieldDeclaration = 52, 
-                   RULE_fieldModifier = 53, RULE_variableDeclaratorList = 54, 
-                   RULE_variableDeclarator = 55, RULE_variableDeclaratorId = 56, 
-                   RULE_variableInitializer = 57, RULE_unannType = 58, RULE_unannPrimitiveType = 59, 
-                   RULE_unannReferenceType = 60, RULE_unannClassOrInterfaceType = 61, 
-                   RULE_unannClassType = 62, RULE_unannClassType_lf_unannClassOrInterfaceType = 63, 
-                   RULE_unannClassType_lfno_unannClassOrInterfaceType = 64, 
-                   RULE_unannInterfaceType = 65, RULE_unannInterfaceType_lf_unannClassOrInterfaceType = 66, 
-                   RULE_unannInterfaceType_lfno_unannClassOrInterfaceType = 67, 
-                   RULE_unannTypeVariable = 68, RULE_unannArrayType = 69, 
-                   RULE_methodDeclaration = 70, RULE_methodModifier = 71, 
-                   RULE_methodHeader = 72, RULE_result = 73, RULE_methodDeclarator = 74, 
-                   RULE_formalParameterList = 75, RULE_formalParameters = 76, 
-                   RULE_formalParameter = 77, RULE_variableModifier = 78, 
-                   RULE_lastFormalParameter = 79, RULE_receiverParameter = 80, 
-                   RULE_throws_ = 81, RULE_exceptionTypeList = 82, RULE_exceptionType = 83, 
-                   RULE_methodBody = 84, RULE_instanceInitializer = 85, 
-                   RULE_staticInitializer = 86, RULE_constructorDeclaration = 87, 
-                   RULE_constructorModifier = 88, RULE_constructorDeclarator = 89, 
-                   RULE_simpleTypeName = 90, RULE_constructorBody = 91, 
-                   RULE_explicitConstructorInvocation = 92, RULE_enumDeclaration = 93, 
-                   RULE_enumBody = 94, RULE_enumConstantList = 95, RULE_enumConstant = 96, 
-                   RULE_enumConstantModifier = 97, RULE_enumBodyDeclarations = 98, 
-                   RULE_interfaceDeclaration = 99, RULE_normalInterfaceDeclaration = 100, 
-                   RULE_interfaceModifier = 101, RULE_extendsInterfaces = 102, 
-                   RULE_interfaceBody = 103, RULE_interfaceMemberDeclaration = 104, 
-                   RULE_constantDeclaration = 105, RULE_constantModifier = 106, 
-                   RULE_interfaceMethodDeclaration = 107, RULE_interfaceMethodModifier = 108, 
-                   RULE_annotationTypeDeclaration = 109, RULE_annotationTypeBody = 110, 
-                   RULE_annotationTypeMemberDeclaration = 111, RULE_annotationTypeElementDeclaration = 112, 
-                   RULE_annotationTypeElementModifier = 113, RULE_defaultValue = 114, 
-                   RULE_annotation = 115, RULE_normalAnnotation = 116, RULE_elementValuePairList = 117, 
-                   RULE_elementValuePair = 118, RULE_elementValue = 119, 
-                   RULE_elementValueArrayInitializer = 120, RULE_elementValueList = 121, 
-                   RULE_markerAnnotation = 122, RULE_singleElementAnnotation = 123, 
-                   RULE_arrayInitializer = 124, RULE_variableInitializerList = 125, 
-                   RULE_block = 126, RULE_blockStatements = 127, RULE_blockStatement = 128, 
-                   RULE_localVariableDeclarationStatement = 129, RULE_localVariableDeclaration = 130, 
-                   RULE_statement = 131, RULE_statementNoShortIf = 132, 
-                   RULE_statementWithoutTrailingSubstatement = 133, RULE_emptyStatement = 134, 
-                   RULE_labeledStatement = 135, RULE_labeledStatementNoShortIf = 136, 
-                   RULE_expressionStatement = 137, RULE_statementExpression = 138, 
-                   RULE_ifThenStatement = 139, RULE_ifThenElseStatement = 140, 
-                   RULE_ifThenElseStatementNoShortIf = 141, RULE_assertStatement = 142, 
-                   RULE_switchStatement = 143, RULE_switchBlock = 144, RULE_switchBlockStatementGroup = 145, 
-                   RULE_switchLabels = 146, RULE_switchLabel = 147, RULE_enumConstantName = 148, 
-                   RULE_whileStatement = 149, RULE_whileStatementNoShortIf = 150, 
-                   RULE_doStatement = 151, RULE_forStatement = 152, RULE_forStatementNoShortIf = 153, 
-                   RULE_basicForStatement = 154, RULE_basicForStatementNoShortIf = 155, 
-                   RULE_forInit = 156, RULE_forUpdate = 157, RULE_statementExpressionList = 158, 
-                   RULE_enhancedForStatement = 159, RULE_enhancedForStatementNoShortIf = 160, 
-                   RULE_breakStatement = 161, RULE_continueStatement = 162, 
-                   RULE_returnStatement = 163, RULE_throwStatement = 164, 
-                   RULE_synchronizedStatement = 165, RULE_tryStatement = 166, 
-                   RULE_catches = 167, RULE_catchClause = 168, RULE_catchFormalParameter = 169, 
-                   RULE_catchType = 170, RULE_finally_ = 171, RULE_tryWithResourcesStatement = 172, 
-                   RULE_resourceSpecification = 173, RULE_resourceList = 174, 
-                   RULE_resource = 175, RULE_primary = 176, RULE_primaryNoNewArray = 177, 
-                   RULE_primaryNoNewArray_lf_arrayAccess = 178, RULE_primaryNoNewArray_lfno_arrayAccess = 179, 
-                   RULE_primaryNoNewArray_lf_primary = 180, RULE_primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary = 181, 
-                   RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary = 182, 
-                   RULE_primaryNoNewArray_lfno_primary = 183, RULE_primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary = 184, 
-                   RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary = 185, 
-                   RULE_classInstanceCreationExpression = 186, RULE_classInstanceCreationExpression_lf_primary = 187, 
-                   RULE_classInstanceCreationExpression_lfno_primary = 188, 
-                   RULE_typeArgumentsOrDiamond = 189, RULE_fieldAccess = 190, 
-                   RULE_fieldAccess_lf_primary = 191, RULE_fieldAccess_lfno_primary = 192, 
-                   RULE_arrayAccess = 193, RULE_arrayAccess_lf_primary = 194, 
-                   RULE_arrayAccess_lfno_primary = 195, RULE_methodInvocation = 196, 
-                   RULE_methodInvocation_lf_primary = 197, RULE_methodInvocation_lfno_primary = 198, 
-                   RULE_argumentList = 199, RULE_methodReference = 200, 
-                   RULE_methodReference_lf_primary = 201, RULE_methodReference_lfno_primary = 202, 
-                   RULE_arrayCreationExpression = 203, RULE_dimExprs = 204, 
-                   RULE_dimExpr = 205, RULE_constantExpression = 206, RULE_expression = 207, 
-                   RULE_lambdaExpression = 208, RULE_lambdaParameters = 209, 
-                   RULE_inferredFormalParameterList = 210, RULE_lambdaBody = 211, 
-                   RULE_assignmentExpression = 212, RULE_assignment = 213, 
-                   RULE_leftHandSide = 214, RULE_assignmentOperator = 215, 
-                   RULE_conditionalExpression = 216, RULE_conditionalOrExpression = 217, 
-                   RULE_conditionalAndExpression = 218, RULE_inclusiveOrExpression = 219, 
-                   RULE_exclusiveOrExpression = 220, RULE_andExpression = 221, 
-                   RULE_equalityExpression = 222, RULE_relationalExpression = 223, 
-                   RULE_shiftExpression = 224, RULE_additiveExpression = 225, 
-                   RULE_multiplicativeExpression = 226, RULE_unaryExpression = 227, 
-                   RULE_preIncrementExpression = 228, RULE_preDecrementExpression = 229, 
-                   RULE_unaryExpressionNotPlusMinus = 230, RULE_postfixExpression = 231, 
-                   RULE_postIncrementExpression = 232, RULE_postIncrementExpression_lf_postfixExpression = 233, 
-                   RULE_postDecrementExpression = 234, RULE_postDecrementExpression_lf_postfixExpression = 235, 
-                   RULE_castExpression = 236
+                   RULE_classType = 8, RULE_classType_classOrInterfaceType = 9, 
+                   RULE_typeVariable = 10, RULE_arrayType = 11, RULE_dims = 12, 
+                   RULE_typeParameter = 13, RULE_additionalBound = 14, RULE_interfaceType = 15, 
+                   RULE_typeArguments = 16, RULE_typeArgument = 17, RULE_packageName = 18, 
+                   RULE_typeName = 19, RULE_packageOrTypeName = 20, RULE_expressionName = 21, 
+                   RULE_compilationUnit = 22, RULE_packageDeclaration = 23, 
+                   RULE_importDeclaration = 24, RULE_typeDeclaration = 25, 
+                   RULE_classDeclaration = 26, RULE_normalClassDeclaration = 27, 
+                   RULE_classModifier = 28, RULE_typeParameters = 29, RULE_superclass = 30, 
+                   RULE_superinterfaces = 31, RULE_interfaceTypeList = 32, 
+                   RULE_classBody = 33, RULE_classBodyDeclaration = 34, 
+                   RULE_classMemberDeclaration = 35, RULE_fieldDeclaration = 36, 
+                   RULE_fieldModifier = 37, RULE_variableDeclaratorList = 38, 
+                   RULE_variableDeclarator = 39, RULE_variableDeclaratorId = 40, 
+                   RULE_variableInitializer = 41, RULE_unannType = 42, RULE_unannPrimitiveType = 43, 
+                   RULE_unannReferenceType = 44, RULE_unannClassOrInterfaceType = 45, 
+                   RULE_unannClassType = 46, RULE_unannClassType_lfno_unannClassOrInterfaceType = 47, 
+                   RULE_unannClassType_lf_unannClassOrInterfaceType = 48, 
+                   RULE_unannTypeVariable = 49, RULE_unannArrayType = 50, 
+                   RULE_methodDeclaration = 51, RULE_methodModifier = 52, 
+                   RULE_methodHeader = 53, RULE_result = 54, RULE_methodDeclarator = 55, 
+                   RULE_formalParameterList = 56, RULE_formalParameters = 57, 
+                   RULE_formalParameter = 58, RULE_variableModifier = 59, 
+                   RULE_lastFormalParameter = 60, RULE_receiverParameter = 61, 
+                   RULE_throws_ = 62, RULE_exceptionType = 63, RULE_methodBody = 64, 
+                   RULE_instanceInitializer = 65, RULE_staticInitializer = 66, 
+                   RULE_constructorDeclaration = 67, RULE_constructorModifier = 68, 
+                   RULE_constructorDeclarator = 69, RULE_simpleTypeName = 70, 
+                   RULE_constructorBody = 71, RULE_explicitConstructorInvocation = 72, 
+                   RULE_enumDeclaration = 73, RULE_enumBody = 74, RULE_enumConstantList = 75, 
+                   RULE_enumConstant = 76, RULE_enumConstantModifier = 77, 
+                   RULE_enumBodyDeclarations = 78, RULE_interfaceDeclaration = 79, 
+                   RULE_normalInterfaceDeclaration = 80, RULE_interfaceModifier = 81, 
+                   RULE_extendsInterfaces = 82, RULE_interfaceBody = 83, 
+                   RULE_interfaceMemberDeclaration = 84, RULE_constantDeclaration = 85, 
+                   RULE_constantModifier = 86, RULE_interfaceMethodDeclaration = 87, 
+                   RULE_interfaceMethodModifier = 88, RULE_annotationTypeDeclaration = 89, 
+                   RULE_annotationTypeBody = 90, RULE_annotationTypeMemberDeclaration = 91, 
+                   RULE_annotationTypeElementDeclaration = 92, RULE_annotationTypeElementModifier = 93, 
+                   RULE_defaultValue = 94, RULE_annotation = 95, RULE_normalAnnotation = 96, 
+                   RULE_elementValuePairList = 97, RULE_elementValuePair = 98, 
+                   RULE_elementValue = 99, RULE_elementValueArrayInitializer = 100, 
+                   RULE_markerAnnotation = 101, RULE_singleElementAnnotation = 102, 
+                   RULE_arrayInitializer = 103, RULE_block = 104, RULE_blockStatements = 105, 
+                   RULE_blockStatement = 106, RULE_localVariableDeclarationStatement = 107, 
+                   RULE_localVariableDeclaration = 108, RULE_statement = 109, 
+                   RULE_statementNoShortIf = 110, RULE_statementWithoutTrailingSubstatement = 111, 
+                   RULE_emptyStatement = 112, RULE_labeledStatement = 113, 
+                   RULE_labeledStatementNoShortIf = 114, RULE_expressionStatement = 115, 
+                   RULE_statementExpression = 116, RULE_ifThenStatement = 117, 
+                   RULE_ifThenElseStatement = 118, RULE_ifThenElseStatementNoShortIf = 119, 
+                   RULE_assertStatement = 120, RULE_switchStatement = 121, 
+                   RULE_switchBlock = 122, RULE_switchBlockStatementGroup = 123, 
+                   RULE_switchLabels = 124, RULE_switchLabel = 125, RULE_whileStatement = 126, 
+                   RULE_whileStatementNoShortIf = 127, RULE_doStatement = 128, 
+                   RULE_forStatement = 129, RULE_forStatementNoShortIf = 130, 
+                   RULE_basicForStatement = 131, RULE_basicForStatementNoShortIf = 132, 
+                   RULE_forInit = 133, RULE_forUpdate = 134, RULE_statementExpressionList = 135, 
+                   RULE_enhancedForStatement = 136, RULE_enhancedForStatementNoShortIf = 137, 
+                   RULE_breakStatement = 138, RULE_continueStatement = 139, 
+                   RULE_returnStatement = 140, RULE_throwStatement = 141, 
+                   RULE_synchronizedStatement = 142, RULE_tryStatement = 143, 
+                   RULE_catches = 144, RULE_catchClause = 145, RULE_catchFormalParameter = 146, 
+                   RULE_catchType = 147, RULE_finally_ = 148, RULE_tryWithResourcesStatement = 149, 
+                   RULE_resourceSpecification = 150, RULE_resourceList = 151, 
+                   RULE_resource = 152, RULE_primary = 153, RULE_primaryNoNewArray = 154, 
+                   RULE_primaryNoNewArray_lfno_arrayAccess = 155, RULE_primaryNoNewArray_lf_primary = 156, 
+                   RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary = 157, 
+                   RULE_primaryNoNewArray_lfno_primary = 158, RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary = 159, 
+                   RULE_classInstanceCreationExpression = 160, RULE_classInstanceCreationExpression_lf_primary = 161, 
+                   RULE_classInstanceCreationExpression_lfno_primary = 162, 
+                   RULE_typeArgumentsOrDiamond = 163, RULE_fieldAccess = 164, 
+                   RULE_fieldAccess_lf_primary = 165, RULE_fieldAccess_lfno_primary = 166, 
+                   RULE_arrayAccess = 167, RULE_arrayAccess_lf_primary = 168, 
+                   RULE_arrayAccess_lfno_primary = 169, RULE_methodInvocation = 170, 
+                   RULE_methodInvocation_lf_primary = 171, RULE_methodInvocation_lfno_primary = 172, 
+                   RULE_argumentList = 173, RULE_methodReference = 174, 
+                   RULE_methodReference_lf_primary = 175, RULE_methodReference_lfno_primary = 176, 
+                   RULE_arrayCreationExpression = 177, RULE_dimExprs = 178, 
+                   RULE_dimExpr = 179, RULE_expression = 180, RULE_lambdaExpression = 181, 
+                   RULE_lambdaParameters = 182, RULE_inferredFormalParameterList = 183, 
+                   RULE_lambdaBody = 184, RULE_assignment = 185, RULE_leftHandSide = 186, 
+                   RULE_assignmentOperator = 187, RULE_conditionalExpression = 188, 
+                   RULE_conditionalOrExpression = 189, RULE_conditionalAndExpression = 190, 
+                   RULE_inclusiveOrExpression = 191, RULE_exclusiveOrExpression = 192, 
+                   RULE_andExpression = 193, RULE_equalityExpression = 194, 
+                   RULE_relationalExpression = 195, RULE_shiftExpression = 196, 
+                   RULE_additiveExpression = 197, RULE_multiplicativeExpression = 198, 
+                   RULE_unaryExpression = 199, RULE_preIncDecExpression = 200, 
+                   RULE_postIncDecExpression = 201, RULE_unaryExpressionNotPlusMinus = 202, 
+                   RULE_postfixExpression = 203, RULE_castExpression = 204
 	public static let ruleNames: [String] = [
 		"literal", "type", "primitiveType", "numericType", "integralType", "floatingPointType", 
-		"referenceType", "classOrInterfaceType", "classType", "classType_lf_classOrInterfaceType", 
-		"classType_lfno_classOrInterfaceType", "interfaceType", "interfaceType_lf_classOrInterfaceType", 
-		"interfaceType_lfno_classOrInterfaceType", "typeVariable", "arrayType", 
-		"dims", "typeParameter", "typeParameterModifier", "typeBound", "additionalBound", 
-		"typeArguments", "typeArgumentList", "typeArgument", "wildcard", "wildcardBounds", 
-		"packageName", "typeName", "packageOrTypeName", "expressionName", "methodName", 
-		"ambiguousName", "compilationUnit", "packageDeclaration", "packageModifier", 
-		"importDeclaration", "singleTypeImportDeclaration", "typeImportOnDemandDeclaration", 
-		"singleStaticImportDeclaration", "staticImportOnDemandDeclaration", "typeDeclaration", 
-		"classDeclaration", "normalClassDeclaration", "classModifier", "typeParameters", 
-		"typeParameterList", "superclass", "superinterfaces", "interfaceTypeList", 
+		"referenceType", "classOrInterfaceType", "classType", "classType_classOrInterfaceType", 
+		"typeVariable", "arrayType", "dims", "typeParameter", "additionalBound", 
+		"interfaceType", "typeArguments", "typeArgument", "packageName", "typeName", 
+		"packageOrTypeName", "expressionName", "compilationUnit", "packageDeclaration", 
+		"importDeclaration", "typeDeclaration", "classDeclaration", "normalClassDeclaration", 
+		"classModifier", "typeParameters", "superclass", "superinterfaces", "interfaceTypeList", 
 		"classBody", "classBodyDeclaration", "classMemberDeclaration", "fieldDeclaration", 
 		"fieldModifier", "variableDeclaratorList", "variableDeclarator", "variableDeclaratorId", 
 		"variableInitializer", "unannType", "unannPrimitiveType", "unannReferenceType", 
-		"unannClassOrInterfaceType", "unannClassType", "unannClassType_lf_unannClassOrInterfaceType", 
-		"unannClassType_lfno_unannClassOrInterfaceType", "unannInterfaceType", 
-		"unannInterfaceType_lf_unannClassOrInterfaceType", "unannInterfaceType_lfno_unannClassOrInterfaceType", 
-		"unannTypeVariable", "unannArrayType", "methodDeclaration", "methodModifier", 
-		"methodHeader", "result", "methodDeclarator", "formalParameterList", "formalParameters", 
-		"formalParameter", "variableModifier", "lastFormalParameter", "receiverParameter", 
-		"throws_", "exceptionTypeList", "exceptionType", "methodBody", "instanceInitializer", 
-		"staticInitializer", "constructorDeclaration", "constructorModifier", 
-		"constructorDeclarator", "simpleTypeName", "constructorBody", "explicitConstructorInvocation", 
-		"enumDeclaration", "enumBody", "enumConstantList", "enumConstant", "enumConstantModifier", 
-		"enumBodyDeclarations", "interfaceDeclaration", "normalInterfaceDeclaration", 
-		"interfaceModifier", "extendsInterfaces", "interfaceBody", "interfaceMemberDeclaration", 
-		"constantDeclaration", "constantModifier", "interfaceMethodDeclaration", 
-		"interfaceMethodModifier", "annotationTypeDeclaration", "annotationTypeBody", 
-		"annotationTypeMemberDeclaration", "annotationTypeElementDeclaration", 
-		"annotationTypeElementModifier", "defaultValue", "annotation", "normalAnnotation", 
-		"elementValuePairList", "elementValuePair", "elementValue", "elementValueArrayInitializer", 
-		"elementValueList", "markerAnnotation", "singleElementAnnotation", "arrayInitializer", 
-		"variableInitializerList", "block", "blockStatements", "blockStatement", 
-		"localVariableDeclarationStatement", "localVariableDeclaration", "statement", 
-		"statementNoShortIf", "statementWithoutTrailingSubstatement", "emptyStatement", 
-		"labeledStatement", "labeledStatementNoShortIf", "expressionStatement", 
+		"unannClassOrInterfaceType", "unannClassType", "unannClassType_lfno_unannClassOrInterfaceType", 
+		"unannClassType_lf_unannClassOrInterfaceType", "unannTypeVariable", "unannArrayType", 
+		"methodDeclaration", "methodModifier", "methodHeader", "result", "methodDeclarator", 
+		"formalParameterList", "formalParameters", "formalParameter", "variableModifier", 
+		"lastFormalParameter", "receiverParameter", "throws_", "exceptionType", 
+		"methodBody", "instanceInitializer", "staticInitializer", "constructorDeclaration", 
+		"constructorModifier", "constructorDeclarator", "simpleTypeName", "constructorBody", 
+		"explicitConstructorInvocation", "enumDeclaration", "enumBody", "enumConstantList", 
+		"enumConstant", "enumConstantModifier", "enumBodyDeclarations", "interfaceDeclaration", 
+		"normalInterfaceDeclaration", "interfaceModifier", "extendsInterfaces", 
+		"interfaceBody", "interfaceMemberDeclaration", "constantDeclaration", 
+		"constantModifier", "interfaceMethodDeclaration", "interfaceMethodModifier", 
+		"annotationTypeDeclaration", "annotationTypeBody", "annotationTypeMemberDeclaration", 
+		"annotationTypeElementDeclaration", "annotationTypeElementModifier", "defaultValue", 
+		"annotation", "normalAnnotation", "elementValuePairList", "elementValuePair", 
+		"elementValue", "elementValueArrayInitializer", "markerAnnotation", "singleElementAnnotation", 
+		"arrayInitializer", "block", "blockStatements", "blockStatement", "localVariableDeclarationStatement", 
+		"localVariableDeclaration", "statement", "statementNoShortIf", "statementWithoutTrailingSubstatement", 
+		"emptyStatement", "labeledStatement", "labeledStatementNoShortIf", "expressionStatement", 
 		"statementExpression", "ifThenStatement", "ifThenElseStatement", "ifThenElseStatementNoShortIf", 
 		"assertStatement", "switchStatement", "switchBlock", "switchBlockStatementGroup", 
-		"switchLabels", "switchLabel", "enumConstantName", "whileStatement", "whileStatementNoShortIf", 
+		"switchLabels", "switchLabel", "whileStatement", "whileStatementNoShortIf", 
 		"doStatement", "forStatement", "forStatementNoShortIf", "basicForStatement", 
 		"basicForStatementNoShortIf", "forInit", "forUpdate", "statementExpressionList", 
 		"enhancedForStatement", "enhancedForStatementNoShortIf", "breakStatement", 
 		"continueStatement", "returnStatement", "throwStatement", "synchronizedStatement", 
 		"tryStatement", "catches", "catchClause", "catchFormalParameter", "catchType", 
 		"finally_", "tryWithResourcesStatement", "resourceSpecification", "resourceList", 
-		"resource", "primary", "primaryNoNewArray", "primaryNoNewArray_lf_arrayAccess", 
-		"primaryNoNewArray_lfno_arrayAccess", "primaryNoNewArray_lf_primary", 
-		"primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary", "primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary", 
-		"primaryNoNewArray_lfno_primary", "primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary", 
-		"primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary", "classInstanceCreationExpression", 
-		"classInstanceCreationExpression_lf_primary", "classInstanceCreationExpression_lfno_primary", 
-		"typeArgumentsOrDiamond", "fieldAccess", "fieldAccess_lf_primary", "fieldAccess_lfno_primary", 
-		"arrayAccess", "arrayAccess_lf_primary", "arrayAccess_lfno_primary", "methodInvocation", 
+		"resource", "primary", "primaryNoNewArray", "primaryNoNewArray_lfno_arrayAccess", 
+		"primaryNoNewArray_lf_primary", "primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary", 
+		"primaryNoNewArray_lfno_primary", "primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary", 
+		"classInstanceCreationExpression", "classInstanceCreationExpression_lf_primary", 
+		"classInstanceCreationExpression_lfno_primary", "typeArgumentsOrDiamond", 
+		"fieldAccess", "fieldAccess_lf_primary", "fieldAccess_lfno_primary", "arrayAccess", 
+		"arrayAccess_lf_primary", "arrayAccess_lfno_primary", "methodInvocation", 
 		"methodInvocation_lf_primary", "methodInvocation_lfno_primary", "argumentList", 
 		"methodReference", "methodReference_lf_primary", "methodReference_lfno_primary", 
-		"arrayCreationExpression", "dimExprs", "dimExpr", "constantExpression", 
-		"expression", "lambdaExpression", "lambdaParameters", "inferredFormalParameterList", 
-		"lambdaBody", "assignmentExpression", "assignment", "leftHandSide", "assignmentOperator", 
-		"conditionalExpression", "conditionalOrExpression", "conditionalAndExpression", 
-		"inclusiveOrExpression", "exclusiveOrExpression", "andExpression", "equalityExpression", 
-		"relationalExpression", "shiftExpression", "additiveExpression", "multiplicativeExpression", 
-		"unaryExpression", "preIncrementExpression", "preDecrementExpression", 
-		"unaryExpressionNotPlusMinus", "postfixExpression", "postIncrementExpression", 
-		"postIncrementExpression_lf_postfixExpression", "postDecrementExpression", 
-		"postDecrementExpression_lf_postfixExpression", "castExpression"
+		"arrayCreationExpression", "dimExprs", "dimExpr", "expression", "lambdaExpression", 
+		"lambdaParameters", "inferredFormalParameterList", "lambdaBody", "assignment", 
+		"leftHandSide", "assignmentOperator", "conditionalExpression", "conditionalOrExpression", 
+		"conditionalAndExpression", "inclusiveOrExpression", "exclusiveOrExpression", 
+		"andExpression", "equalityExpression", "relationalExpression", "shiftExpression", 
+		"additiveExpression", "multiplicativeExpression", "unaryExpression", "preIncDecExpression", 
+		"postIncDecExpression", "unaryExpressionNotPlusMinus", "postfixExpression", 
+		"castExpression"
 	]
 
 	private static let _LITERAL_NAMES: [String?] = [
@@ -293,17 +262,17 @@ open class Java8Parser: Parser {
 	}
 
 	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	    RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,Java8Parser._ATN,Java8Parser._decisionToDFA, Java8Parser._sharedContextCache)
 	}
 	open class LiteralContext:ParserRuleContext {
-		open func IntegerLiteral() -> TerminalNode? { return getToken(Java8Parser.Tokens.IntegerLiteral.rawValue, 0) }
-		open func FloatingPointLiteral() -> TerminalNode? { return getToken(Java8Parser.Tokens.FloatingPointLiteral.rawValue, 0) }
-		open func BooleanLiteral() -> TerminalNode? { return getToken(Java8Parser.Tokens.BooleanLiteral.rawValue, 0) }
-		open func CharacterLiteral() -> TerminalNode? { return getToken(Java8Parser.Tokens.CharacterLiteral.rawValue, 0) }
-		open func StringLiteral() -> TerminalNode? { return getToken(Java8Parser.Tokens.StringLiteral.rawValue, 0) }
-		open func NullLiteral() -> TerminalNode? { return getToken(Java8Parser.Tokens.NullLiteral.rawValue, 0) }
+		open func IntegerLiteral() -> TerminalNode? { return getToken(Java8Parser.IntegerLiteral, 0) }
+		open func FloatingPointLiteral() -> TerminalNode? { return getToken(Java8Parser.FloatingPointLiteral, 0) }
+		open func BooleanLiteral() -> TerminalNode? { return getToken(Java8Parser.BooleanLiteral, 0) }
+		open func CharacterLiteral() -> TerminalNode? { return getToken(Java8Parser.CharacterLiteral, 0) }
+		open func StringLiteral() -> TerminalNode? { return getToken(Java8Parser.StringLiteral, 0) }
+		open func NullLiteral() -> TerminalNode? { return getToken(Java8Parser.NullLiteral, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_literal }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -339,20 +308,18 @@ open class Java8Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(474)
+		 	setState(410)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
+		 	} else {
 		 		try consume()
 		 	}
 
@@ -405,18 +372,18 @@ open class Java8Parser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(478)
+		 	setState(414)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,0, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(476)
+		 		setState(412)
 		 		try primitiveType()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(477)
+		 		setState(413)
 		 		try referenceType()
 
 		 		break
@@ -475,55 +442,47 @@ open class Java8Parser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(494)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(419)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,3, _ctx)) {
-		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(483)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.AT
+		 	      return testSet
+		 	 }()) {
+		 		setState(416)
+		 		try annotation()
+
+
+		 		setState(421)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
-		 		while (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(480)
-		 			try annotation()
-
-
-		 			setState(485)
-		 			try _errHandler.sync(self)
-		 			_la = try _input.LA(1)
-		 		}
-		 		setState(486)
+		 	}
+		 	setState(424)
+		 	try _errHandler.sync(self)
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.SHORT:
+		 		setState(422)
 		 		try numericType()
 
 		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(490)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		while (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(487)
-		 			try annotation()
 
-
-		 			setState(492)
-		 			try _errHandler.sync(self)
-		 			_la = try _input.LA(1)
-		 		}
-		 		setState(493)
-		 		try match(Java8Parser.Tokens.BOOLEAN.rawValue)
+		 	case Java8Parser.BOOLEAN:
+		 		setState(423)
+		 		try match(Java8Parser.BOOLEAN)
 
 		 		break
-		 	default: break
+		 	default:
+		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -573,23 +532,23 @@ open class Java8Parser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(498)
+		 	setState(428)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .SHORT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.SHORT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(496)
+		 		setState(426)
 		 		try integralType()
 
 		 		break
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(497)
+		 		setState(427)
 		 		try floatingPointType()
 
 		 		break
@@ -641,20 +600,18 @@ open class Java8Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(500)
+		 	setState(430)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.SHORT.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.INT,Java8Parser.LONG,Java8Parser.SHORT]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
+		 	} else {
 		 		try consume()
 		 	}
 
@@ -703,17 +660,15 @@ open class Java8Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(502)
+		 	setState(432)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.DOUBLE.rawValue || _la == Java8Parser.Tokens.FLOAT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.DOUBLE || _la == Java8Parser.FLOAT
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
+		 	} else {
 		 		try consume()
 		 	}
 
@@ -769,24 +724,24 @@ open class Java8Parser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(507)
+		 	setState(437)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,5, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,4, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(504)
+		 		setState(434)
 		 		try classOrInterfaceType()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(505)
+		 		setState(435)
 		 		try typeVariable()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(506)
+		 		setState(436)
 		 		try arrayType()
 
 		 		break
@@ -802,23 +757,11 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ClassOrInterfaceTypeContext:ParserRuleContext {
-		open func classType_lfno_classOrInterfaceType() -> ClassType_lfno_classOrInterfaceTypeContext? {
-			return getRuleContext(ClassType_lfno_classOrInterfaceTypeContext.self,0)
+		open func classType_classOrInterfaceType() -> Array<ClassType_classOrInterfaceTypeContext> {
+			return getRuleContexts(ClassType_classOrInterfaceTypeContext.self)
 		}
-		open func interfaceType_lfno_classOrInterfaceType() -> InterfaceType_lfno_classOrInterfaceTypeContext? {
-			return getRuleContext(InterfaceType_lfno_classOrInterfaceTypeContext.self,0)
-		}
-		open func classType_lf_classOrInterfaceType() -> Array<ClassType_lf_classOrInterfaceTypeContext> {
-			return getRuleContexts(ClassType_lf_classOrInterfaceTypeContext.self)
-		}
-		open func classType_lf_classOrInterfaceType(_ i: Int) -> ClassType_lf_classOrInterfaceTypeContext? {
-			return getRuleContext(ClassType_lf_classOrInterfaceTypeContext.self,i)
-		}
-		open func interfaceType_lf_classOrInterfaceType() -> Array<InterfaceType_lf_classOrInterfaceTypeContext> {
-			return getRuleContexts(InterfaceType_lf_classOrInterfaceTypeContext.self)
-		}
-		open func interfaceType_lf_classOrInterfaceType(_ i: Int) -> InterfaceType_lf_classOrInterfaceTypeContext? {
-			return getRuleContext(InterfaceType_lf_classOrInterfaceTypeContext.self,i)
+		open func classType_classOrInterfaceType(_ i: Int) -> ClassType_classOrInterfaceTypeContext? {
+			return getRuleContext(ClassType_classOrInterfaceTypeContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_classOrInterfaceType }
 		override
@@ -855,46 +798,23 @@ open class Java8Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(511)
+		 	setState(439)
+		 	try classType_classOrInterfaceType()
+		 	setState(444)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,6, _ctx)) {
-		 	case 1:
-		 		setState(509)
-		 		try classType_lfno_classOrInterfaceType()
-
-		 		break
-		 	case 2:
-		 		setState(510)
-		 		try interfaceType_lfno_classOrInterfaceType()
-
-		 		break
-		 	default: break
-		 	}
-		 	setState(517)
-		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,8,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,5,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(515)
-		 			try _errHandler.sync(self)
-		 			switch(try getInterpreter().adaptivePredict(_input,7, _ctx)) {
-		 			case 1:
-		 				setState(513)
-		 				try classType_lf_classOrInterfaceType()
+		 			setState(440)
+		 			try match(Java8Parser.DOT)
+		 			setState(441)
+		 			try classType_classOrInterfaceType()
 
-		 				break
-		 			case 2:
-		 				setState(514)
-		 				try interfaceType_lf_classOrInterfaceType()
-
-		 				break
-		 			default: break
-		 			}
 		 	 
 		 		}
-		 		setState(519)
+		 		setState(446)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,8,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,5,_ctx)
 		 	}
 
 		}
@@ -907,7 +827,10 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ClassTypeContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
+		open func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
+			return getRuleContext(ClassOrInterfaceTypeContext.self,0)
+		}
 		open func annotation() -> Array<AnnotationContext> {
 			return getRuleContexts(AnnotationContext.self)
 		}
@@ -916,9 +839,6 @@ open class Java8Parser: Parser {
 		}
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
-		}
-		open func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
-			return getRuleContext(ClassOrInterfaceTypeContext.self,0)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_classType }
 		override
@@ -954,85 +874,51 @@ open class Java8Parser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(542)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(450)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,13, _ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,6,_ctx)) {
 		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(523)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		while (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(520)
-		 			try annotation()
-
-
-		 			setState(525)
-		 			try _errHandler.sync(self)
-		 			_la = try _input.LA(1)
-		 		}
-		 		setState(526)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(528)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		if (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(527)
-		 			try typeArguments()
-
-		 		}
-
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(530)
+		 		setState(447)
 		 		try classOrInterfaceType()
-		 		setState(531)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(535)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		while (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(532)
-		 			try annotation()
-
-
-		 			setState(537)
-		 			try _errHandler.sync(self)
-		 			_la = try _input.LA(1)
-		 		}
-		 		setState(538)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(540)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		if (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(539)
-		 			try typeArguments()
-
-		 		}
-
+		 		setState(448)
+		 		try match(Java8Parser.DOT)
 
 		 		break
 		 	default: break
 		 	}
+		 	setState(455)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.AT
+		 	      return testSet
+		 	 }()) {
+		 		setState(452)
+		 		try annotation()
+
+
+		 		setState(457)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
+		 	setState(458)
+		 	try match(Java8Parser.Identifier)
+		 	setState(460)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.LT
+		 	      return testSet
+		 	 }()) {
+		 		setState(459)
+		 		try typeArguments()
+
+		 	}
+
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -1042,8 +928,8 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassType_lf_classOrInterfaceTypeContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+	open class ClassType_classOrInterfaceTypeContext:ParserRuleContext {
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func annotation() -> Array<AnnotationContext> {
 			return getRuleContexts(AnnotationContext.self)
 		}
@@ -1053,25 +939,25 @@ open class Java8Parser: Parser {
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_classType_lf_classOrInterfaceType }
+		open override func getRuleIndex() -> Int { return Java8Parser.RULE_classType_classOrInterfaceType }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
 			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterClassType_lf_classOrInterfaceType(self)
+			 	(listener as! Java8Listener).enterClassType_classOrInterfaceType(self)
 			}
 		}
 		override
 		open func exitRule(_ listener: ParseTreeListener) {
 			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitClassType_lf_classOrInterfaceType(self)
+			 	(listener as! Java8Listener).exitClassType_classOrInterfaceType(self)
 			}
 		}
 		override
 		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
 			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitClassType_lf_classOrInterfaceType(self)
+			     return (visitor as! Java8Visitor<T>).visitClassType_classOrInterfaceType(self)
 			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitClassType_lf_classOrInterfaceType(self)
+		    	 return (visitor as! Java8BaseVisitor<T>).visitClassType_classOrInterfaceType(self)
 		    }
 			else {
 			     return visitor.visitChildren(self)
@@ -1079,279 +965,43 @@ open class Java8Parser: Parser {
 		}
 	}
 	@discardableResult
-	open func classType_lf_classOrInterfaceType() throws -> ClassType_lf_classOrInterfaceTypeContext {
-		var _localctx: ClassType_lf_classOrInterfaceTypeContext = ClassType_lf_classOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 18, Java8Parser.RULE_classType_lf_classOrInterfaceType)
+	open func classType_classOrInterfaceType() throws -> ClassType_classOrInterfaceTypeContext {
+		var _localctx: ClassType_classOrInterfaceTypeContext = ClassType_classOrInterfaceTypeContext(_ctx, getState())
+		try enterRule(_localctx, 18, Java8Parser.RULE_classType_classOrInterfaceType)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(544)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(548)
+		 	setState(465)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(545)
+		 		setState(462)
 		 		try annotation()
 
 
-		 		setState(550)
+		 		setState(467)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(551)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(553)
+		 	setState(468)
+		 	try match(Java8Parser.Identifier)
+		 	setState(470)
 		 	try _errHandler.sync(self)
-		 	switch (try getInterpreter().adaptivePredict(_input,15,_ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,10,_ctx)) {
 		 	case 1:
-		 		setState(552)
+		 		setState(469)
 		 		try typeArguments()
 
 		 		break
 		 	default: break
 		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class ClassType_lfno_classOrInterfaceTypeContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func typeArguments() -> TypeArgumentsContext? {
-			return getRuleContext(TypeArgumentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_classType_lfno_classOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterClassType_lfno_classOrInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitClassType_lfno_classOrInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitClassType_lfno_classOrInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitClassType_lfno_classOrInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func classType_lfno_classOrInterfaceType() throws -> ClassType_lfno_classOrInterfaceTypeContext {
-		var _localctx: ClassType_lfno_classOrInterfaceTypeContext = ClassType_lfno_classOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 20, Java8Parser.RULE_classType_lfno_classOrInterfaceType)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(558)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(555)
-		 		try annotation()
-
-
-		 		setState(560)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-		 	setState(561)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(563)
-		 	try _errHandler.sync(self)
-		 	switch (try getInterpreter().adaptivePredict(_input,17,_ctx)) {
-		 	case 1:
-		 		setState(562)
-		 		try typeArguments()
-
-		 		break
-		 	default: break
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class InterfaceTypeContext:ParserRuleContext {
-		open func classType() -> ClassTypeContext? {
-			return getRuleContext(ClassTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_interfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func interfaceType() throws -> InterfaceTypeContext {
-		var _localctx: InterfaceTypeContext = InterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 22, Java8Parser.RULE_interfaceType)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(565)
-		 	try classType()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class InterfaceType_lf_classOrInterfaceTypeContext:ParserRuleContext {
-		open func classType_lf_classOrInterfaceType() -> ClassType_lf_classOrInterfaceTypeContext? {
-			return getRuleContext(ClassType_lf_classOrInterfaceTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_interfaceType_lf_classOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterInterfaceType_lf_classOrInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitInterfaceType_lf_classOrInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitInterfaceType_lf_classOrInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitInterfaceType_lf_classOrInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func interfaceType_lf_classOrInterfaceType() throws -> InterfaceType_lf_classOrInterfaceTypeContext {
-		var _localctx: InterfaceType_lf_classOrInterfaceTypeContext = InterfaceType_lf_classOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 24, Java8Parser.RULE_interfaceType_lf_classOrInterfaceType)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(567)
-		 	try classType_lf_classOrInterfaceType()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class InterfaceType_lfno_classOrInterfaceTypeContext:ParserRuleContext {
-		open func classType_lfno_classOrInterfaceType() -> ClassType_lfno_classOrInterfaceTypeContext? {
-			return getRuleContext(ClassType_lfno_classOrInterfaceTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_interfaceType_lfno_classOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterInterfaceType_lfno_classOrInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitInterfaceType_lfno_classOrInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitInterfaceType_lfno_classOrInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitInterfaceType_lfno_classOrInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func interfaceType_lfno_classOrInterfaceType() throws -> InterfaceType_lfno_classOrInterfaceTypeContext {
-		var _localctx: InterfaceType_lfno_classOrInterfaceTypeContext = InterfaceType_lfno_classOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 26, Java8Parser.RULE_interfaceType_lfno_classOrInterfaceType)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(569)
-		 	try classType_lfno_classOrInterfaceType()
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1363,7 +1013,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class TypeVariableContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func annotation() -> Array<AnnotationContext> {
 			return getRuleContexts(AnnotationContext.self)
 		}
@@ -1398,31 +1048,31 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeVariable() throws -> TypeVariableContext {
 		var _localctx: TypeVariableContext = TypeVariableContext(_ctx, getState())
-		try enterRule(_localctx, 28, Java8Parser.RULE_typeVariable)
+		try enterRule(_localctx, 20, Java8Parser.RULE_typeVariable)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(574)
+		 	setState(475)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(571)
+		 		setState(472)
 		 		try annotation()
 
 
-		 		setState(576)
+		 		setState(477)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(577)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	setState(478)
+		 	try match(Java8Parser.Identifier)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1474,35 +1124,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func arrayType() throws -> ArrayTypeContext {
 		var _localctx: ArrayTypeContext = ArrayTypeContext(_ctx, getState())
-		try enterRule(_localctx, 30, Java8Parser.RULE_arrayType)
+		try enterRule(_localctx, 22, Java8Parser.RULE_arrayType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(588)
+		 	setState(489)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,19, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,12, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(579)
+		 		setState(480)
 		 		try primitiveType()
-		 		setState(580)
+		 		setState(481)
 		 		try dims()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(582)
+		 		setState(483)
 		 		try classOrInterfaceType()
-		 		setState(583)
+		 		setState(484)
 		 		try dims()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(585)
+		 		setState(486)
 		 		try typeVariable()
-		 		setState(586)
+		 		setState(487)
 		 		try dims()
 
 		 		break
@@ -1552,7 +1202,7 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func dims() throws -> DimsContext {
 		var _localctx: DimsContext = DimsContext(_ctx, getState())
-		try enterRule(_localctx, 32, Java8Parser.RULE_dims)
+		try enterRule(_localctx, 24, Java8Parser.RULE_dims)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -1560,58 +1210,42 @@ open class Java8Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(593)
+		 	setState(499); 
 		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(590)
-		 		try annotation()
-
-
-		 		setState(595)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-		 	setState(596)
-		 	try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 	setState(597)
-		 	try match(Java8Parser.Tokens.RBRACK.rawValue)
-		 	setState(608)
-		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,22,_ctx)
-		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 		if ( _alt==1 ) {
-		 			setState(601)
+		 	_alt = 1;
+		 	repeat {
+		 		switch (_alt) {
+		 		case 1:
+		 			setState(494)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 			while (//closure
 		 			 { () -> Bool in
-		 			      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 			      let testSet: Bool = _la == Java8Parser.AT
 		 			      return testSet
 		 			 }()) {
-		 				setState(598)
+		 				setState(491)
 		 				try annotation()
 
 
-		 				setState(603)
+		 				setState(496)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 			}
-		 			setState(604)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(605)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(497)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(498)
+		 			try match(Java8Parser.RBRACK)
 
-		 	 
+
+		 			break
+		 		default:
+		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
-		 		setState(610)
+		 		setState(501); 
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,22,_ctx)
-		 	}
+		 		_alt = try getInterpreter().adaptivePredict(_input,14,_ctx)
+		 	} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1623,15 +1257,24 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class TypeParameterContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func typeParameterModifier() -> Array<TypeParameterModifierContext> {
-			return getRuleContexts(TypeParameterModifierContext.self)
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
+		open func annotation() -> Array<AnnotationContext> {
+			return getRuleContexts(AnnotationContext.self)
 		}
-		open func typeParameterModifier(_ i: Int) -> TypeParameterModifierContext? {
-			return getRuleContext(TypeParameterModifierContext.self,i)
+		open func annotation(_ i: Int) -> AnnotationContext? {
+			return getRuleContext(AnnotationContext.self,i)
 		}
-		open func typeBound() -> TypeBoundContext? {
-			return getRuleContext(TypeBoundContext.self,0)
+		open func typeVariable() -> TypeVariableContext? {
+			return getRuleContext(TypeVariableContext.self,0)
+		}
+		open func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
+			return getRuleContext(ClassOrInterfaceTypeContext.self,0)
+		}
+		open func additionalBound() -> Array<AdditionalBoundContext> {
+			return getRuleContexts(AdditionalBoundContext.self)
+		}
+		open func additionalBound(_ i: Int) -> AdditionalBoundContext? {
+			return getRuleContext(AdditionalBoundContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeParameter }
 		override
@@ -1661,188 +1304,76 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeParameter() throws -> TypeParameterContext {
 		var _localctx: TypeParameterContext = TypeParameterContext(_ctx, getState())
-		try enterRule(_localctx, 34, Java8Parser.RULE_typeParameter)
+		try enterRule(_localctx, 26, Java8Parser.RULE_typeParameter)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(614)
+		 	setState(506)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(611)
-		 		try typeParameterModifier()
+		 		setState(503)
+		 		try annotation()
 
 
-		 		setState(616)
+		 		setState(508)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(617)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(619)
+		 	setState(509)
+		 	try match(Java8Parser.Identifier)
+		 	setState(521)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.EXTENDS.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.EXTENDS
 		 	      return testSet
 		 	 }()) {
-		 		setState(618)
-		 		try typeBound()
-
-		 	}
-
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class TypeParameterModifierContext:ParserRuleContext {
-		open func annotation() -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeParameterModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterTypeParameterModifier(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitTypeParameterModifier(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitTypeParameterModifier(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitTypeParameterModifier(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func typeParameterModifier() throws -> TypeParameterModifierContext {
-		var _localctx: TypeParameterModifierContext = TypeParameterModifierContext(_ctx, getState())
-		try enterRule(_localctx, 36, Java8Parser.RULE_typeParameterModifier)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(621)
-		 	try annotation()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class TypeBoundContext:ParserRuleContext {
-		open func typeVariable() -> TypeVariableContext? {
-			return getRuleContext(TypeVariableContext.self,0)
-		}
-		open func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
-			return getRuleContext(ClassOrInterfaceTypeContext.self,0)
-		}
-		open func additionalBound() -> Array<AdditionalBoundContext> {
-			return getRuleContexts(AdditionalBoundContext.self)
-		}
-		open func additionalBound(_ i: Int) -> AdditionalBoundContext? {
-			return getRuleContext(AdditionalBoundContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeBound }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterTypeBound(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitTypeBound(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitTypeBound(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitTypeBound(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func typeBound() throws -> TypeBoundContext {
-		var _localctx: TypeBoundContext = TypeBoundContext(_ctx, getState())
-		try enterRule(_localctx, 38, Java8Parser.RULE_typeBound)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	setState(633)
-		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,26, _ctx)) {
-		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(623)
-		 		try match(Java8Parser.Tokens.EXTENDS.rawValue)
-		 		setState(624)
-		 		try typeVariable()
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(625)
-		 		try match(Java8Parser.Tokens.EXTENDS.rawValue)
-		 		setState(626)
-		 		try classOrInterfaceType()
-		 		setState(630)
+		 		setState(510)
+		 		try match(Java8Parser.EXTENDS)
+		 		setState(519)
 		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		while (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.BITAND.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(627)
-		 			try additionalBound()
+		 		switch(try getInterpreter().adaptivePredict(_input,17, _ctx)) {
+		 		case 1:
+		 			setState(511)
+		 			try typeVariable()
 
-
-		 			setState(632)
+		 			break
+		 		case 2:
+		 			setState(512)
+		 			try classOrInterfaceType()
+		 			setState(516)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
+		 			while (//closure
+		 			 { () -> Bool in
+		 			      let testSet: Bool = _la == Java8Parser.BITAND
+		 			      return testSet
+		 			 }()) {
+		 				setState(513)
+		 				try additionalBound()
+
+
+		 				setState(518)
+		 				try _errHandler.sync(self)
+		 				_la = try _input.LA(1)
+		 			}
+
+		 			break
+		 		default: break
 		 		}
 
-		 		break
-		 	default: break
 		 	}
+
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -1884,15 +1415,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func additionalBound() throws -> AdditionalBoundContext {
 		var _localctx: AdditionalBoundContext = AdditionalBoundContext(_ctx, getState())
-		try enterRule(_localctx, 40, Java8Parser.RULE_additionalBound)
+		try enterRule(_localctx, 28, Java8Parser.RULE_additionalBound)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(635)
-		 	try match(Java8Parser.Tokens.BITAND.rawValue)
-		 	setState(636)
+		 	setState(523)
+		 	try match(Java8Parser.BITAND)
+		 	setState(524)
 		 	try interfaceType()
 
 		}
@@ -1904,9 +1435,62 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
+	open class InterfaceTypeContext:ParserRuleContext {
+		open func classType() -> ClassTypeContext? {
+			return getRuleContext(ClassTypeContext.self,0)
+		}
+		open override func getRuleIndex() -> Int { return Java8Parser.RULE_interfaceType }
+		override
+		open func enterRule(_ listener: ParseTreeListener) {
+			if listener is Java8Listener {
+			 	(listener as! Java8Listener).enterInterfaceType(self)
+			}
+		}
+		override
+		open func exitRule(_ listener: ParseTreeListener) {
+			if listener is Java8Listener {
+			 	(listener as! Java8Listener).exitInterfaceType(self)
+			}
+		}
+		override
+		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if visitor is Java8Visitor {
+			     return (visitor as! Java8Visitor<T>).visitInterfaceType(self)
+			}else if visitor is Java8BaseVisitor {
+		    	 return (visitor as! Java8BaseVisitor<T>).visitInterfaceType(self)
+		    }
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	open func interfaceType() throws -> InterfaceTypeContext {
+		var _localctx: InterfaceTypeContext = InterfaceTypeContext(_ctx, getState())
+		try enterRule(_localctx, 30, Java8Parser.RULE_interfaceType)
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(526)
+		 	try classType()
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
 	open class TypeArgumentsContext:ParserRuleContext {
-		open func typeArgumentList() -> TypeArgumentListContext? {
-			return getRuleContext(TypeArgumentListContext.self,0)
+		open func typeArgument() -> Array<TypeArgumentContext> {
+			return getRuleContexts(TypeArgumentContext.self)
+		}
+		open func typeArgument(_ i: Int) -> TypeArgumentContext? {
+			return getRuleContext(TypeArgumentContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeArguments }
 		override
@@ -1936,90 +1520,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeArguments() throws -> TypeArgumentsContext {
 		var _localctx: TypeArgumentsContext = TypeArgumentsContext(_ctx, getState())
-		try enterRule(_localctx, 42, Java8Parser.RULE_typeArguments)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(638)
-		 	try match(Java8Parser.Tokens.LT.rawValue)
-		 	setState(639)
-		 	try typeArgumentList()
-		 	setState(640)
-		 	try match(Java8Parser.Tokens.GT.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class TypeArgumentListContext:ParserRuleContext {
-		open func typeArgument() -> Array<TypeArgumentContext> {
-			return getRuleContexts(TypeArgumentContext.self)
-		}
-		open func typeArgument(_ i: Int) -> TypeArgumentContext? {
-			return getRuleContext(TypeArgumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeArgumentList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterTypeArgumentList(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitTypeArgumentList(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitTypeArgumentList(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitTypeArgumentList(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func typeArgumentList() throws -> TypeArgumentListContext {
-		var _localctx: TypeArgumentListContext = TypeArgumentListContext(_ctx, getState())
-		try enterRule(_localctx, 44, Java8Parser.RULE_typeArgumentList)
+		try enterRule(_localctx, 32, Java8Parser.RULE_typeArguments)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(642)
+		 	setState(528)
+		 	try match(Java8Parser.LT)
+		 	setState(529)
 		 	try typeArgument()
-		 	setState(647)
+		 	setState(534)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(643)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(644)
+		 		setState(530)
+		 		try match(Java8Parser.COMMA)
+		 		setState(531)
 		 		try typeArgument()
 
 
-		 		setState(649)
+		 		setState(536)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
+		 	setState(537)
+		 	try match(Java8Parser.GT)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2034,8 +1565,11 @@ open class Java8Parser: Parser {
 		open func referenceType() -> ReferenceTypeContext? {
 			return getRuleContext(ReferenceTypeContext.self,0)
 		}
-		open func wildcard() -> WildcardContext? {
-			return getRuleContext(WildcardContext.self,0)
+		open func annotation() -> Array<AnnotationContext> {
+			return getRuleContexts(AnnotationContext.self)
+		}
+		open func annotation(_ i: Int) -> AnnotationContext? {
+			return getRuleContext(AnnotationContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeArgument }
 		override
@@ -2065,24 +1599,65 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeArgument() throws -> TypeArgumentContext {
 		var _localctx: TypeArgumentContext = TypeArgumentContext(_ctx, getState())
-		try enterRule(_localctx, 46, Java8Parser.RULE_typeArgument)
+		try enterRule(_localctx, 34, Java8Parser.RULE_typeArgument)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(652)
+		 	setState(551)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,28, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,22, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(650)
+		 		setState(539)
 		 		try referenceType()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(651)
-		 		try wildcard()
+		 		setState(543)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 		while (//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Java8Parser.AT
+		 		      return testSet
+		 		 }()) {
+		 			setState(540)
+		 			try annotation()
+
+
+		 			setState(545)
+		 			try _errHandler.sync(self)
+		 			_la = try _input.LA(1)
+		 		}
+		 		setState(546)
+		 		try match(Java8Parser.QUESTION)
+		 		setState(549)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 		if (//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Java8Parser.EXTENDS || _la == Java8Parser.SUPER
+		 		      return testSet
+		 		 }()) {
+		 			setState(547)
+		 			_la = try _input.LA(1)
+		 			if (!(//closure
+		 			 { () -> Bool in
+		 			      let testSet: Bool = _la == Java8Parser.EXTENDS || _la == Java8Parser.SUPER
+		 			      return testSet
+		 			 }())) {
+		 			try _errHandler.recoverInline(self)
+		 			} else {
+		 				try consume()
+		 			}
+		 			setState(548)
+		 			try referenceType()
+
+		 		}
+
 
 		 		break
 		 	default: break
@@ -2096,166 +1671,10 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
-	open class WildcardContext:ParserRuleContext {
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func wildcardBounds() -> WildcardBoundsContext? {
-			return getRuleContext(WildcardBoundsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_wildcard }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterWildcard(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitWildcard(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitWildcard(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitWildcard(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func wildcard() throws -> WildcardContext {
-		var _localctx: WildcardContext = WildcardContext(_ctx, getState())
-		try enterRule(_localctx, 48, Java8Parser.RULE_wildcard)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(657)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(654)
-		 		try annotation()
-
-
-		 		setState(659)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-		 	setState(660)
-		 	try match(Java8Parser.Tokens.QUESTION.rawValue)
-		 	setState(662)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.EXTENDS.rawValue || _la == Java8Parser.Tokens.SUPER.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(661)
-		 		try wildcardBounds()
-
-		 	}
-
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class WildcardBoundsContext:ParserRuleContext {
-		open func referenceType() -> ReferenceTypeContext? {
-			return getRuleContext(ReferenceTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_wildcardBounds }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterWildcardBounds(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitWildcardBounds(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitWildcardBounds(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitWildcardBounds(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func wildcardBounds() throws -> WildcardBoundsContext {
-		var _localctx: WildcardBoundsContext = WildcardBoundsContext(_ctx, getState())
-		try enterRule(_localctx, 50, Java8Parser.RULE_wildcardBounds)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	setState(668)
-		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .EXTENDS:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(664)
-		 		try match(Java8Parser.Tokens.EXTENDS.rawValue)
-		 		setState(665)
-		 		try referenceType()
-
-		 		break
-
-		 	case .SUPER:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(666)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(667)
-		 		try referenceType()
-
-		 		break
-		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
-		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-
 	open class PackageNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func packageName() -> PackageNameContext? {
-			return getRuleContext(PackageNameContext.self,0)
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
+		open func Identifier(_ i:Int) -> TerminalNode?{
+			return getToken(Java8Parser.Identifier, i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_packageName }
 		override
@@ -2282,54 +1701,36 @@ open class Java8Parser: Parser {
 			}
 		}
 	}
-
-	public final  func packageName( ) throws -> PackageNameContext   {
-		return try packageName(0)
-	}
 	@discardableResult
-	private func packageName(_ _p: Int) throws -> PackageNameContext   {
-		let _parentctx: ParserRuleContext? = _ctx
-		var _parentState: Int = getState()
-		var _localctx: PackageNameContext = PackageNameContext(_ctx, _parentState)
-		var  _prevctx: PackageNameContext = _localctx
-		var _startState: Int = 52
-		try enterRecursionRule(_localctx, 52, Java8Parser.RULE_packageName, _p)
+	open func packageName() throws -> PackageNameContext {
+		var _localctx: PackageNameContext = PackageNameContext(_ctx, getState())
+		try enterRule(_localctx, 36, Java8Parser.RULE_packageName)
+		var _la: Int = 0
 		defer {
-	    		try! unrollRecursionContexts(_parentctx)
+	    		try! exitRule()
 	    }
 		do {
-			var _alt: Int
-			try enterOuterAlt(_localctx, 1)
-			setState(671)
-			try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(553)
+		 	try match(Java8Parser.Identifier)
+		 	setState(558)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.DOT
+		 	      return testSet
+		 	 }()) {
+		 		setState(554)
+		 		try match(Java8Parser.DOT)
+		 		setState(555)
+		 		try match(Java8Parser.Identifier)
 
-			_ctx!.stop = try _input.LT(-1)
-			setState(678)
-			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,32,_ctx)
-			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-				if ( _alt==1 ) {
-					if _parseListeners != nil {
-					   try triggerExitRuleEvent()
-					}
-					_prevctx = _localctx
-					_localctx = PackageNameContext(_parentctx, _parentState);
-					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_packageName)
-					setState(673)
-					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-					}
-					setState(674)
-					try match(Java8Parser.Tokens.DOT.rawValue)
-					setState(675)
-					try match(Java8Parser.Tokens.Identifier.rawValue)
 
-			 
-				}
-				setState(680)
-				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,32,_ctx)
-			}
+		 		setState(560)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2338,10 +1739,10 @@ open class Java8Parser: Parser {
 			try _errHandler.recover(self, re)
 		}
 
-		return _localctx;
+		return _localctx
 	}
 	open class TypeNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func packageOrTypeName() -> PackageOrTypeNameContext? {
 			return getRuleContext(PackageOrTypeNameContext.self,0)
 		}
@@ -2373,32 +1774,27 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeName() throws -> TypeNameContext {
 		var _localctx: TypeNameContext = TypeNameContext(_ctx, getState())
-		try enterRule(_localctx, 54, Java8Parser.RULE_typeName)
+		try enterRule(_localctx, 38, Java8Parser.RULE_typeName)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(686)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(564)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,33, _ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,24,_ctx)) {
 		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(681)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(682)
-		 		try packageOrTypeName(0)
-		 		setState(683)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(684)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(561)
+		 		try packageOrTypeName()
+		 		setState(562)
+		 		try match(Java8Parser.DOT)
 
 		 		break
 		 	default: break
 		 	}
+		 	setState(566)
+		 	try match(Java8Parser.Identifier)
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -2408,11 +1804,10 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
-
 	open class PackageOrTypeNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func packageOrTypeName() -> PackageOrTypeNameContext? {
-			return getRuleContext(PackageOrTypeNameContext.self,0)
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
+		open func Identifier(_ i:Int) -> TerminalNode?{
+			return getToken(Java8Parser.Identifier, i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_packageOrTypeName }
 		override
@@ -2439,54 +1834,34 @@ open class Java8Parser: Parser {
 			}
 		}
 	}
-
-	public final  func packageOrTypeName( ) throws -> PackageOrTypeNameContext   {
-		return try packageOrTypeName(0)
-	}
 	@discardableResult
-	private func packageOrTypeName(_ _p: Int) throws -> PackageOrTypeNameContext   {
-		let _parentctx: ParserRuleContext? = _ctx
-		var _parentState: Int = getState()
-		var _localctx: PackageOrTypeNameContext = PackageOrTypeNameContext(_ctx, _parentState)
-		var  _prevctx: PackageOrTypeNameContext = _localctx
-		var _startState: Int = 56
-		try enterRecursionRule(_localctx, 56, Java8Parser.RULE_packageOrTypeName, _p)
+	open func packageOrTypeName() throws -> PackageOrTypeNameContext {
+		var _localctx: PackageOrTypeNameContext = PackageOrTypeNameContext(_ctx, getState())
+		try enterRule(_localctx, 40, Java8Parser.RULE_packageOrTypeName)
 		defer {
-	    		try! unrollRecursionContexts(_parentctx)
+	    		try! exitRule()
 	    }
 		do {
-			var _alt: Int
-			try enterOuterAlt(_localctx, 1)
-			setState(689)
-			try match(Java8Parser.Tokens.Identifier.rawValue)
+			var _alt:Int
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(568)
+		 	try match(Java8Parser.Identifier)
+		 	setState(573)
+		 	try _errHandler.sync(self)
+		 	_alt = try getInterpreter().adaptivePredict(_input,25,_ctx)
+		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
+		 		if ( _alt==1 ) {
+		 			setState(569)
+		 			try match(Java8Parser.DOT)
+		 			setState(570)
+		 			try match(Java8Parser.Identifier)
 
-			_ctx!.stop = try _input.LT(-1)
-			setState(696)
-			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,34,_ctx)
-			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-				if ( _alt==1 ) {
-					if _parseListeners != nil {
-					   try triggerExitRuleEvent()
-					}
-					_prevctx = _localctx
-					_localctx = PackageOrTypeNameContext(_parentctx, _parentState);
-					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_packageOrTypeName)
-					setState(691)
-					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-					}
-					setState(692)
-					try match(Java8Parser.Tokens.DOT.rawValue)
-					setState(693)
-					try match(Java8Parser.Tokens.Identifier.rawValue)
-
-			 
-				}
-				setState(698)
-				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,34,_ctx)
-			}
+		 	 
+		 		}
+		 		setState(575)
+		 		try _errHandler.sync(self)
+		 		_alt = try getInterpreter().adaptivePredict(_input,25,_ctx)
+		 	}
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2495,12 +1870,12 @@ open class Java8Parser: Parser {
 			try _errHandler.recover(self, re)
 		}
 
-		return _localctx;
+		return _localctx
 	}
 	open class ExpressionNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func ambiguousName() -> AmbiguousNameContext? {
-			return getRuleContext(AmbiguousNameContext.self,0)
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
+		open func Identifier(_ i:Int) -> TerminalNode?{
+			return getToken(Java8Parser.Identifier, i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_expressionName }
 		override
@@ -2530,79 +1905,31 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func expressionName() throws -> ExpressionNameContext {
 		var _localctx: ExpressionNameContext = ExpressionNameContext(_ctx, getState())
-		try enterRule(_localctx, 58, Java8Parser.RULE_expressionName)
+		try enterRule(_localctx, 42, Java8Parser.RULE_expressionName)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(704)
-		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,35, _ctx)) {
-		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(699)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(700)
-		 		try ambiguousName(0)
-		 		setState(701)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(702)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-
-		 		break
-		 	default: break
-		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class MethodNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_methodName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterMethodName(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitMethodName(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitMethodName(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitMethodName(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func methodName() throws -> MethodNameContext {
-		var _localctx: MethodNameContext = MethodNameContext(_ctx, getState())
-		try enterRule(_localctx, 60, Java8Parser.RULE_methodName)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
+			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(706)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	setState(576)
+		 	try match(Java8Parser.Identifier)
+		 	setState(581)
+		 	try _errHandler.sync(self)
+		 	_alt = try getInterpreter().adaptivePredict(_input,26,_ctx)
+		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
+		 		if ( _alt==1 ) {
+		 			setState(577)
+		 			try match(Java8Parser.DOT)
+		 			setState(578)
+		 			try match(Java8Parser.Identifier)
+
+		 	 
+		 		}
+		 		setState(583)
+		 		try _errHandler.sync(self)
+		 		_alt = try getInterpreter().adaptivePredict(_input,26,_ctx)
+		 	}
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2612,98 +1939,9 @@ open class Java8Parser: Parser {
 		}
 
 		return _localctx
-	}
-
-	open class AmbiguousNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func ambiguousName() -> AmbiguousNameContext? {
-			return getRuleContext(AmbiguousNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_ambiguousName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterAmbiguousName(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitAmbiguousName(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitAmbiguousName(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitAmbiguousName(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-
-	public final  func ambiguousName( ) throws -> AmbiguousNameContext   {
-		return try ambiguousName(0)
-	}
-	@discardableResult
-	private func ambiguousName(_ _p: Int) throws -> AmbiguousNameContext   {
-		let _parentctx: ParserRuleContext? = _ctx
-		var _parentState: Int = getState()
-		var _localctx: AmbiguousNameContext = AmbiguousNameContext(_ctx, _parentState)
-		var  _prevctx: AmbiguousNameContext = _localctx
-		var _startState: Int = 62
-		try enterRecursionRule(_localctx, 62, Java8Parser.RULE_ambiguousName, _p)
-		defer {
-	    		try! unrollRecursionContexts(_parentctx)
-	    }
-		do {
-			var _alt: Int
-			try enterOuterAlt(_localctx, 1)
-			setState(709)
-			try match(Java8Parser.Tokens.Identifier.rawValue)
-
-			_ctx!.stop = try _input.LT(-1)
-			setState(716)
-			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,36,_ctx)
-			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-				if ( _alt==1 ) {
-					if _parseListeners != nil {
-					   try triggerExitRuleEvent()
-					}
-					_prevctx = _localctx
-					_localctx = AmbiguousNameContext(_parentctx, _parentState);
-					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_ambiguousName)
-					setState(711)
-					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-					}
-					setState(712)
-					try match(Java8Parser.Tokens.DOT.rawValue)
-					setState(713)
-					try match(Java8Parser.Tokens.Identifier.rawValue)
-
-			 
-				}
-				setState(718)
-				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,36,_ctx)
-			}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx;
 	}
 	open class CompilationUnitContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(Java8Parser.Tokens.EOF.rawValue, 0) }
+		open func EOF() -> TerminalNode? { return getToken(Java8Parser.EOF, 0) }
 		open func packageDeclaration() -> PackageDeclarationContext? {
 			return getRuleContext(PackageDeclarationContext.self,0)
 		}
@@ -2747,61 +1985,61 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func compilationUnit() throws -> CompilationUnitContext {
 		var _localctx: CompilationUnitContext = CompilationUnitContext(_ctx, getState())
-		try enterRule(_localctx, 64, Java8Parser.RULE_compilationUnit)
+		try enterRule(_localctx, 44, Java8Parser.RULE_compilationUnit)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(720)
+		 	setState(585)
 		 	try _errHandler.sync(self)
-		 	switch (try getInterpreter().adaptivePredict(_input,37,_ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,27,_ctx)) {
 		 	case 1:
-		 		setState(719)
+		 		setState(584)
 		 		try packageDeclaration()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(725)
+		 	setState(590)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.IMPORT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.IMPORT
 		 	      return testSet
 		 	 }()) {
-		 		setState(722)
+		 		setState(587)
 		 		try importDeclaration()
 
 
-		 		setState(727)
+		 		setState(592)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(731)
+		 	setState(596)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.INTERFACE.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.CLASS,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.INTERFACE,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(728)
+		 		setState(593)
 		 		try typeDeclaration()
 
 
-		 		setState(733)
+		 		setState(598)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(734)
-		 	try match(Java8Parser.Tokens.EOF.rawValue)
+		 	setState(599)
+		 	try match(Java8Parser.EOF)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2813,15 +2051,15 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class PackageDeclarationContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Tokens.Identifier.rawValue) }
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
 		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Java8Parser.Tokens.Identifier.rawValue, i)
+			return getToken(Java8Parser.Identifier, i)
 		}
-		open func packageModifier() -> Array<PackageModifierContext> {
-			return getRuleContexts(PackageModifierContext.self)
+		open func annotation() -> Array<AnnotationContext> {
+			return getRuleContexts(AnnotationContext.self)
 		}
-		open func packageModifier(_ i: Int) -> PackageModifierContext? {
-			return getRuleContext(PackageModifierContext.self,i)
+		open func annotation(_ i: Int) -> AnnotationContext? {
+			return getRuleContext(AnnotationContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_packageDeclaration }
 		override
@@ -2851,103 +2089,53 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func packageDeclaration() throws -> PackageDeclarationContext {
 		var _localctx: PackageDeclarationContext = PackageDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 66, Java8Parser.RULE_packageDeclaration)
+		try enterRule(_localctx, 46, Java8Parser.RULE_packageDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(739)
+		 	setState(604)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(736)
-		 		try packageModifier()
+		 		setState(601)
+		 		try annotation()
 
 
-		 		setState(741)
+		 		setState(606)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(742)
-		 	try match(Java8Parser.Tokens.PACKAGE.rawValue)
-		 	setState(743)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(748)
+		 	setState(607)
+		 	try match(Java8Parser.PACKAGE)
+		 	setState(608)
+		 	try match(Java8Parser.Identifier)
+		 	setState(613)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.DOT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.DOT
 		 	      return testSet
 		 	 }()) {
-		 		setState(744)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(745)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(609)
+		 		try match(Java8Parser.DOT)
+		 		setState(610)
+		 		try match(Java8Parser.Identifier)
 
 
-		 		setState(750)
+		 		setState(615)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(751)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PackageModifierContext:ParserRuleContext {
-		open func annotation() -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_packageModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPackageModifier(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPackageModifier(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPackageModifier(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPackageModifier(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func packageModifier() throws -> PackageModifierContext {
-		var _localctx: PackageModifierContext = PackageModifierContext(_ctx, getState())
-		try enterRule(_localctx, 68, Java8Parser.RULE_packageModifier)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(753)
-		 	try annotation()
+		 	setState(616)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2959,18 +2147,13 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ImportDeclarationContext:ParserRuleContext {
-		open func singleTypeImportDeclaration() -> SingleTypeImportDeclarationContext? {
-			return getRuleContext(SingleTypeImportDeclarationContext.self,0)
+		open func typeName() -> TypeNameContext? {
+			return getRuleContext(TypeNameContext.self,0)
 		}
-		open func typeImportOnDemandDeclaration() -> TypeImportOnDemandDeclarationContext? {
-			return getRuleContext(TypeImportOnDemandDeclarationContext.self,0)
+		open func packageOrTypeName() -> PackageOrTypeNameContext? {
+			return getRuleContext(PackageOrTypeNameContext.self,0)
 		}
-		open func singleStaticImportDeclaration() -> SingleStaticImportDeclarationContext? {
-			return getRuleContext(SingleStaticImportDeclarationContext.self,0)
-		}
-		open func staticImportOnDemandDeclaration() -> StaticImportOnDemandDeclarationContext? {
-			return getRuleContext(StaticImportOnDemandDeclarationContext.self,0)
-		}
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_importDeclaration }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -2999,273 +2182,66 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func importDeclaration() throws -> ImportDeclarationContext {
 		var _localctx: ImportDeclarationContext = ImportDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 70, Java8Parser.RULE_importDeclaration)
+		try enterRule(_localctx, 48, Java8Parser.RULE_importDeclaration)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(759)
+		 	setState(635)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,42, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,32, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(755)
-		 		try singleTypeImportDeclaration()
+		 		setState(618)
+		 		try match(Java8Parser.IMPORT)
+		 		setState(619)
+		 		try typeName()
+		 		setState(620)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(756)
-		 		try typeImportOnDemandDeclaration()
+		 		setState(622)
+		 		try match(Java8Parser.IMPORT)
+		 		setState(623)
+		 		try packageOrTypeName()
+		 		setState(624)
+		 		try match(Java8Parser.DOT)
+		 		setState(625)
+		 		try match(Java8Parser.MUL)
+		 		setState(626)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(757)
-		 		try singleStaticImportDeclaration()
-
-		 		break
-		 	case 4:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(758)
-		 		try staticImportOnDemandDeclaration()
+		 		setState(628)
+		 		try match(Java8Parser.IMPORT)
+		 		setState(629)
+		 		try match(Java8Parser.STATIC)
+		 		setState(630)
+		 		try typeName()
+		 		setState(631)
+		 		try match(Java8Parser.DOT)
+		 		setState(632)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Java8Parser.MUL || _la == Java8Parser.Identifier
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		} else {
+		 			try consume()
+		 		}
+		 		setState(633)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default: break
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class SingleTypeImportDeclarationContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_singleTypeImportDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterSingleTypeImportDeclaration(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitSingleTypeImportDeclaration(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitSingleTypeImportDeclaration(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitSingleTypeImportDeclaration(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func singleTypeImportDeclaration() throws -> SingleTypeImportDeclarationContext {
-		var _localctx: SingleTypeImportDeclarationContext = SingleTypeImportDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 72, Java8Parser.RULE_singleTypeImportDeclaration)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(761)
-		 	try match(Java8Parser.Tokens.IMPORT.rawValue)
-		 	setState(762)
-		 	try typeName()
-		 	setState(763)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class TypeImportOnDemandDeclarationContext:ParserRuleContext {
-		open func packageOrTypeName() -> PackageOrTypeNameContext? {
-			return getRuleContext(PackageOrTypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeImportOnDemandDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterTypeImportOnDemandDeclaration(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitTypeImportOnDemandDeclaration(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitTypeImportOnDemandDeclaration(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitTypeImportOnDemandDeclaration(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func typeImportOnDemandDeclaration() throws -> TypeImportOnDemandDeclarationContext {
-		var _localctx: TypeImportOnDemandDeclarationContext = TypeImportOnDemandDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 74, Java8Parser.RULE_typeImportOnDemandDeclaration)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(765)
-		 	try match(Java8Parser.Tokens.IMPORT.rawValue)
-		 	setState(766)
-		 	try packageOrTypeName(0)
-		 	setState(767)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(768)
-		 	try match(Java8Parser.Tokens.MUL.rawValue)
-		 	setState(769)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class SingleStaticImportDeclarationContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_singleStaticImportDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterSingleStaticImportDeclaration(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitSingleStaticImportDeclaration(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitSingleStaticImportDeclaration(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitSingleStaticImportDeclaration(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func singleStaticImportDeclaration() throws -> SingleStaticImportDeclarationContext {
-		var _localctx: SingleStaticImportDeclarationContext = SingleStaticImportDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 76, Java8Parser.RULE_singleStaticImportDeclaration)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(771)
-		 	try match(Java8Parser.Tokens.IMPORT.rawValue)
-		 	setState(772)
-		 	try match(Java8Parser.Tokens.STATIC.rawValue)
-		 	setState(773)
-		 	try typeName()
-		 	setState(774)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(775)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(776)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class StaticImportOnDemandDeclarationContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_staticImportOnDemandDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterStaticImportOnDemandDeclaration(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitStaticImportOnDemandDeclaration(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitStaticImportOnDemandDeclaration(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitStaticImportOnDemandDeclaration(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func staticImportOnDemandDeclaration() throws -> StaticImportOnDemandDeclarationContext {
-		var _localctx: StaticImportOnDemandDeclarationContext = StaticImportOnDemandDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 78, Java8Parser.RULE_staticImportOnDemandDeclaration)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(778)
-		 	try match(Java8Parser.Tokens.IMPORT.rawValue)
-		 	setState(779)
-		 	try match(Java8Parser.Tokens.STATIC.rawValue)
-		 	setState(780)
-		 	try typeName()
-		 	setState(781)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(782)
-		 	try match(Java8Parser.Tokens.MUL.rawValue)
-		 	setState(783)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -3310,30 +2286,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeDeclaration() throws -> TypeDeclarationContext {
 		var _localctx: TypeDeclarationContext = TypeDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 80, Java8Parser.RULE_typeDeclaration)
+		try enterRule(_localctx, 50, Java8Parser.RULE_typeDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(788)
+		 	setState(640)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,43, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,33, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(785)
+		 		setState(637)
 		 		try classDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(786)
+		 		setState(638)
 		 		try interfaceDeclaration()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(787)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(639)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default: break
@@ -3382,23 +2358,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classDeclaration() throws -> ClassDeclarationContext {
 		var _localctx: ClassDeclarationContext = ClassDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 82, Java8Parser.RULE_classDeclaration)
+		try enterRule(_localctx, 52, Java8Parser.RULE_classDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(792)
+		 	setState(644)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,44, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,34, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(790)
+		 		setState(642)
 		 		try normalClassDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(791)
+		 		setState(643)
 		 		try enumDeclaration()
 
 		 		break
@@ -3414,7 +2390,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class NormalClassDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func classBody() -> ClassBodyContext? {
 			return getRuleContext(ClassBodyContext.self,0)
 		}
@@ -3461,77 +2437,77 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func normalClassDeclaration() throws -> NormalClassDeclarationContext {
 		var _localctx: NormalClassDeclarationContext = NormalClassDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 84, Java8Parser.RULE_normalClassDeclaration)
+		try enterRule(_localctx, 54, Java8Parser.RULE_normalClassDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(797)
+		 	setState(649)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.FINAL,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.STRICTFP]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(794)
+		 		setState(646)
 		 		try classModifier()
 
 
-		 		setState(799)
+		 		setState(651)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(800)
-		 	try match(Java8Parser.Tokens.CLASS.rawValue)
-		 	setState(801)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(803)
+		 	setState(652)
+		 	try match(Java8Parser.CLASS)
+		 	setState(653)
+		 	try match(Java8Parser.Identifier)
+		 	setState(655)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(802)
+		 		setState(654)
 		 		try typeParameters()
 
 		 	}
 
-		 	setState(806)
+		 	setState(658)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.EXTENDS.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.EXTENDS
 		 	      return testSet
 		 	 }()) {
-		 		setState(805)
+		 		setState(657)
 		 		try superclass()
 
 		 	}
 
-		 	setState(809)
+		 	setState(661)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.IMPLEMENTS.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.IMPLEMENTS
 		 	      return testSet
 		 	 }()) {
-		 		setState(808)
+		 		setState(660)
 		 		try superinterfaces()
 
 		 	}
 
-		 	setState(811)
+		 	setState(663)
 		 	try classBody()
 
 		}
@@ -3575,67 +2551,67 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classModifier() throws -> ClassModifierContext {
 		var _localctx: ClassModifierContext = ClassModifierContext(_ctx, getState())
-		try enterRule(_localctx, 86, Java8Parser.RULE_classModifier)
+		try enterRule(_localctx, 56, Java8Parser.RULE_classModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(821)
+		 	setState(673)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(813)
+		 		setState(665)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(814)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(666)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .PROTECTED:
+		 	case Java8Parser.PROTECTED:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(815)
-		 		try match(Java8Parser.Tokens.PROTECTED.rawValue)
+		 		setState(667)
+		 		try match(Java8Parser.PROTECTED)
 
 		 		break
 
-		 	case .PRIVATE:
+		 	case Java8Parser.PRIVATE:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(816)
-		 		try match(Java8Parser.Tokens.PRIVATE.rawValue)
+		 		setState(668)
+		 		try match(Java8Parser.PRIVATE)
 
 		 		break
 
-		 	case .ABSTRACT:
+		 	case Java8Parser.ABSTRACT:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(817)
-		 		try match(Java8Parser.Tokens.ABSTRACT.rawValue)
+		 		setState(669)
+		 		try match(Java8Parser.ABSTRACT)
 
 		 		break
 
-		 	case .STATIC:
+		 	case Java8Parser.STATIC:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(818)
-		 		try match(Java8Parser.Tokens.STATIC.rawValue)
+		 		setState(670)
+		 		try match(Java8Parser.STATIC)
 
 		 		break
 
-		 	case .FINAL:
+		 	case Java8Parser.FINAL:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(819)
-		 		try match(Java8Parser.Tokens.FINAL.rawValue)
+		 		setState(671)
+		 		try match(Java8Parser.FINAL)
 
 		 		break
 
-		 	case .STRICTFP:
+		 	case Java8Parser.STRICTFP:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(820)
-		 		try match(Java8Parser.Tokens.STRICTFP.rawValue)
+		 		setState(672)
+		 		try match(Java8Parser.STRICTFP)
 
 		 		break
 		 	default:
@@ -3651,8 +2627,11 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class TypeParametersContext:ParserRuleContext {
-		open func typeParameterList() -> TypeParameterListContext? {
-			return getRuleContext(TypeParameterListContext.self,0)
+		open func typeParameter() -> Array<TypeParameterContext> {
+			return getRuleContexts(TypeParameterContext.self)
+		}
+		open func typeParameter(_ i: Int) -> TypeParameterContext? {
+			return getRuleContext(TypeParameterContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeParameters }
 		override
@@ -3682,90 +2661,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeParameters() throws -> TypeParametersContext {
 		var _localctx: TypeParametersContext = TypeParametersContext(_ctx, getState())
-		try enterRule(_localctx, 88, Java8Parser.RULE_typeParameters)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(823)
-		 	try match(Java8Parser.Tokens.LT.rawValue)
-		 	setState(824)
-		 	try typeParameterList()
-		 	setState(825)
-		 	try match(Java8Parser.Tokens.GT.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class TypeParameterListContext:ParserRuleContext {
-		open func typeParameter() -> Array<TypeParameterContext> {
-			return getRuleContexts(TypeParameterContext.self)
-		}
-		open func typeParameter(_ i: Int) -> TypeParameterContext? {
-			return getRuleContext(TypeParameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_typeParameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterTypeParameterList(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitTypeParameterList(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitTypeParameterList(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitTypeParameterList(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func typeParameterList() throws -> TypeParameterListContext {
-		var _localctx: TypeParameterListContext = TypeParameterListContext(_ctx, getState())
-		try enterRule(_localctx, 90, Java8Parser.RULE_typeParameterList)
+		try enterRule(_localctx, 58, Java8Parser.RULE_typeParameters)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(827)
+		 	setState(675)
+		 	try match(Java8Parser.LT)
+		 	setState(676)
 		 	try typeParameter()
-		 	setState(832)
+		 	setState(681)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(828)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(829)
+		 		setState(677)
+		 		try match(Java8Parser.COMMA)
+		 		setState(678)
 		 		try typeParameter()
 
 
-		 		setState(834)
+		 		setState(683)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
+		 	setState(684)
+		 	try match(Java8Parser.GT)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3808,15 +2734,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func superclass() throws -> SuperclassContext {
 		var _localctx: SuperclassContext = SuperclassContext(_ctx, getState())
-		try enterRule(_localctx, 92, Java8Parser.RULE_superclass)
+		try enterRule(_localctx, 60, Java8Parser.RULE_superclass)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(835)
-		 	try match(Java8Parser.Tokens.EXTENDS.rawValue)
-		 	setState(836)
+		 	setState(686)
+		 	try match(Java8Parser.EXTENDS)
+		 	setState(687)
 		 	try classType()
 
 		}
@@ -3860,15 +2786,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func superinterfaces() throws -> SuperinterfacesContext {
 		var _localctx: SuperinterfacesContext = SuperinterfacesContext(_ctx, getState())
-		try enterRule(_localctx, 94, Java8Parser.RULE_superinterfaces)
+		try enterRule(_localctx, 62, Java8Parser.RULE_superinterfaces)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(838)
-		 	try match(Java8Parser.Tokens.IMPLEMENTS.rawValue)
-		 	setState(839)
+		 	setState(689)
+		 	try match(Java8Parser.IMPLEMENTS)
+		 	setState(690)
 		 	try interfaceTypeList()
 
 		}
@@ -3915,30 +2841,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceTypeList() throws -> InterfaceTypeListContext {
 		var _localctx: InterfaceTypeListContext = InterfaceTypeListContext(_ctx, getState())
-		try enterRule(_localctx, 96, Java8Parser.RULE_interfaceTypeList)
+		try enterRule(_localctx, 64, Java8Parser.RULE_interfaceTypeList)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(841)
+		 	setState(692)
 		 	try interfaceType()
-		 	setState(846)
+		 	setState(697)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(842)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(843)
+		 		setState(693)
+		 		try match(Java8Parser.COMMA)
+		 		setState(694)
 		 		try interfaceType()
 
 
-		 		setState(848)
+		 		setState(699)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -3987,40 +2913,40 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classBody() throws -> ClassBodyContext {
 		var _localctx: ClassBodyContext = ClassBodyContext(_ctx, getState())
-		try enterRule(_localctx, 98, Java8Parser.RULE_classBody)
+		try enterRule(_localctx, 66, Java8Parser.RULE_classBody)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(849)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(853)
+		 	setState(700)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(704)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.INTERFACE.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NATIVE.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SYNCHRONIZED.rawValue,Java8Parser.Tokens.TRANSIENT.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.VOLATILE.rawValue,Java8Parser.Tokens.LBRACE.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.INTERFACE,Java8Parser.LONG,Java8Parser.NATIVE,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SYNCHRONIZED,Java8Parser.TRANSIENT,Java8Parser.VOID,Java8Parser.VOLATILE,Java8Parser.LBRACE,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.LT.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.LT,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 68)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(850)
+		 		setState(701)
 		 		try classBodyDeclaration()
 
 
-		 		setState(855)
+		 		setState(706)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(856)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(707)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4072,35 +2998,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classBodyDeclaration() throws -> ClassBodyDeclarationContext {
 		var _localctx: ClassBodyDeclarationContext = ClassBodyDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 100, Java8Parser.RULE_classBodyDeclaration)
+		try enterRule(_localctx, 68, Java8Parser.RULE_classBodyDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(862)
+		 	setState(713)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,53, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,43, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(858)
+		 		setState(709)
 		 		try classMemberDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(859)
+		 		setState(710)
 		 		try instanceInitializer()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(860)
+		 		setState(711)
 		 		try staticInitializer()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(861)
+		 		setState(712)
 		 		try constructorDeclaration()
 
 		 		break
@@ -4156,42 +3082,42 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classMemberDeclaration() throws -> ClassMemberDeclarationContext {
 		var _localctx: ClassMemberDeclarationContext = ClassMemberDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 102, Java8Parser.RULE_classMemberDeclaration)
+		try enterRule(_localctx, 70, Java8Parser.RULE_classMemberDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(869)
+		 	setState(720)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,54, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,44, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(864)
+		 		setState(715)
 		 		try fieldDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(865)
+		 		setState(716)
 		 		try methodDeclaration()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(866)
+		 		setState(717)
 		 		try classDeclaration()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(867)
+		 		setState(718)
 		 		try interfaceDeclaration()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(868)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(719)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default: break
@@ -4246,39 +3172,39 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func fieldDeclaration() throws -> FieldDeclarationContext {
 		var _localctx: FieldDeclarationContext = FieldDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 104, Java8Parser.RULE_fieldDeclaration)
+		try enterRule(_localctx, 72, Java8Parser.RULE_fieldDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(874)
+		 	setState(725)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.TRANSIENT.rawValue,Java8Parser.Tokens.VOLATILE.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.FINAL,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.TRANSIENT,Java8Parser.VOLATILE]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(871)
+		 		setState(722)
 		 		try fieldModifier()
 
 
-		 		setState(876)
+		 		setState(727)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(877)
+		 	setState(728)
 		 	try unannType()
-		 	setState(878)
+		 	setState(729)
 		 	try variableDeclaratorList()
-		 	setState(879)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(730)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4321,67 +3247,67 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func fieldModifier() throws -> FieldModifierContext {
 		var _localctx: FieldModifierContext = FieldModifierContext(_ctx, getState())
-		try enterRule(_localctx, 106, Java8Parser.RULE_fieldModifier)
+		try enterRule(_localctx, 74, Java8Parser.RULE_fieldModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(889)
+		 	setState(740)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(881)
+		 		setState(732)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(882)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(733)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .PROTECTED:
+		 	case Java8Parser.PROTECTED:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(883)
-		 		try match(Java8Parser.Tokens.PROTECTED.rawValue)
+		 		setState(734)
+		 		try match(Java8Parser.PROTECTED)
 
 		 		break
 
-		 	case .PRIVATE:
+		 	case Java8Parser.PRIVATE:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(884)
-		 		try match(Java8Parser.Tokens.PRIVATE.rawValue)
+		 		setState(735)
+		 		try match(Java8Parser.PRIVATE)
 
 		 		break
 
-		 	case .STATIC:
+		 	case Java8Parser.STATIC:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(885)
-		 		try match(Java8Parser.Tokens.STATIC.rawValue)
+		 		setState(736)
+		 		try match(Java8Parser.STATIC)
 
 		 		break
 
-		 	case .FINAL:
+		 	case Java8Parser.FINAL:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(886)
-		 		try match(Java8Parser.Tokens.FINAL.rawValue)
+		 		setState(737)
+		 		try match(Java8Parser.FINAL)
 
 		 		break
 
-		 	case .TRANSIENT:
+		 	case Java8Parser.TRANSIENT:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(887)
-		 		try match(Java8Parser.Tokens.TRANSIENT.rawValue)
+		 		setState(738)
+		 		try match(Java8Parser.TRANSIENT)
 
 		 		break
 
-		 	case .VOLATILE:
+		 	case Java8Parser.VOLATILE:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(888)
-		 		try match(Java8Parser.Tokens.VOLATILE.rawValue)
+		 		setState(739)
+		 		try match(Java8Parser.VOLATILE)
 
 		 		break
 		 	default:
@@ -4431,30 +3357,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func variableDeclaratorList() throws -> VariableDeclaratorListContext {
 		var _localctx: VariableDeclaratorListContext = VariableDeclaratorListContext(_ctx, getState())
-		try enterRule(_localctx, 108, Java8Parser.RULE_variableDeclaratorList)
+		try enterRule(_localctx, 76, Java8Parser.RULE_variableDeclaratorList)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(891)
+		 	setState(742)
 		 	try variableDeclarator()
-		 	setState(896)
+		 	setState(747)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(892)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(893)
+		 		setState(743)
+		 		try match(Java8Parser.COMMA)
+		 		setState(744)
 		 		try variableDeclarator()
 
 
-		 		setState(898)
+		 		setState(749)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -4503,26 +3429,26 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func variableDeclarator() throws -> VariableDeclaratorContext {
 		var _localctx: VariableDeclaratorContext = VariableDeclaratorContext(_ctx, getState())
-		try enterRule(_localctx, 110, Java8Parser.RULE_variableDeclarator)
+		try enterRule(_localctx, 78, Java8Parser.RULE_variableDeclarator)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(899)
+		 	setState(750)
 		 	try variableDeclaratorId()
-		 	setState(902)
+		 	setState(753)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.ASSIGN.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.ASSIGN
 		 	      return testSet
 		 	 }()) {
-		 		setState(900)
-		 		try match(Java8Parser.Tokens.ASSIGN.rawValue)
-		 		setState(901)
+		 		setState(751)
+		 		try match(Java8Parser.ASSIGN)
+		 		setState(752)
 		 		try variableInitializer()
 
 		 	}
@@ -4538,7 +3464,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class VariableDeclaratorIdContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func dims() -> DimsContext? {
 			return getRuleContext(DimsContext.self,0)
 		}
@@ -4570,24 +3496,24 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func variableDeclaratorId() throws -> VariableDeclaratorIdContext {
 		var _localctx: VariableDeclaratorIdContext = VariableDeclaratorIdContext(_ctx, getState())
-		try enterRule(_localctx, 112, Java8Parser.RULE_variableDeclaratorId)
+		try enterRule(_localctx, 80, Java8Parser.RULE_variableDeclaratorId)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(904)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(906)
+		 	setState(755)
+		 	try match(Java8Parser.Identifier)
+		 	setState(757)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LBRACK || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(905)
+		 		setState(756)
 		 		try dims()
 
 		 	}
@@ -4637,50 +3563,50 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func variableInitializer() throws -> VariableInitializerContext {
 		var _localctx: VariableInitializerContext = VariableInitializerContext(_ctx, getState())
-		try enterRule(_localctx, 114, Java8Parser.RULE_variableInitializer)
+		try enterRule(_localctx, 82, Java8Parser.RULE_variableInitializer)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(910)
+		 	setState(761)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .BOOLEAN:fallthrough
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .NEW:fallthrough
-		 	case .SHORT:fallthrough
-		 	case .SUPER:fallthrough
-		 	case .THIS:fallthrough
-		 	case .VOID:fallthrough
-		 	case .IntegerLiteral:fallthrough
-		 	case .FloatingPointLiteral:fallthrough
-		 	case .BooleanLiteral:fallthrough
-		 	case .CharacterLiteral:fallthrough
-		 	case .StringLiteral:fallthrough
-		 	case .NullLiteral:fallthrough
-		 	case .LPAREN:fallthrough
-		 	case .BANG:fallthrough
-		 	case .TILDE:fallthrough
-		 	case .INC:fallthrough
-		 	case .DEC:fallthrough
-		 	case .ADD:fallthrough
-		 	case .SUB:fallthrough
-		 	case .Identifier:fallthrough
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BOOLEAN:fallthrough
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.NEW:fallthrough
+		 	case Java8Parser.SHORT:fallthrough
+		 	case Java8Parser.SUPER:fallthrough
+		 	case Java8Parser.THIS:fallthrough
+		 	case Java8Parser.VOID:fallthrough
+		 	case Java8Parser.IntegerLiteral:fallthrough
+		 	case Java8Parser.FloatingPointLiteral:fallthrough
+		 	case Java8Parser.BooleanLiteral:fallthrough
+		 	case Java8Parser.CharacterLiteral:fallthrough
+		 	case Java8Parser.StringLiteral:fallthrough
+		 	case Java8Parser.NullLiteral:fallthrough
+		 	case Java8Parser.LPAREN:fallthrough
+		 	case Java8Parser.BANG:fallthrough
+		 	case Java8Parser.TILDE:fallthrough
+		 	case Java8Parser.INC:fallthrough
+		 	case Java8Parser.DEC:fallthrough
+		 	case Java8Parser.ADD:fallthrough
+		 	case Java8Parser.SUB:fallthrough
+		 	case Java8Parser.Identifier:fallthrough
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(908)
+		 		setState(759)
 		 		try expression()
 
 		 		break
 
-		 	case .LBRACE:
+		 	case Java8Parser.LBRACE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(909)
+		 		setState(760)
 		 		try arrayInitializer()
 
 		 		break
@@ -4731,23 +3657,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannType() throws -> UnannTypeContext {
 		var _localctx: UnannTypeContext = UnannTypeContext(_ctx, getState())
-		try enterRule(_localctx, 116, Java8Parser.RULE_unannType)
+		try enterRule(_localctx, 84, Java8Parser.RULE_unannType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(914)
+		 	setState(765)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,61, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,51, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(912)
+		 		setState(763)
 		 		try unannPrimitiveType()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(913)
+		 		setState(764)
 		 		try unannReferenceType()
 
 		 		break
@@ -4794,31 +3720,31 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannPrimitiveType() throws -> UnannPrimitiveTypeContext {
 		var _localctx: UnannPrimitiveTypeContext = UnannPrimitiveTypeContext(_ctx, getState())
-		try enterRule(_localctx, 118, Java8Parser.RULE_unannPrimitiveType)
+		try enterRule(_localctx, 86, Java8Parser.RULE_unannPrimitiveType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(918)
+		 	setState(769)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .SHORT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.SHORT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(916)
+		 		setState(767)
 		 		try numericType()
 
 		 		break
 
-		 	case .BOOLEAN:
+		 	case Java8Parser.BOOLEAN:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(917)
-		 		try match(Java8Parser.Tokens.BOOLEAN.rawValue)
+		 		setState(768)
+		 		try match(Java8Parser.BOOLEAN)
 
 		 		break
 		 	default:
@@ -4871,29 +3797,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannReferenceType() throws -> UnannReferenceTypeContext {
 		var _localctx: UnannReferenceTypeContext = UnannReferenceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 120, Java8Parser.RULE_unannReferenceType)
+		try enterRule(_localctx, 88, Java8Parser.RULE_unannReferenceType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(923)
+		 	setState(774)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,63, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,53, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(920)
+		 		setState(771)
 		 		try unannClassOrInterfaceType()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(921)
+		 		setState(772)
 		 		try unannTypeVariable()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(922)
+		 		setState(773)
 		 		try unannArrayType()
 
 		 		break
@@ -4912,20 +3838,11 @@ open class Java8Parser: Parser {
 		open func unannClassType_lfno_unannClassOrInterfaceType() -> UnannClassType_lfno_unannClassOrInterfaceTypeContext? {
 			return getRuleContext(UnannClassType_lfno_unannClassOrInterfaceTypeContext.self,0)
 		}
-		open func unannInterfaceType_lfno_unannClassOrInterfaceType() -> UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext? {
-			return getRuleContext(UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext.self,0)
-		}
 		open func unannClassType_lf_unannClassOrInterfaceType() -> Array<UnannClassType_lf_unannClassOrInterfaceTypeContext> {
 			return getRuleContexts(UnannClassType_lf_unannClassOrInterfaceTypeContext.self)
 		}
 		open func unannClassType_lf_unannClassOrInterfaceType(_ i: Int) -> UnannClassType_lf_unannClassOrInterfaceTypeContext? {
 			return getRuleContext(UnannClassType_lf_unannClassOrInterfaceTypeContext.self,i)
-		}
-		open func unannInterfaceType_lf_unannClassOrInterfaceType() -> Array<UnannInterfaceType_lf_unannClassOrInterfaceTypeContext> {
-			return getRuleContexts(UnannInterfaceType_lf_unannClassOrInterfaceTypeContext.self)
-		}
-		open func unannInterfaceType_lf_unannClassOrInterfaceType(_ i: Int) -> UnannInterfaceType_lf_unannClassOrInterfaceTypeContext? {
-			return getRuleContext(UnannInterfaceType_lf_unannClassOrInterfaceTypeContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannClassOrInterfaceType }
 		override
@@ -4955,53 +3872,28 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannClassOrInterfaceType() throws -> UnannClassOrInterfaceTypeContext {
 		var _localctx: UnannClassOrInterfaceTypeContext = UnannClassOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 122, Java8Parser.RULE_unannClassOrInterfaceType)
+		try enterRule(_localctx, 90, Java8Parser.RULE_unannClassOrInterfaceType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(927)
+		 	setState(776)
+		 	try unannClassType_lfno_unannClassOrInterfaceType()
+		 	setState(780)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,64, _ctx)) {
-		 	case 1:
-		 		setState(925)
-		 		try unannClassType_lfno_unannClassOrInterfaceType()
-
-		 		break
-		 	case 2:
-		 		setState(926)
-		 		try unannInterfaceType_lfno_unannClassOrInterfaceType()
-
-		 		break
-		 	default: break
-		 	}
-		 	setState(933)
-		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,66,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,54,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(931)
-		 			try _errHandler.sync(self)
-		 			switch(try getInterpreter().adaptivePredict(_input,65, _ctx)) {
-		 			case 1:
-		 				setState(929)
-		 				try unannClassType_lf_unannClassOrInterfaceType()
+		 			setState(777)
+		 			try unannClassType_lf_unannClassOrInterfaceType()
 
-		 				break
-		 			case 2:
-		 				setState(930)
-		 				try unannInterfaceType_lf_unannClassOrInterfaceType()
-
-		 				break
-		 			default: break
-		 			}
 		 	 
 		 		}
-		 		setState(935)
+		 		setState(782)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,66,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,54,_ctx)
 		 	}
 
 		}
@@ -5014,7 +3906,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class UnannClassTypeContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -5055,28 +3947,28 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannClassType() throws -> UnannClassTypeContext {
 		var _localctx: UnannClassTypeContext = UnannClassTypeContext(_ctx, getState())
-		try enterRule(_localctx, 124, Java8Parser.RULE_unannClassType)
+		try enterRule(_localctx, 92, Java8Parser.RULE_unannClassType)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(952)
+		 	setState(799)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,70, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,58, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(936)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(938)
+		 		setState(783)
+		 		try match(Java8Parser.Identifier)
+		 		setState(785)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(937)
+		 			setState(784)
 		 			try typeArguments()
 
 		 		}
@@ -5085,37 +3977,37 @@ open class Java8Parser: Parser {
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(940)
+		 		setState(787)
 		 		try unannClassOrInterfaceType()
-		 		setState(941)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(945)
+		 		setState(788)
+		 		try match(Java8Parser.DOT)
+		 		setState(792)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(942)
+		 			setState(789)
 		 			try annotation()
 
 
-		 			setState(947)
+		 			setState(794)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(948)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(950)
+		 		setState(795)
+		 		try match(Java8Parser.Identifier)
+		 		setState(797)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(949)
+		 			setState(796)
 		 			try typeArguments()
 
 		 		}
@@ -5133,8 +4025,73 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
+	open class UnannClassType_lfno_unannClassOrInterfaceTypeContext:ParserRuleContext {
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
+		open func typeArguments() -> TypeArgumentsContext? {
+			return getRuleContext(TypeArgumentsContext.self,0)
+		}
+		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannClassType_lfno_unannClassOrInterfaceType }
+		override
+		open func enterRule(_ listener: ParseTreeListener) {
+			if listener is Java8Listener {
+			 	(listener as! Java8Listener).enterUnannClassType_lfno_unannClassOrInterfaceType(self)
+			}
+		}
+		override
+		open func exitRule(_ listener: ParseTreeListener) {
+			if listener is Java8Listener {
+			 	(listener as! Java8Listener).exitUnannClassType_lfno_unannClassOrInterfaceType(self)
+			}
+		}
+		override
+		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if visitor is Java8Visitor {
+			     return (visitor as! Java8Visitor<T>).visitUnannClassType_lfno_unannClassOrInterfaceType(self)
+			}else if visitor is Java8BaseVisitor {
+		    	 return (visitor as! Java8BaseVisitor<T>).visitUnannClassType_lfno_unannClassOrInterfaceType(self)
+		    }
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	open func unannClassType_lfno_unannClassOrInterfaceType() throws -> UnannClassType_lfno_unannClassOrInterfaceTypeContext {
+		var _localctx: UnannClassType_lfno_unannClassOrInterfaceTypeContext = UnannClassType_lfno_unannClassOrInterfaceTypeContext(_ctx, getState())
+		try enterRule(_localctx, 94, Java8Parser.RULE_unannClassType_lfno_unannClassOrInterfaceType)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(801)
+		 	try match(Java8Parser.Identifier)
+		 	setState(803)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.LT
+		 	      return testSet
+		 	 }()) {
+		 		setState(802)
+		 		try typeArguments()
+
+		 	}
+
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
 	open class UnannClassType_lf_unannClassOrInterfaceTypeContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func annotation() -> Array<AnnotationContext> {
 			return getRuleContexts(AnnotationContext.self)
 		}
@@ -5172,261 +4129,46 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannClassType_lf_unannClassOrInterfaceType() throws -> UnannClassType_lf_unannClassOrInterfaceTypeContext {
 		var _localctx: UnannClassType_lf_unannClassOrInterfaceTypeContext = UnannClassType_lf_unannClassOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 126, Java8Parser.RULE_unannClassType_lf_unannClassOrInterfaceType)
+		try enterRule(_localctx, 96, Java8Parser.RULE_unannClassType_lf_unannClassOrInterfaceType)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(954)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(958)
+		 	setState(805)
+		 	try match(Java8Parser.DOT)
+		 	setState(809)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(955)
+		 		setState(806)
 		 		try annotation()
 
 
-		 		setState(960)
+		 		setState(811)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(961)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(963)
+		 	setState(812)
+		 	try match(Java8Parser.Identifier)
+		 	setState(814)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(962)
+		 		setState(813)
 		 		try typeArguments()
 
 		 	}
 
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class UnannClassType_lfno_unannClassOrInterfaceTypeContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open func typeArguments() -> TypeArgumentsContext? {
-			return getRuleContext(TypeArgumentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannClassType_lfno_unannClassOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterUnannClassType_lfno_unannClassOrInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitUnannClassType_lfno_unannClassOrInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitUnannClassType_lfno_unannClassOrInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitUnannClassType_lfno_unannClassOrInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func unannClassType_lfno_unannClassOrInterfaceType() throws -> UnannClassType_lfno_unannClassOrInterfaceTypeContext {
-		var _localctx: UnannClassType_lfno_unannClassOrInterfaceTypeContext = UnannClassType_lfno_unannClassOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 128, Java8Parser.RULE_unannClassType_lfno_unannClassOrInterfaceType)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(965)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(967)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(966)
-		 		try typeArguments()
-
-		 	}
-
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class UnannInterfaceTypeContext:ParserRuleContext {
-		open func unannClassType() -> UnannClassTypeContext? {
-			return getRuleContext(UnannClassTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterUnannInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitUnannInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitUnannInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitUnannInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func unannInterfaceType() throws -> UnannInterfaceTypeContext {
-		var _localctx: UnannInterfaceTypeContext = UnannInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 130, Java8Parser.RULE_unannInterfaceType)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(969)
-		 	try unannClassType()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class UnannInterfaceType_lf_unannClassOrInterfaceTypeContext:ParserRuleContext {
-		open func unannClassType_lf_unannClassOrInterfaceType() -> UnannClassType_lf_unannClassOrInterfaceTypeContext? {
-			return getRuleContext(UnannClassType_lf_unannClassOrInterfaceTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannInterfaceType_lf_unannClassOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterUnannInterfaceType_lf_unannClassOrInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitUnannInterfaceType_lf_unannClassOrInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitUnannInterfaceType_lf_unannClassOrInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitUnannInterfaceType_lf_unannClassOrInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func unannInterfaceType_lf_unannClassOrInterfaceType() throws -> UnannInterfaceType_lf_unannClassOrInterfaceTypeContext {
-		var _localctx: UnannInterfaceType_lf_unannClassOrInterfaceTypeContext = UnannInterfaceType_lf_unannClassOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 132, Java8Parser.RULE_unannInterfaceType_lf_unannClassOrInterfaceType)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(971)
-		 	try unannClassType_lf_unannClassOrInterfaceType()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext:ParserRuleContext {
-		open func unannClassType_lfno_unannClassOrInterfaceType() -> UnannClassType_lfno_unannClassOrInterfaceTypeContext? {
-			return getRuleContext(UnannClassType_lfno_unannClassOrInterfaceTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannInterfaceType_lfno_unannClassOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterUnannInterfaceType_lfno_unannClassOrInterfaceType(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitUnannInterfaceType_lfno_unannClassOrInterfaceType(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitUnannInterfaceType_lfno_unannClassOrInterfaceType(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitUnannInterfaceType_lfno_unannClassOrInterfaceType(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func unannInterfaceType_lfno_unannClassOrInterfaceType() throws -> UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext {
-		var _localctx: UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext = UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext(_ctx, getState())
-		try enterRule(_localctx, 134, Java8Parser.RULE_unannInterfaceType_lfno_unannClassOrInterfaceType)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(973)
-		 	try unannClassType_lfno_unannClassOrInterfaceType()
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5438,7 +4180,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class UnannTypeVariableContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_unannTypeVariable }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -5467,14 +4209,14 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannTypeVariable() throws -> UnannTypeVariableContext {
 		var _localctx: UnannTypeVariableContext = UnannTypeVariableContext(_ctx, getState())
-		try enterRule(_localctx, 136, Java8Parser.RULE_unannTypeVariable)
+		try enterRule(_localctx, 98, Java8Parser.RULE_unannTypeVariable)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(975)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	setState(816)
+		 	try match(Java8Parser.Identifier)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5526,35 +4268,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unannArrayType() throws -> UnannArrayTypeContext {
 		var _localctx: UnannArrayTypeContext = UnannArrayTypeContext(_ctx, getState())
-		try enterRule(_localctx, 138, Java8Parser.RULE_unannArrayType)
+		try enterRule(_localctx, 100, Java8Parser.RULE_unannArrayType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(986)
+		 	setState(827)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,74, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,62, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(977)
+		 		setState(818)
 		 		try unannPrimitiveType()
-		 		setState(978)
+		 		setState(819)
 		 		try dims()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(980)
+		 		setState(821)
 		 		try unannClassOrInterfaceType()
-		 		setState(981)
+		 		setState(822)
 		 		try dims()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(983)
+		 		setState(824)
 		 		try unannTypeVariable()
-		 		setState(984)
+		 		setState(825)
 		 		try dims()
 
 		 		break
@@ -5610,36 +4352,36 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodDeclaration() throws -> MethodDeclarationContext {
 		var _localctx: MethodDeclarationContext = MethodDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 140, Java8Parser.RULE_methodDeclaration)
+		try enterRule(_localctx, 102, Java8Parser.RULE_methodDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(991)
+		 	setState(832)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.NATIVE.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SYNCHRONIZED.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.FINAL,Java8Parser.NATIVE,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SYNCHRONIZED]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(988)
+		 		setState(829)
 		 		try methodModifier()
 
 
-		 		setState(993)
+		 		setState(834)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(994)
+		 	setState(835)
 		 	try methodHeader()
-		 	setState(995)
+		 	setState(836)
 		 	try methodBody()
 
 		}
@@ -5683,81 +4425,81 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodModifier() throws -> MethodModifierContext {
 		var _localctx: MethodModifierContext = MethodModifierContext(_ctx, getState())
-		try enterRule(_localctx, 142, Java8Parser.RULE_methodModifier)
+		try enterRule(_localctx, 104, Java8Parser.RULE_methodModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1007)
+		 	setState(848)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(997)
+		 		setState(838)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(998)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(839)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .PROTECTED:
+		 	case Java8Parser.PROTECTED:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(999)
-		 		try match(Java8Parser.Tokens.PROTECTED.rawValue)
+		 		setState(840)
+		 		try match(Java8Parser.PROTECTED)
 
 		 		break
 
-		 	case .PRIVATE:
+		 	case Java8Parser.PRIVATE:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1000)
-		 		try match(Java8Parser.Tokens.PRIVATE.rawValue)
+		 		setState(841)
+		 		try match(Java8Parser.PRIVATE)
 
 		 		break
 
-		 	case .ABSTRACT:
+		 	case Java8Parser.ABSTRACT:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1001)
-		 		try match(Java8Parser.Tokens.ABSTRACT.rawValue)
+		 		setState(842)
+		 		try match(Java8Parser.ABSTRACT)
 
 		 		break
 
-		 	case .STATIC:
+		 	case Java8Parser.STATIC:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1002)
-		 		try match(Java8Parser.Tokens.STATIC.rawValue)
+		 		setState(843)
+		 		try match(Java8Parser.STATIC)
 
 		 		break
 
-		 	case .FINAL:
+		 	case Java8Parser.FINAL:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1003)
-		 		try match(Java8Parser.Tokens.FINAL.rawValue)
+		 		setState(844)
+		 		try match(Java8Parser.FINAL)
 
 		 		break
 
-		 	case .SYNCHRONIZED:
+		 	case Java8Parser.SYNCHRONIZED:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(1004)
-		 		try match(Java8Parser.Tokens.SYNCHRONIZED.rawValue)
+		 		setState(845)
+		 		try match(Java8Parser.SYNCHRONIZED)
 
 		 		break
 
-		 	case .NATIVE:
+		 	case Java8Parser.NATIVE:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(1005)
-		 		try match(Java8Parser.Tokens.NATIVE.rawValue)
+		 		setState(846)
+		 		try match(Java8Parser.NATIVE)
 
 		 		break
 
-		 	case .STRICTFP:
+		 	case Java8Parser.STRICTFP:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(1006)
-		 		try match(Java8Parser.Tokens.STRICTFP.rawValue)
+		 		setState(847)
+		 		try match(Java8Parser.STRICTFP)
 
 		 		break
 		 	default:
@@ -5819,39 +4561,39 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodHeader() throws -> MethodHeaderContext {
 		var _localctx: MethodHeaderContext = MethodHeaderContext(_ctx, getState())
-		try enterRule(_localctx, 144, Java8Parser.RULE_methodHeader)
+		try enterRule(_localctx, 106, Java8Parser.RULE_methodHeader)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1026)
+		 	setState(867)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .BOOLEAN:fallthrough
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .SHORT:fallthrough
-		 	case .VOID:fallthrough
-		 	case .Identifier:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BOOLEAN:fallthrough
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.SHORT:fallthrough
+		 	case Java8Parser.VOID:fallthrough
+		 	case Java8Parser.Identifier:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1009)
+		 		setState(850)
 		 		try result()
-		 		setState(1010)
+		 		setState(851)
 		 		try methodDeclarator()
-		 		setState(1012)
+		 		setState(853)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.THROWS.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.THROWS
 		 		      return testSet
 		 		 }()) {
-		 			setState(1011)
+		 			setState(852)
 		 			try throws_()
 
 		 		}
@@ -5859,39 +4601,39 @@ open class Java8Parser: Parser {
 
 		 		break
 
-		 	case .LT:
+		 	case Java8Parser.LT:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1014)
+		 		setState(855)
 		 		try typeParameters()
-		 		setState(1018)
+		 		setState(859)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1015)
+		 			setState(856)
 		 			try annotation()
 
 
-		 			setState(1020)
+		 			setState(861)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1021)
+		 		setState(862)
 		 		try result()
-		 		setState(1022)
+		 		setState(863)
 		 		try methodDeclarator()
-		 		setState(1024)
+		 		setState(865)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.THROWS.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.THROWS
 		 		      return testSet
 		 		 }()) {
-		 			setState(1023)
+		 			setState(864)
 		 			try throws_()
 
 		 		}
@@ -5942,33 +4684,33 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func result() throws -> ResultContext {
 		var _localctx: ResultContext = ResultContext(_ctx, getState())
-		try enterRule(_localctx, 146, Java8Parser.RULE_result)
+		try enterRule(_localctx, 108, Java8Parser.RULE_result)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1030)
+		 	setState(871)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .BOOLEAN:fallthrough
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .SHORT:fallthrough
-		 	case .Identifier:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BOOLEAN:fallthrough
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.SHORT:fallthrough
+		 	case Java8Parser.Identifier:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1028)
+		 		setState(869)
 		 		try unannType()
 
 		 		break
 
-		 	case .VOID:
+		 	case Java8Parser.VOID:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1029)
-		 		try match(Java8Parser.Tokens.VOID.rawValue)
+		 		setState(870)
+		 		try match(Java8Parser.VOID)
 
 		 		break
 		 	default:
@@ -5984,7 +4726,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class MethodDeclaratorContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func formalParameterList() -> FormalParameterListContext? {
 			return getRuleContext(FormalParameterListContext.self,0)
 		}
@@ -6019,45 +4761,45 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodDeclarator() throws -> MethodDeclaratorContext {
 		var _localctx: MethodDeclaratorContext = MethodDeclaratorContext(_ctx, getState())
-		try enterRule(_localctx, 148, Java8Parser.RULE_methodDeclarator)
+		try enterRule(_localctx, 110, Java8Parser.RULE_methodDeclarator)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1032)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1033)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1035)
+		 	setState(873)
+		 	try match(Java8Parser.Identifier)
+		 	setState(874)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(876)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.SHORT.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.SHORT]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.Identifier.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.Identifier || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1034)
+		 		setState(875)
 		 		try formalParameterList()
 
 		 	}
 
-		 	setState(1037)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1039)
+		 	setState(878)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(880)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LBRACK || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1038)
+		 		setState(879)
 		 		try dims()
 
 		 	}
@@ -6073,11 +4815,11 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class FormalParameterListContext:ParserRuleContext {
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
-		}
 		open func lastFormalParameter() -> LastFormalParameterContext? {
 			return getRuleContext(LastFormalParameterContext.self,0)
+		}
+		open func formalParameters() -> FormalParametersContext? {
+			return getRuleContext(FormalParametersContext.self,0)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_formalParameterList }
 		override
@@ -6107,32 +4849,27 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func formalParameterList() throws -> FormalParameterListContext {
 		var _localctx: FormalParameterListContext = FormalParameterListContext(_ctx, getState())
-		try enterRule(_localctx, 150, Java8Parser.RULE_formalParameterList)
+		try enterRule(_localctx, 112, Java8Parser.RULE_formalParameterList)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1046)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(885)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,84, _ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,72,_ctx)) {
 		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1041)
+		 		setState(882)
 		 		try formalParameters()
-		 		setState(1042)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(1043)
-		 		try lastFormalParameter()
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1045)
-		 		try lastFormalParameter()
+		 		setState(883)
+		 		try match(Java8Parser.COMMA)
 
 		 		break
 		 	default: break
 		 	}
+		 	setState(887)
+		 	try lastFormalParameter()
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -6180,56 +4917,56 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func formalParameters() throws -> FormalParametersContext {
 		var _localctx: FormalParametersContext = FormalParametersContext(_ctx, getState())
-		try enterRule(_localctx, 152, Java8Parser.RULE_formalParameters)
+		try enterRule(_localctx, 114, Java8Parser.RULE_formalParameters)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
-		 	setState(1064)
+		 	setState(905)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,87, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,75, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1048)
+		 		setState(889)
 		 		try formalParameter()
-		 		setState(1053)
+		 		setState(894)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,85,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,73,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(1049)
-		 				try match(Java8Parser.Tokens.COMMA.rawValue)
-		 				setState(1050)
+		 				setState(890)
+		 				try match(Java8Parser.COMMA)
+		 				setState(891)
 		 				try formalParameter()
 
 		 		 
 		 			}
-		 			setState(1055)
+		 			setState(896)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,85,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,73,_ctx)
 		 		}
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1056)
+		 		setState(897)
 		 		try receiverParameter()
-		 		setState(1061)
+		 		setState(902)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,86,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,74,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(1057)
-		 				try match(Java8Parser.Tokens.COMMA.rawValue)
-		 				setState(1058)
+		 				setState(898)
+		 				try match(Java8Parser.COMMA)
+		 				setState(899)
 		 				try formalParameter()
 
 		 		 
 		 			}
-		 			setState(1063)
+		 			setState(904)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,86,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,74,_ctx)
 		 		}
 
 		 		break
@@ -6285,33 +5022,33 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func formalParameter() throws -> FormalParameterContext {
 		var _localctx: FormalParameterContext = FormalParameterContext(_ctx, getState())
-		try enterRule(_localctx, 154, Java8Parser.RULE_formalParameter)
+		try enterRule(_localctx, 116, Java8Parser.RULE_formalParameter)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1069)
+		 	setState(910)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.FINAL
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1066)
+		 		setState(907)
 		 		try variableModifier()
 
 
-		 		setState(1071)
+		 		setState(912)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1072)
+		 	setState(913)
 		 	try unannType()
-		 	setState(1073)
+		 	setState(914)
 		 	try variableDeclaratorId()
 
 		}
@@ -6355,25 +5092,25 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func variableModifier() throws -> VariableModifierContext {
 		var _localctx: VariableModifierContext = VariableModifierContext(_ctx, getState())
-		try enterRule(_localctx, 156, Java8Parser.RULE_variableModifier)
+		try enterRule(_localctx, 118, Java8Parser.RULE_variableModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1077)
+		 	setState(918)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1075)
+		 		setState(916)
 		 		try annotation()
 
 		 		break
 
-		 	case .FINAL:
+		 	case Java8Parser.FINAL:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1076)
-		 		try match(Java8Parser.Tokens.FINAL.rawValue)
+		 		setState(917)
+		 		try match(Java8Parser.FINAL)
 
 		 		break
 		 	default:
@@ -6438,61 +5175,61 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func lastFormalParameter() throws -> LastFormalParameterContext {
 		var _localctx: LastFormalParameterContext = LastFormalParameterContext(_ctx, getState())
-		try enterRule(_localctx, 158, Java8Parser.RULE_lastFormalParameter)
+		try enterRule(_localctx, 120, Java8Parser.RULE_lastFormalParameter)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1096)
+		 	setState(937)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,92, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,80, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1082)
+		 		setState(923)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 		          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 		      var testSet: Bool = _la == Java8Parser.FINAL
+		 		          testSet = testSet || _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1079)
+		 			setState(920)
 		 			try variableModifier()
 
 
-		 			setState(1084)
+		 			setState(925)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1085)
+		 		setState(926)
 		 		try unannType()
-		 		setState(1089)
+		 		setState(930)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1086)
+		 			setState(927)
 		 			try annotation()
 
 
-		 			setState(1091)
+		 			setState(932)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1092)
-		 		try match(Java8Parser.Tokens.ELLIPSIS.rawValue)
-		 		setState(1093)
+		 		setState(933)
+		 		try match(Java8Parser.ELLIPSIS)
+		 		setState(934)
 		 		try variableDeclaratorId()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1095)
+		 		setState(936)
 		 		try formalParameter()
 
 		 		break
@@ -6517,7 +5254,7 @@ open class Java8Parser: Parser {
 		open func annotation(_ i: Int) -> AnnotationContext? {
 			return getRuleContext(AnnotationContext.self,i)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_receiverParameter }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -6546,48 +5283,48 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func receiverParameter() throws -> ReceiverParameterContext {
 		var _localctx: ReceiverParameterContext = ReceiverParameterContext(_ctx, getState())
-		try enterRule(_localctx, 160, Java8Parser.RULE_receiverParameter)
+		try enterRule(_localctx, 122, Java8Parser.RULE_receiverParameter)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1101)
+		 	setState(942)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1098)
+		 		setState(939)
 		 		try annotation()
 
 
-		 		setState(1103)
+		 		setState(944)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1104)
+		 	setState(945)
 		 	try unannType()
-		 	setState(1107)
+		 	setState(948)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.Identifier.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.Identifier
 		 	      return testSet
 		 	 }()) {
-		 		setState(1105)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(1106)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
+		 		setState(946)
+		 		try match(Java8Parser.Identifier)
+		 		setState(947)
+		 		try match(Java8Parser.DOT)
 
 		 	}
 
-		 	setState(1109)
-		 	try match(Java8Parser.Tokens.THIS.rawValue)
+		 	setState(950)
+		 	try match(Java8Parser.THIS)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6599,8 +5336,11 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class Throws_Context:ParserRuleContext {
-		open func exceptionTypeList() -> ExceptionTypeListContext? {
-			return getRuleContext(ExceptionTypeListContext.self,0)
+		open func exceptionType() -> Array<ExceptionTypeContext> {
+			return getRuleContexts(ExceptionTypeContext.self)
+		}
+		open func exceptionType(_ i: Int) -> ExceptionTypeContext? {
+			return getRuleContext(ExceptionTypeContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_throws_ }
 		override
@@ -6630,85 +5370,32 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func throws_() throws -> Throws_Context {
 		var _localctx: Throws_Context = Throws_Context(_ctx, getState())
-		try enterRule(_localctx, 162, Java8Parser.RULE_throws_)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1111)
-		 	try match(Java8Parser.Tokens.THROWS.rawValue)
-		 	setState(1112)
-		 	try exceptionTypeList()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class ExceptionTypeListContext:ParserRuleContext {
-		open func exceptionType() -> Array<ExceptionTypeContext> {
-			return getRuleContexts(ExceptionTypeContext.self)
-		}
-		open func exceptionType(_ i: Int) -> ExceptionTypeContext? {
-			return getRuleContext(ExceptionTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_exceptionTypeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterExceptionTypeList(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitExceptionTypeList(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitExceptionTypeList(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitExceptionTypeList(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func exceptionTypeList() throws -> ExceptionTypeListContext {
-		var _localctx: ExceptionTypeListContext = ExceptionTypeListContext(_ctx, getState())
-		try enterRule(_localctx, 164, Java8Parser.RULE_exceptionTypeList)
+		try enterRule(_localctx, 124, Java8Parser.RULE_throws_)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1114)
+		 	setState(952)
+		 	try match(Java8Parser.THROWS)
+		 	setState(953)
 		 	try exceptionType()
-		 	setState(1119)
+		 	setState(958)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(1115)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(1116)
+		 		setState(954)
+		 		try match(Java8Parser.COMMA)
+		 		setState(955)
 		 		try exceptionType()
 
 
-		 		setState(1121)
+		 		setState(960)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -6757,23 +5444,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func exceptionType() throws -> ExceptionTypeContext {
 		var _localctx: ExceptionTypeContext = ExceptionTypeContext(_ctx, getState())
-		try enterRule(_localctx, 166, Java8Parser.RULE_exceptionType)
+		try enterRule(_localctx, 126, Java8Parser.RULE_exceptionType)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1124)
+		 	setState(963)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,96, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,84, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1122)
+		 		setState(961)
 		 		try classType()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1123)
+		 		setState(962)
 		 		try typeVariable()
 
 		 		break
@@ -6820,25 +5507,25 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodBody() throws -> MethodBodyContext {
 		var _localctx: MethodBodyContext = MethodBodyContext(_ctx, getState())
-		try enterRule(_localctx, 168, Java8Parser.RULE_methodBody)
+		try enterRule(_localctx, 128, Java8Parser.RULE_methodBody)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1128)
+		 	setState(967)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .LBRACE:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.LBRACE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1126)
+		 		setState(965)
 		 		try block()
 
 		 		break
 
-		 	case .SEMI:
+		 	case Java8Parser.SEMI:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1127)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(966)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default:
@@ -6885,13 +5572,13 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func instanceInitializer() throws -> InstanceInitializerContext {
 		var _localctx: InstanceInitializerContext = InstanceInitializerContext(_ctx, getState())
-		try enterRule(_localctx, 170, Java8Parser.RULE_instanceInitializer)
+		try enterRule(_localctx, 130, Java8Parser.RULE_instanceInitializer)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1130)
+		 	setState(969)
 		 	try block()
 
 		}
@@ -6935,15 +5622,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func staticInitializer() throws -> StaticInitializerContext {
 		var _localctx: StaticInitializerContext = StaticInitializerContext(_ctx, getState())
-		try enterRule(_localctx, 172, Java8Parser.RULE_staticInitializer)
+		try enterRule(_localctx, 132, Java8Parser.RULE_staticInitializer)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1132)
-		 	try match(Java8Parser.Tokens.STATIC.rawValue)
-		 	setState(1133)
+		 	setState(971)
+		 	try match(Java8Parser.STATIC)
+		 	setState(972)
 		 	try block()
 
 		}
@@ -6999,49 +5686,49 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func constructorDeclaration() throws -> ConstructorDeclarationContext {
 		var _localctx: ConstructorDeclarationContext = ConstructorDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 174, Java8Parser.RULE_constructorDeclaration)
+		try enterRule(_localctx, 134, Java8Parser.RULE_constructorDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1138)
+		 	setState(977)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1135)
+		 		setState(974)
 		 		try constructorModifier()
 
 
-		 		setState(1140)
+		 		setState(979)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1141)
+		 	setState(980)
 		 	try constructorDeclarator()
-		 	setState(1143)
+		 	setState(982)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.THROWS.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.THROWS
 		 	      return testSet
 		 	 }()) {
-		 		setState(1142)
+		 		setState(981)
 		 		try throws_()
 
 		 	}
 
-		 	setState(1145)
+		 	setState(984)
 		 	try constructorBody()
 
 		}
@@ -7085,39 +5772,39 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func constructorModifier() throws -> ConstructorModifierContext {
 		var _localctx: ConstructorModifierContext = ConstructorModifierContext(_ctx, getState())
-		try enterRule(_localctx, 176, Java8Parser.RULE_constructorModifier)
+		try enterRule(_localctx, 136, Java8Parser.RULE_constructorModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1151)
+		 	setState(990)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1147)
+		 		setState(986)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1148)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(987)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .PROTECTED:
+		 	case Java8Parser.PROTECTED:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1149)
-		 		try match(Java8Parser.Tokens.PROTECTED.rawValue)
+		 		setState(988)
+		 		try match(Java8Parser.PROTECTED)
 
 		 		break
 
-		 	case .PRIVATE:
+		 	case Java8Parser.PRIVATE:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1150)
-		 		try match(Java8Parser.Tokens.PRIVATE.rawValue)
+		 		setState(989)
+		 		try match(Java8Parser.PRIVATE)
 
 		 		break
 		 	default:
@@ -7170,49 +5857,49 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func constructorDeclarator() throws -> ConstructorDeclaratorContext {
 		var _localctx: ConstructorDeclaratorContext = ConstructorDeclaratorContext(_ctx, getState())
-		try enterRule(_localctx, 178, Java8Parser.RULE_constructorDeclarator)
+		try enterRule(_localctx, 138, Java8Parser.RULE_constructorDeclarator)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1154)
+		 	setState(993)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1153)
+		 		setState(992)
 		 		try typeParameters()
 
 		 	}
 
-		 	setState(1156)
+		 	setState(995)
 		 	try simpleTypeName()
-		 	setState(1157)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1159)
+		 	setState(996)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(998)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.SHORT.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.SHORT]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.Identifier.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.Identifier || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1158)
+		 		setState(997)
 		 		try formalParameterList()
 
 		 	}
 
-		 	setState(1161)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 	setState(1000)
+		 	try match(Java8Parser.RPAREN)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7224,7 +5911,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class SimpleTypeNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_simpleTypeName }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -7253,14 +5940,14 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func simpleTypeName() throws -> SimpleTypeNameContext {
 		var _localctx: SimpleTypeNameContext = SimpleTypeNameContext(_ctx, getState())
-		try enterRule(_localctx, 180, Java8Parser.RULE_simpleTypeName)
+		try enterRule(_localctx, 140, Java8Parser.RULE_simpleTypeName)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1163)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	setState(1002)
+		 	try match(Java8Parser.Identifier)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7306,47 +5993,47 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func constructorBody() throws -> ConstructorBodyContext {
 		var _localctx: ConstructorBodyContext = ConstructorBodyContext(_ctx, getState())
-		try enterRule(_localctx, 182, Java8Parser.RULE_constructorBody)
+		try enterRule(_localctx, 142, Java8Parser.RULE_constructorBody)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1165)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1167)
+		 	setState(1004)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1006)
 		 	try _errHandler.sync(self)
-		 	switch (try getInterpreter().adaptivePredict(_input,103,_ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,91,_ctx)) {
 		 	case 1:
-		 		setState(1166)
+		 		setState(1005)
 		 		try explicitConstructorInvocation()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(1170)
+		 	setState(1009)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.ASSERT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BREAK.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.CONTINUE.rawValue,Java8Parser.Tokens.DO.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.FOR.rawValue,Java8Parser.Tokens.IF.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.RETURN.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.SWITCH.rawValue,Java8Parser.Tokens.SYNCHRONIZED.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.THROW.rawValue,Java8Parser.Tokens.TRY.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.WHILE.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue,Java8Parser.Tokens.LBRACE.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.ASSERT,Java8Parser.BOOLEAN,Java8Parser.BREAK,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.CONTINUE,Java8Parser.DO,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.FOR,Java8Parser.IF,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.RETURN,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SUPER,Java8Parser.SWITCH,Java8Parser.SYNCHRONIZED,Java8Parser.THIS,Java8Parser.THROW,Java8Parser.TRY,Java8Parser.VOID,Java8Parser.WHILE,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN,Java8Parser.LBRACE,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1169)
+		 		setState(1008)
 		 		try blockStatements()
 
 		 	}
 
-		 	setState(1172)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(1011)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7398,201 +6085,201 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func explicitConstructorInvocation() throws -> ExplicitConstructorInvocationContext {
 		var _localctx: ExplicitConstructorInvocationContext = ExplicitConstructorInvocationContext(_ctx, getState())
-		try enterRule(_localctx, 184, Java8Parser.RULE_explicitConstructorInvocation)
+		try enterRule(_localctx, 144, Java8Parser.RULE_explicitConstructorInvocation)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1220)
+		 	setState(1059)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,113, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,101, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1175)
+		 		setState(1014)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1174)
+		 			setState(1013)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(1177)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
-		 		setState(1178)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1180)
+		 		setState(1016)
+		 		try match(Java8Parser.THIS)
+		 		setState(1017)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1019)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(1179)
+		 			setState(1018)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(1182)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(1183)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1021)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1022)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1185)
+		 		setState(1024)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1184)
+		 			setState(1023)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(1187)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(1188)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1190)
+		 		setState(1026)
+		 		try match(Java8Parser.SUPER)
+		 		setState(1027)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1029)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(1189)
+		 			setState(1028)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(1192)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(1193)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1031)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1032)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1194)
+		 		setState(1033)
 		 		try expressionName()
-		 		setState(1195)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1197)
+		 		setState(1034)
+		 		try match(Java8Parser.DOT)
+		 		setState(1036)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1196)
+		 			setState(1035)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(1199)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(1200)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1202)
+		 		setState(1038)
+		 		try match(Java8Parser.SUPER)
+		 		setState(1039)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1041)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(1201)
+		 			setState(1040)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(1204)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(1205)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1043)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1044)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1207)
+		 		setState(1046)
 		 		try primary()
-		 		setState(1208)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1210)
+		 		setState(1047)
+		 		try match(Java8Parser.DOT)
+		 		setState(1049)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(1209)
+		 			setState(1048)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(1212)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(1213)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1215)
+		 		setState(1051)
+		 		try match(Java8Parser.SUPER)
+		 		setState(1052)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1054)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(1214)
+		 			setState(1053)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(1217)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(1218)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1056)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1057)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default: break
@@ -7607,7 +6294,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class EnumDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func enumBody() -> EnumBodyContext? {
 			return getRuleContext(EnumBodyContext.self,0)
 		}
@@ -7648,51 +6335,51 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enumDeclaration() throws -> EnumDeclarationContext {
 		var _localctx: EnumDeclarationContext = EnumDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 186, Java8Parser.RULE_enumDeclaration)
+		try enterRule(_localctx, 146, Java8Parser.RULE_enumDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1225)
+		 	setState(1064)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.FINAL,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.STRICTFP]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1222)
+		 		setState(1061)
 		 		try classModifier()
 
 
-		 		setState(1227)
+		 		setState(1066)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1228)
-		 	try match(Java8Parser.Tokens.ENUM.rawValue)
-		 	setState(1229)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1231)
+		 	setState(1067)
+		 	try match(Java8Parser.ENUM)
+		 	setState(1068)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1070)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.IMPLEMENTS.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.IMPLEMENTS
 		 	      return testSet
 		 	 }()) {
-		 		setState(1230)
+		 		setState(1069)
 		 		try superinterfaces()
 
 		 	}
 
-		 	setState(1233)
+		 	setState(1072)
 		 	try enumBody()
 
 		}
@@ -7739,56 +6426,56 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enumBody() throws -> EnumBodyContext {
 		var _localctx: EnumBodyContext = EnumBodyContext(_ctx, getState())
-		try enterRule(_localctx, 188, Java8Parser.RULE_enumBody)
+		try enterRule(_localctx, 148, Java8Parser.RULE_enumBody)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1235)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1237)
+		 	setState(1074)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1076)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.Identifier.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.Identifier || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1236)
+		 		setState(1075)
 		 		try enumConstantList()
 
 		 	}
 
-		 	setState(1240)
+		 	setState(1079)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(1239)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
+		 		setState(1078)
+		 		try match(Java8Parser.COMMA)
 
 		 	}
 
-		 	setState(1243)
+		 	setState(1082)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.SEMI.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.SEMI
 		 	      return testSet
 		 	 }()) {
-		 		setState(1242)
+		 		setState(1081)
 		 		try enumBodyDeclarations()
 
 		 	}
 
-		 	setState(1245)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(1084)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7834,30 +6521,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enumConstantList() throws -> EnumConstantListContext {
 		var _localctx: EnumConstantListContext = EnumConstantListContext(_ctx, getState())
-		try enterRule(_localctx, 190, Java8Parser.RULE_enumConstantList)
+		try enterRule(_localctx, 150, Java8Parser.RULE_enumConstantList)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1247)
+		 	setState(1086)
 		 	try enumConstant()
-		 	setState(1252)
+		 	setState(1091)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,119,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,107,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(1248)
-		 			try match(Java8Parser.Tokens.COMMA.rawValue)
-		 			setState(1249)
+		 			setState(1087)
+		 			try match(Java8Parser.COMMA)
+		 			setState(1088)
 		 			try enumConstant()
 
 		 	 
 		 		}
-		 		setState(1254)
+		 		setState(1093)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,119,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,107,_ctx)
 		 	}
 
 		}
@@ -7870,7 +6557,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class EnumConstantContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func enumConstantModifier() -> Array<EnumConstantModifierContext> {
 			return getRuleContexts(EnumConstantModifierContext.self)
 		}
@@ -7911,75 +6598,75 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enumConstant() throws -> EnumConstantContext {
 		var _localctx: EnumConstantContext = EnumConstantContext(_ctx, getState())
-		try enterRule(_localctx, 192, Java8Parser.RULE_enumConstant)
+		try enterRule(_localctx, 152, Java8Parser.RULE_enumConstant)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1258)
+		 	setState(1097)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1255)
+		 		setState(1094)
 		 		try enumConstantModifier()
 
 
-		 		setState(1260)
+		 		setState(1099)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1261)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1267)
+		 	setState(1100)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1106)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LPAREN.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LPAREN
 		 	      return testSet
 		 	 }()) {
-		 		setState(1262)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1264)
+		 		setState(1101)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1103)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(1263)
+		 			setState(1102)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(1266)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(1105)
+		 		try match(Java8Parser.RPAREN)
 
 		 	}
 
-		 	setState(1270)
+		 	setState(1109)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LBRACE.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LBRACE
 		 	      return testSet
 		 	 }()) {
-		 		setState(1269)
+		 		setState(1108)
 		 		try classBody()
 
 		 	}
@@ -8026,13 +6713,13 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enumConstantModifier() throws -> EnumConstantModifierContext {
 		var _localctx: EnumConstantModifierContext = EnumConstantModifierContext(_ctx, getState())
-		try enterRule(_localctx, 194, Java8Parser.RULE_enumConstantModifier)
+		try enterRule(_localctx, 154, Java8Parser.RULE_enumConstantModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1272)
+		 	setState(1111)
 		 	try annotation()
 
 		}
@@ -8079,35 +6766,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enumBodyDeclarations() throws -> EnumBodyDeclarationsContext {
 		var _localctx: EnumBodyDeclarationsContext = EnumBodyDeclarationsContext(_ctx, getState())
-		try enterRule(_localctx, 196, Java8Parser.RULE_enumBodyDeclarations)
+		try enterRule(_localctx, 156, Java8Parser.RULE_enumBodyDeclarations)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1274)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-		 	setState(1278)
+		 	setState(1113)
+		 	try match(Java8Parser.SEMI)
+		 	setState(1117)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.INTERFACE.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NATIVE.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SYNCHRONIZED.rawValue,Java8Parser.Tokens.TRANSIENT.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.VOLATILE.rawValue,Java8Parser.Tokens.LBRACE.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.INTERFACE,Java8Parser.LONG,Java8Parser.NATIVE,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SYNCHRONIZED,Java8Parser.TRANSIENT,Java8Parser.VOID,Java8Parser.VOLATILE,Java8Parser.LBRACE,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.LT.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.LT,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 68)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1275)
+		 		setState(1114)
 		 		try classBodyDeclaration()
 
 
-		 		setState(1280)
+		 		setState(1119)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -8156,23 +6843,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceDeclaration() throws -> InterfaceDeclarationContext {
 		var _localctx: InterfaceDeclarationContext = InterfaceDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 198, Java8Parser.RULE_interfaceDeclaration)
+		try enterRule(_localctx, 158, Java8Parser.RULE_interfaceDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1283)
+		 	setState(1122)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,125, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,113, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1281)
+		 		setState(1120)
 		 		try normalInterfaceDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1282)
+		 		setState(1121)
 		 		try annotationTypeDeclaration()
 
 		 		break
@@ -8188,7 +6875,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class NormalInterfaceDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func interfaceBody() -> InterfaceBodyContext? {
 			return getRuleContext(InterfaceBodyContext.self,0)
 		}
@@ -8232,64 +6919,64 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func normalInterfaceDeclaration() throws -> NormalInterfaceDeclarationContext {
 		var _localctx: NormalInterfaceDeclarationContext = NormalInterfaceDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 200, Java8Parser.RULE_normalInterfaceDeclaration)
+		try enterRule(_localctx, 160, Java8Parser.RULE_normalInterfaceDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1288)
+		 	setState(1127)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.STRICTFP]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1285)
+		 		setState(1124)
 		 		try interfaceModifier()
 
 
-		 		setState(1290)
+		 		setState(1129)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1291)
-		 	try match(Java8Parser.Tokens.INTERFACE.rawValue)
-		 	setState(1292)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1294)
+		 	setState(1130)
+		 	try match(Java8Parser.INTERFACE)
+		 	setState(1131)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1133)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1293)
+		 		setState(1132)
 		 		try typeParameters()
 
 		 	}
 
-		 	setState(1297)
+		 	setState(1136)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.EXTENDS.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.EXTENDS
 		 	      return testSet
 		 	 }()) {
-		 		setState(1296)
+		 		setState(1135)
 		 		try extendsInterfaces()
 
 		 	}
 
-		 	setState(1299)
+		 	setState(1138)
 		 	try interfaceBody()
 
 		}
@@ -8333,60 +7020,60 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceModifier() throws -> InterfaceModifierContext {
 		var _localctx: InterfaceModifierContext = InterfaceModifierContext(_ctx, getState())
-		try enterRule(_localctx, 202, Java8Parser.RULE_interfaceModifier)
+		try enterRule(_localctx, 162, Java8Parser.RULE_interfaceModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1308)
+		 	setState(1147)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1301)
+		 		setState(1140)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1302)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(1141)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .PROTECTED:
+		 	case Java8Parser.PROTECTED:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1303)
-		 		try match(Java8Parser.Tokens.PROTECTED.rawValue)
+		 		setState(1142)
+		 		try match(Java8Parser.PROTECTED)
 
 		 		break
 
-		 	case .PRIVATE:
+		 	case Java8Parser.PRIVATE:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1304)
-		 		try match(Java8Parser.Tokens.PRIVATE.rawValue)
+		 		setState(1143)
+		 		try match(Java8Parser.PRIVATE)
 
 		 		break
 
-		 	case .ABSTRACT:
+		 	case Java8Parser.ABSTRACT:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1305)
-		 		try match(Java8Parser.Tokens.ABSTRACT.rawValue)
+		 		setState(1144)
+		 		try match(Java8Parser.ABSTRACT)
 
 		 		break
 
-		 	case .STATIC:
+		 	case Java8Parser.STATIC:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1306)
-		 		try match(Java8Parser.Tokens.STATIC.rawValue)
+		 		setState(1145)
+		 		try match(Java8Parser.STATIC)
 
 		 		break
 
-		 	case .STRICTFP:
+		 	case Java8Parser.STRICTFP:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1307)
-		 		try match(Java8Parser.Tokens.STRICTFP.rawValue)
+		 		setState(1146)
+		 		try match(Java8Parser.STRICTFP)
 
 		 		break
 		 	default:
@@ -8433,15 +7120,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func extendsInterfaces() throws -> ExtendsInterfacesContext {
 		var _localctx: ExtendsInterfacesContext = ExtendsInterfacesContext(_ctx, getState())
-		try enterRule(_localctx, 204, Java8Parser.RULE_extendsInterfaces)
+		try enterRule(_localctx, 164, Java8Parser.RULE_extendsInterfaces)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1310)
-		 	try match(Java8Parser.Tokens.EXTENDS.rawValue)
-		 	setState(1311)
+		 	setState(1149)
+		 	try match(Java8Parser.EXTENDS)
+		 	setState(1150)
 		 	try interfaceTypeList()
 
 		}
@@ -8488,40 +7175,40 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceBody() throws -> InterfaceBodyContext {
 		var _localctx: InterfaceBodyContext = InterfaceBodyContext(_ctx, getState())
-		try enterRule(_localctx, 206, Java8Parser.RULE_interfaceBody)
+		try enterRule(_localctx, 166, Java8Parser.RULE_interfaceBody)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1313)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1317)
+		 	setState(1152)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1156)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.DEFAULT.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.INTERFACE.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.DEFAULT,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.INTERFACE,Java8Parser.LONG,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.VOID,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.LT.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.LT,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 68)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1314)
+		 		setState(1153)
 		 		try interfaceMemberDeclaration()
 
 
-		 		setState(1319)
+		 		setState(1158)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1320)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(1159)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -8573,42 +7260,42 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceMemberDeclaration() throws -> InterfaceMemberDeclarationContext {
 		var _localctx: InterfaceMemberDeclarationContext = InterfaceMemberDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 208, Java8Parser.RULE_interfaceMemberDeclaration)
+		try enterRule(_localctx, 168, Java8Parser.RULE_interfaceMemberDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1327)
+		 	setState(1166)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,131, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,119, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1322)
+		 		setState(1161)
 		 		try constantDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1323)
+		 		setState(1162)
 		 		try interfaceMethodDeclaration()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1324)
+		 		setState(1163)
 		 		try classDeclaration()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1325)
+		 		setState(1164)
 		 		try interfaceDeclaration()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1326)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1165)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default: break
@@ -8663,39 +7350,39 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func constantDeclaration() throws -> ConstantDeclarationContext {
 		var _localctx: ConstantDeclarationContext = ConstantDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 210, Java8Parser.RULE_constantDeclaration)
+		try enterRule(_localctx, 170, Java8Parser.RULE_constantDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1332)
+		 	setState(1171)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.FINAL,Java8Parser.PUBLIC,Java8Parser.STATIC]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1329)
+		 		setState(1168)
 		 		try constantModifier()
 
 
-		 		setState(1334)
+		 		setState(1173)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1335)
+		 	setState(1174)
 		 	try unannType()
-		 	setState(1336)
+		 	setState(1175)
 		 	try variableDeclaratorList()
-		 	setState(1337)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1176)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -8738,39 +7425,39 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func constantModifier() throws -> ConstantModifierContext {
 		var _localctx: ConstantModifierContext = ConstantModifierContext(_ctx, getState())
-		try enterRule(_localctx, 212, Java8Parser.RULE_constantModifier)
+		try enterRule(_localctx, 172, Java8Parser.RULE_constantModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1343)
+		 	setState(1182)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1339)
+		 		setState(1178)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1340)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(1179)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .STATIC:
+		 	case Java8Parser.STATIC:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1341)
-		 		try match(Java8Parser.Tokens.STATIC.rawValue)
+		 		setState(1180)
+		 		try match(Java8Parser.STATIC)
 
 		 		break
 
-		 	case .FINAL:
+		 	case Java8Parser.FINAL:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1342)
-		 		try match(Java8Parser.Tokens.FINAL.rawValue)
+		 		setState(1181)
+		 		try match(Java8Parser.FINAL)
 
 		 		break
 		 	default:
@@ -8826,36 +7513,36 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceMethodDeclaration() throws -> InterfaceMethodDeclarationContext {
 		var _localctx: InterfaceMethodDeclarationContext = InterfaceMethodDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 214, Java8Parser.RULE_interfaceMethodDeclaration)
+		try enterRule(_localctx, 174, Java8Parser.RULE_interfaceMethodDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1348)
+		 	setState(1187)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.DEFAULT.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.DEFAULT,Java8Parser.PUBLIC,Java8Parser.STATIC,Java8Parser.STRICTFP]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1345)
+		 		setState(1184)
 		 		try interfaceMethodModifier()
 
 
-		 		setState(1350)
+		 		setState(1189)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1351)
+		 	setState(1190)
 		 	try methodHeader()
-		 	setState(1352)
+		 	setState(1191)
 		 	try methodBody()
 
 		}
@@ -8899,53 +7586,53 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func interfaceMethodModifier() throws -> InterfaceMethodModifierContext {
 		var _localctx: InterfaceMethodModifierContext = InterfaceMethodModifierContext(_ctx, getState())
-		try enterRule(_localctx, 216, Java8Parser.RULE_interfaceMethodModifier)
+		try enterRule(_localctx, 176, Java8Parser.RULE_interfaceMethodModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1360)
+		 	setState(1199)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1354)
+		 		setState(1193)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1355)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(1194)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .ABSTRACT:
+		 	case Java8Parser.ABSTRACT:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1356)
-		 		try match(Java8Parser.Tokens.ABSTRACT.rawValue)
+		 		setState(1195)
+		 		try match(Java8Parser.ABSTRACT)
 
 		 		break
 
-		 	case .DEFAULT:
+		 	case Java8Parser.DEFAULT:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1357)
-		 		try match(Java8Parser.Tokens.DEFAULT.rawValue)
+		 		setState(1196)
+		 		try match(Java8Parser.DEFAULT)
 
 		 		break
 
-		 	case .STATIC:
+		 	case Java8Parser.STATIC:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1358)
-		 		try match(Java8Parser.Tokens.STATIC.rawValue)
+		 		setState(1197)
+		 		try match(Java8Parser.STATIC)
 
 		 		break
 
-		 	case .STRICTFP:
+		 	case Java8Parser.STRICTFP:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1359)
-		 		try match(Java8Parser.Tokens.STRICTFP.rawValue)
+		 		setState(1198)
+		 		try match(Java8Parser.STRICTFP)
 
 		 		break
 		 	default:
@@ -8961,7 +7648,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class AnnotationTypeDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func annotationTypeBody() -> AnnotationTypeBodyContext? {
 			return getRuleContext(AnnotationTypeBodyContext.self,0)
 		}
@@ -8999,34 +7686,34 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func annotationTypeDeclaration() throws -> AnnotationTypeDeclarationContext {
 		var _localctx: AnnotationTypeDeclarationContext = AnnotationTypeDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 218, Java8Parser.RULE_annotationTypeDeclaration)
+		try enterRule(_localctx, 178, Java8Parser.RULE_annotationTypeDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1365)
+		 	setState(1204)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,136,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,124,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(1362)
+		 			setState(1201)
 		 			try interfaceModifier()
 
 		 	 
 		 		}
-		 		setState(1367)
+		 		setState(1206)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,136,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,124,_ctx)
 		 	}
-		 	setState(1368)
-		 	try match(Java8Parser.Tokens.AT.rawValue)
-		 	setState(1369)
-		 	try match(Java8Parser.Tokens.INTERFACE.rawValue)
-		 	setState(1370)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1371)
+		 	setState(1207)
+		 	try match(Java8Parser.AT)
+		 	setState(1208)
+		 	try match(Java8Parser.INTERFACE)
+		 	setState(1209)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1210)
 		 	try annotationTypeBody()
 
 		}
@@ -9073,37 +7760,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func annotationTypeBody() throws -> AnnotationTypeBodyContext {
 		var _localctx: AnnotationTypeBodyContext = AnnotationTypeBodyContext(_ctx, getState())
-		try enterRule(_localctx, 220, Java8Parser.RULE_annotationTypeBody)
+		try enterRule(_localctx, 180, Java8Parser.RULE_annotationTypeBody)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1373)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1377)
+		 	setState(1212)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1216)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.INTERFACE.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.INTERFACE,Java8Parser.LONG,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
-		 	          testSet = testSet || _la == Java8Parser.Tokens.Identifier.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	          testSet = testSet || _la == Java8Parser.Identifier || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1374)
+		 		setState(1213)
 		 		try annotationTypeMemberDeclaration()
 
 
-		 		setState(1379)
+		 		setState(1218)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1380)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(1219)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9155,42 +7842,42 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func annotationTypeMemberDeclaration() throws -> AnnotationTypeMemberDeclarationContext {
 		var _localctx: AnnotationTypeMemberDeclarationContext = AnnotationTypeMemberDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 222, Java8Parser.RULE_annotationTypeMemberDeclaration)
+		try enterRule(_localctx, 182, Java8Parser.RULE_annotationTypeMemberDeclaration)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1387)
+		 	setState(1226)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,138, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,126, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1382)
+		 		setState(1221)
 		 		try annotationTypeElementDeclaration()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1383)
+		 		setState(1222)
 		 		try constantDeclaration()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1384)
+		 		setState(1223)
 		 		try classDeclaration()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1385)
+		 		setState(1224)
 		 		try interfaceDeclaration()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1386)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1225)
+		 		try match(Java8Parser.SEMI)
 
 		 		break
 		 	default: break
@@ -9208,7 +7895,7 @@ open class Java8Parser: Parser {
 		open func unannType() -> UnannTypeContext? {
 			return getRuleContext(UnannTypeContext.self,0)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func annotationTypeElementModifier() -> Array<AnnotationTypeElementModifierContext> {
 			return getRuleContexts(AnnotationTypeElementModifierContext.self)
 		}
@@ -9249,66 +7936,66 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func annotationTypeElementDeclaration() throws -> AnnotationTypeElementDeclarationContext {
 		var _localctx: AnnotationTypeElementDeclarationContext = AnnotationTypeElementDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 224, Java8Parser.RULE_annotationTypeElementDeclaration)
+		try enterRule(_localctx, 184, Java8Parser.RULE_annotationTypeElementDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1392)
+		 	setState(1231)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.ABSTRACT.rawValue || _la == Java8Parser.Tokens.PUBLIC.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.ABSTRACT || _la == Java8Parser.PUBLIC
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1389)
+		 		setState(1228)
 		 		try annotationTypeElementModifier()
 
 
-		 		setState(1394)
+		 		setState(1233)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1395)
+		 	setState(1234)
 		 	try unannType()
-		 	setState(1396)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1397)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1398)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1400)
+		 	setState(1235)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1236)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1237)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1239)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LBRACK || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1399)
+		 		setState(1238)
 		 		try dims()
 
 		 	}
 
-		 	setState(1403)
+		 	setState(1242)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.DEFAULT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.DEFAULT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1402)
+		 		setState(1241)
 		 		try defaultValue()
 
 		 	}
 
-		 	setState(1405)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1244)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9351,32 +8038,32 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func annotationTypeElementModifier() throws -> AnnotationTypeElementModifierContext {
 		var _localctx: AnnotationTypeElementModifierContext = AnnotationTypeElementModifierContext(_ctx, getState())
-		try enterRule(_localctx, 226, Java8Parser.RULE_annotationTypeElementModifier)
+		try enterRule(_localctx, 186, Java8Parser.RULE_annotationTypeElementModifier)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1410)
+		 	setState(1249)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1407)
+		 		setState(1246)
 		 		try annotation()
 
 		 		break
 
-		 	case .PUBLIC:
+		 	case Java8Parser.PUBLIC:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1408)
-		 		try match(Java8Parser.Tokens.PUBLIC.rawValue)
+		 		setState(1247)
+		 		try match(Java8Parser.PUBLIC)
 
 		 		break
 
-		 	case .ABSTRACT:
+		 	case Java8Parser.ABSTRACT:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1409)
-		 		try match(Java8Parser.Tokens.ABSTRACT.rawValue)
+		 		setState(1248)
+		 		try match(Java8Parser.ABSTRACT)
 
 		 		break
 		 	default:
@@ -9423,15 +8110,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func defaultValue() throws -> DefaultValueContext {
 		var _localctx: DefaultValueContext = DefaultValueContext(_ctx, getState())
-		try enterRule(_localctx, 228, Java8Parser.RULE_defaultValue)
+		try enterRule(_localctx, 188, Java8Parser.RULE_defaultValue)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1412)
-		 	try match(Java8Parser.Tokens.DEFAULT.rawValue)
-		 	setState(1413)
+		 	setState(1251)
+		 	try match(Java8Parser.DEFAULT)
+		 	setState(1252)
 		 	try elementValue()
 
 		}
@@ -9481,29 +8168,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func annotation() throws -> AnnotationContext {
 		var _localctx: AnnotationContext = AnnotationContext(_ctx, getState())
-		try enterRule(_localctx, 230, Java8Parser.RULE_annotation)
+		try enterRule(_localctx, 190, Java8Parser.RULE_annotation)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1418)
+		 	setState(1257)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,143, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,131, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1415)
+		 		setState(1254)
 		 		try normalAnnotation()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1416)
+		 		setState(1255)
 		 		try markerAnnotation()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1417)
+		 		setState(1256)
 		 		try singleElementAnnotation()
 
 		 		break
@@ -9553,34 +8240,34 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func normalAnnotation() throws -> NormalAnnotationContext {
 		var _localctx: NormalAnnotationContext = NormalAnnotationContext(_ctx, getState())
-		try enterRule(_localctx, 232, Java8Parser.RULE_normalAnnotation)
+		try enterRule(_localctx, 192, Java8Parser.RULE_normalAnnotation)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1420)
-		 	try match(Java8Parser.Tokens.AT.rawValue)
-		 	setState(1421)
+		 	setState(1259)
+		 	try match(Java8Parser.AT)
+		 	setState(1260)
 		 	try typeName()
-		 	setState(1422)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1424)
+		 	setState(1261)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1263)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.Identifier.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.Identifier
 		 	      return testSet
 		 	 }()) {
-		 		setState(1423)
+		 		setState(1262)
 		 		try elementValuePairList()
 
 		 	}
 
-		 	setState(1426)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 	setState(1265)
+		 	try match(Java8Parser.RPAREN)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9626,30 +8313,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func elementValuePairList() throws -> ElementValuePairListContext {
 		var _localctx: ElementValuePairListContext = ElementValuePairListContext(_ctx, getState())
-		try enterRule(_localctx, 234, Java8Parser.RULE_elementValuePairList)
+		try enterRule(_localctx, 194, Java8Parser.RULE_elementValuePairList)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1428)
+		 	setState(1267)
 		 	try elementValuePair()
-		 	setState(1433)
+		 	setState(1272)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(1429)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(1430)
+		 		setState(1268)
+		 		try match(Java8Parser.COMMA)
+		 		setState(1269)
 		 		try elementValuePair()
 
 
-		 		setState(1435)
+		 		setState(1274)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -9664,7 +8351,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ElementValuePairContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func elementValue() -> ElementValueContext? {
 			return getRuleContext(ElementValueContext.self,0)
 		}
@@ -9696,17 +8383,17 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func elementValuePair() throws -> ElementValuePairContext {
 		var _localctx: ElementValuePairContext = ElementValuePairContext(_ctx, getState())
-		try enterRule(_localctx, 236, Java8Parser.RULE_elementValuePair)
+		try enterRule(_localctx, 196, Java8Parser.RULE_elementValuePair)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1436)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1437)
-		 	try match(Java8Parser.Tokens.ASSIGN.rawValue)
-		 	setState(1438)
+		 	setState(1275)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1276)
+		 	try match(Java8Parser.ASSIGN)
+		 	setState(1277)
 		 	try elementValue()
 
 		}
@@ -9756,29 +8443,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func elementValue() throws -> ElementValueContext {
 		var _localctx: ElementValueContext = ElementValueContext(_ctx, getState())
-		try enterRule(_localctx, 238, Java8Parser.RULE_elementValue)
+		try enterRule(_localctx, 198, Java8Parser.RULE_elementValue)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1443)
+		 	setState(1282)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,146, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,134, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1440)
+		 		setState(1279)
 		 		try conditionalExpression()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1441)
+		 		setState(1280)
 		 		try elementValueArrayInitializer()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1442)
+		 		setState(1281)
 		 		try annotation()
 
 		 		break
@@ -9794,8 +8481,11 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ElementValueArrayInitializerContext:ParserRuleContext {
-		open func elementValueList() -> ElementValueListContext? {
-			return getRuleContext(ElementValueListContext.self,0)
+		open func elementValue() -> Array<ElementValueContext> {
+			return getRuleContexts(ElementValueContext.self)
+		}
+		open func elementValue(_ i: Int) -> ElementValueContext? {
+			return getRuleContext(ElementValueContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_elementValueArrayInitializer }
 		override
@@ -9825,120 +8515,67 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func elementValueArrayInitializer() throws -> ElementValueArrayInitializerContext {
 		var _localctx: ElementValueArrayInitializerContext = ElementValueArrayInitializerContext(_ctx, getState())
-		try enterRule(_localctx, 240, Java8Parser.RULE_elementValueArrayInitializer)
+		try enterRule(_localctx, 200, Java8Parser.RULE_elementValueArrayInitializer)
 		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1445)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1447)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue,Java8Parser.Tokens.LBRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 	}()
-		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
-		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
-		 	          }()
-		 	      return testSet
-		 	 }()) {
-		 		setState(1446)
-		 		try elementValueList()
-
-		 	}
-
-		 	setState(1450)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(1449)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-
-		 	}
-
-		 	setState(1452)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class ElementValueListContext:ParserRuleContext {
-		open func elementValue() -> Array<ElementValueContext> {
-			return getRuleContexts(ElementValueContext.self)
-		}
-		open func elementValue(_ i: Int) -> ElementValueContext? {
-			return getRuleContext(ElementValueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_elementValueList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterElementValueList(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitElementValueList(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitElementValueList(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitElementValueList(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func elementValueList() throws -> ElementValueListContext {
-		var _localctx: ElementValueListContext = ElementValueListContext(_ctx, getState())
-		try enterRule(_localctx, 242, Java8Parser.RULE_elementValueList)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1454)
-		 	try elementValue()
-		 	setState(1459)
+		 	setState(1284)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1293)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,149,_ctx)
-		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 		if ( _alt==1 ) {
-		 			setState(1455)
-		 			try match(Java8Parser.Tokens.COMMA.rawValue)
-		 			setState(1456)
-		 			try elementValue()
-
-		 	 
-		 		}
-		 		setState(1461)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN,Java8Parser.LBRACE]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
+		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
+		 	          }()
+		 	      return testSet
+		 	 }()) {
+		 		setState(1285)
+		 		try elementValue()
+		 		setState(1290)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,149,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,135,_ctx)
+		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
+		 			if ( _alt==1 ) {
+		 				setState(1286)
+		 				try match(Java8Parser.COMMA)
+		 				setState(1287)
+		 				try elementValue()
+
+		 		 
+		 			}
+		 			setState(1292)
+		 			try _errHandler.sync(self)
+		 			_alt = try getInterpreter().adaptivePredict(_input,135,_ctx)
+		 		}
+
 		 	}
+
+		 	setState(1296)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
+		 	      return testSet
+		 	 }()) {
+		 		setState(1295)
+		 		try match(Java8Parser.COMMA)
+
+		 	}
+
+		 	setState(1298)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9981,15 +8618,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func markerAnnotation() throws -> MarkerAnnotationContext {
 		var _localctx: MarkerAnnotationContext = MarkerAnnotationContext(_ctx, getState())
-		try enterRule(_localctx, 244, Java8Parser.RULE_markerAnnotation)
+		try enterRule(_localctx, 202, Java8Parser.RULE_markerAnnotation)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1462)
-		 	try match(Java8Parser.Tokens.AT.rawValue)
-		 	setState(1463)
+		 	setState(1300)
+		 	try match(Java8Parser.AT)
+		 	setState(1301)
 		 	try typeName()
 
 		}
@@ -10036,22 +8673,22 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func singleElementAnnotation() throws -> SingleElementAnnotationContext {
 		var _localctx: SingleElementAnnotationContext = SingleElementAnnotationContext(_ctx, getState())
-		try enterRule(_localctx, 246, Java8Parser.RULE_singleElementAnnotation)
+		try enterRule(_localctx, 204, Java8Parser.RULE_singleElementAnnotation)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1465)
-		 	try match(Java8Parser.Tokens.AT.rawValue)
-		 	setState(1466)
+		 	setState(1303)
+		 	try match(Java8Parser.AT)
+		 	setState(1304)
 		 	try typeName()
-		 	setState(1467)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1468)
+		 	setState(1305)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1306)
 		 	try elementValue()
-		 	setState(1469)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 	setState(1307)
+		 	try match(Java8Parser.RPAREN)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10063,8 +8700,11 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ArrayInitializerContext:ParserRuleContext {
-		open func variableInitializerList() -> VariableInitializerListContext? {
-			return getRuleContext(VariableInitializerListContext.self,0)
+		open func variableInitializer() -> Array<VariableInitializerContext> {
+			return getRuleContexts(VariableInitializerContext.self)
+		}
+		open func variableInitializer(_ i: Int) -> VariableInitializerContext? {
+			return getRuleContext(VariableInitializerContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_arrayInitializer }
 		override
@@ -10094,120 +8734,67 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func arrayInitializer() throws -> ArrayInitializerContext {
 		var _localctx: ArrayInitializerContext = ArrayInitializerContext(_ctx, getState())
-		try enterRule(_localctx, 248, Java8Parser.RULE_arrayInitializer)
+		try enterRule(_localctx, 206, Java8Parser.RULE_arrayInitializer)
 		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1471)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1473)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue,Java8Parser.Tokens.LBRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 	}()
-		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
-		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
-		 	          }()
-		 	      return testSet
-		 	 }()) {
-		 		setState(1472)
-		 		try variableInitializerList()
-
-		 	}
-
-		 	setState(1476)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(1475)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-
-		 	}
-
-		 	setState(1478)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class VariableInitializerListContext:ParserRuleContext {
-		open func variableInitializer() -> Array<VariableInitializerContext> {
-			return getRuleContexts(VariableInitializerContext.self)
-		}
-		open func variableInitializer(_ i: Int) -> VariableInitializerContext? {
-			return getRuleContext(VariableInitializerContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_variableInitializerList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterVariableInitializerList(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitVariableInitializerList(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitVariableInitializerList(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitVariableInitializerList(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func variableInitializerList() throws -> VariableInitializerListContext {
-		var _localctx: VariableInitializerListContext = VariableInitializerListContext(_ctx, getState())
-		try enterRule(_localctx, 250, Java8Parser.RULE_variableInitializerList)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1480)
-		 	try variableInitializer()
-		 	setState(1485)
+		 	setState(1309)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1318)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,152,_ctx)
-		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 		if ( _alt==1 ) {
-		 			setState(1481)
-		 			try match(Java8Parser.Tokens.COMMA.rawValue)
-		 			setState(1482)
-		 			try variableInitializer()
-
-		 	 
-		 		}
-		 		setState(1487)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN,Java8Parser.LBRACE]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
+		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
+		 	          }()
+		 	      return testSet
+		 	 }()) {
+		 		setState(1310)
+		 		try variableInitializer()
+		 		setState(1315)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,152,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,138,_ctx)
+		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
+		 			if ( _alt==1 ) {
+		 				setState(1311)
+		 				try match(Java8Parser.COMMA)
+		 				setState(1312)
+		 				try variableInitializer()
+
+		 		 
+		 			}
+		 			setState(1317)
+		 			try _errHandler.sync(self)
+		 			_alt = try getInterpreter().adaptivePredict(_input,138,_ctx)
+		 		}
+
 		 	}
+
+		 	setState(1321)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
+		 	      return testSet
+		 	 }()) {
+		 		setState(1320)
+		 		try match(Java8Parser.COMMA)
+
+		 	}
+
+		 	setState(1323)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10250,37 +8837,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
-		try enterRule(_localctx, 252, Java8Parser.RULE_block)
+		try enterRule(_localctx, 208, Java8Parser.RULE_block)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1488)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1490)
+		 	setState(1325)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1327)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.ASSERT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BREAK.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.CONTINUE.rawValue,Java8Parser.Tokens.DO.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.FOR.rawValue,Java8Parser.Tokens.IF.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.RETURN.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.SWITCH.rawValue,Java8Parser.Tokens.SYNCHRONIZED.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.THROW.rawValue,Java8Parser.Tokens.TRY.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.WHILE.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue,Java8Parser.Tokens.LBRACE.rawValue,Java8Parser.Tokens.SEMI.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.ASSERT,Java8Parser.BOOLEAN,Java8Parser.BREAK,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.CONTINUE,Java8Parser.DO,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.FOR,Java8Parser.IF,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.RETURN,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SUPER,Java8Parser.SWITCH,Java8Parser.SYNCHRONIZED,Java8Parser.THIS,Java8Parser.THROW,Java8Parser.TRY,Java8Parser.VOID,Java8Parser.WHILE,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN,Java8Parser.LBRACE,Java8Parser.SEMI]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1489)
+		 		setState(1326)
 		 		try blockStatements()
 
 		 	}
 
-		 	setState(1492)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(1329)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10326,38 +8913,36 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func blockStatements() throws -> BlockStatementsContext {
 		var _localctx: BlockStatementsContext = BlockStatementsContext(_ctx, getState())
-		try enterRule(_localctx, 254, Java8Parser.RULE_blockStatements)
+		try enterRule(_localctx, 210, Java8Parser.RULE_blockStatements)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1494)
-		 	try blockStatement()
-		 	setState(1498)
+		 	setState(1332) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ABSTRACT.rawValue,Java8Parser.Tokens.ASSERT.rawValue,Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BREAK.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.CLASS.rawValue,Java8Parser.Tokens.CONTINUE.rawValue,Java8Parser.Tokens.DO.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.ENUM.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.FOR.rawValue,Java8Parser.Tokens.IF.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.PRIVATE.rawValue,Java8Parser.Tokens.PROTECTED.rawValue,Java8Parser.Tokens.PUBLIC.rawValue,Java8Parser.Tokens.RETURN.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.STATIC.rawValue,Java8Parser.Tokens.STRICTFP.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.SWITCH.rawValue,Java8Parser.Tokens.SYNCHRONIZED.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.THROW.rawValue,Java8Parser.Tokens.TRY.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.WHILE.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue,Java8Parser.Tokens.LBRACE.rawValue,Java8Parser.Tokens.SEMI.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 	}()
-		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
-		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
-		 	          }()
-		 	      return testSet
-		 	 }()) {
-		 		setState(1495)
+		 	repeat {
+		 		setState(1331)
 		 		try blockStatement()
 
 
-		 		setState(1500)
+		 		setState(1334); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
-		 	}
+		 	} while (//closure
+		 	 { () -> Bool in
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Java8Parser.ABSTRACT,Java8Parser.ASSERT,Java8Parser.BOOLEAN,Java8Parser.BREAK,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.CLASS,Java8Parser.CONTINUE,Java8Parser.DO,Java8Parser.DOUBLE,Java8Parser.ENUM,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.FOR,Java8Parser.IF,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.PRIVATE,Java8Parser.PROTECTED,Java8Parser.PUBLIC,Java8Parser.RETURN,Java8Parser.SHORT,Java8Parser.STATIC,Java8Parser.STRICTFP,Java8Parser.SUPER,Java8Parser.SWITCH,Java8Parser.SYNCHRONIZED,Java8Parser.THIS,Java8Parser.THROW,Java8Parser.TRY,Java8Parser.VOID,Java8Parser.WHILE,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN,Java8Parser.LBRACE,Java8Parser.SEMI]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
+		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
+		 	          }()
+		 	      return testSet
+		 	 }())
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10406,29 +8991,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func blockStatement() throws -> BlockStatementContext {
 		var _localctx: BlockStatementContext = BlockStatementContext(_ctx, getState())
-		try enterRule(_localctx, 256, Java8Parser.RULE_blockStatement)
+		try enterRule(_localctx, 212, Java8Parser.RULE_blockStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1504)
+		 	setState(1339)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,155, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,143, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1501)
+		 		setState(1336)
 		 		try localVariableDeclarationStatement()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1502)
+		 		setState(1337)
 		 		try classDeclaration()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1503)
+		 		setState(1338)
 		 		try statement()
 
 		 		break
@@ -10475,16 +9060,16 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func localVariableDeclarationStatement() throws -> LocalVariableDeclarationStatementContext {
 		var _localctx: LocalVariableDeclarationStatementContext = LocalVariableDeclarationStatementContext(_ctx, getState())
-		try enterRule(_localctx, 258, Java8Parser.RULE_localVariableDeclarationStatement)
+		try enterRule(_localctx, 214, Java8Parser.RULE_localVariableDeclarationStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1506)
+		 	setState(1341)
 		 	try localVariableDeclaration()
-		 	setState(1507)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1342)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10536,33 +9121,33 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func localVariableDeclaration() throws -> LocalVariableDeclarationContext {
 		var _localctx: LocalVariableDeclarationContext = LocalVariableDeclarationContext(_ctx, getState())
-		try enterRule(_localctx, 260, Java8Parser.RULE_localVariableDeclaration)
+		try enterRule(_localctx, 216, Java8Parser.RULE_localVariableDeclaration)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1512)
+		 	setState(1347)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.FINAL
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1509)
+		 		setState(1344)
 		 		try variableModifier()
 
 
-		 		setState(1514)
+		 		setState(1349)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1515)
+		 	setState(1350)
 		 	try unannType()
-		 	setState(1516)
+		 	setState(1351)
 		 	try variableDeclaratorList()
 
 		}
@@ -10621,47 +9206,47 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
-		try enterRule(_localctx, 262, Java8Parser.RULE_statement)
+		try enterRule(_localctx, 218, Java8Parser.RULE_statement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1524)
+		 	setState(1359)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,157, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,145, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1518)
+		 		setState(1353)
 		 		try statementWithoutTrailingSubstatement()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1519)
+		 		setState(1354)
 		 		try labeledStatement()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1520)
+		 		setState(1355)
 		 		try ifThenStatement()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1521)
+		 		setState(1356)
 		 		try ifThenElseStatement()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1522)
+		 		setState(1357)
 		 		try whileStatement()
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1523)
+		 		setState(1358)
 		 		try forStatement()
 
 		 		break
@@ -10720,41 +9305,41 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func statementNoShortIf() throws -> StatementNoShortIfContext {
 		var _localctx: StatementNoShortIfContext = StatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 264, Java8Parser.RULE_statementNoShortIf)
+		try enterRule(_localctx, 220, Java8Parser.RULE_statementNoShortIf)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1531)
+		 	setState(1366)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,158, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,146, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1526)
+		 		setState(1361)
 		 		try statementWithoutTrailingSubstatement()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1527)
+		 		setState(1362)
 		 		try labeledStatementNoShortIf()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1528)
+		 		setState(1363)
 		 		try ifThenElseStatementNoShortIf()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1529)
+		 		setState(1364)
 		 		try whileStatementNoShortIf()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1530)
+		 		setState(1365)
 		 		try forStatementNoShortIf()
 
 		 		break
@@ -10834,115 +9419,115 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func statementWithoutTrailingSubstatement() throws -> StatementWithoutTrailingSubstatementContext {
 		var _localctx: StatementWithoutTrailingSubstatementContext = StatementWithoutTrailingSubstatementContext(_ctx, getState())
-		try enterRule(_localctx, 266, Java8Parser.RULE_statementWithoutTrailingSubstatement)
+		try enterRule(_localctx, 222, Java8Parser.RULE_statementWithoutTrailingSubstatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1545)
+		 	setState(1380)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .LBRACE:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.LBRACE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1533)
+		 		setState(1368)
 		 		try block()
 
 		 		break
 
-		 	case .SEMI:
+		 	case Java8Parser.SEMI:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1534)
+		 		setState(1369)
 		 		try emptyStatement()
 
 		 		break
-		 	case .BOOLEAN:fallthrough
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .NEW:fallthrough
-		 	case .SHORT:fallthrough
-		 	case .SUPER:fallthrough
-		 	case .THIS:fallthrough
-		 	case .VOID:fallthrough
-		 	case .IntegerLiteral:fallthrough
-		 	case .FloatingPointLiteral:fallthrough
-		 	case .BooleanLiteral:fallthrough
-		 	case .CharacterLiteral:fallthrough
-		 	case .StringLiteral:fallthrough
-		 	case .NullLiteral:fallthrough
-		 	case .LPAREN:fallthrough
-		 	case .INC:fallthrough
-		 	case .DEC:fallthrough
-		 	case .Identifier:fallthrough
-		 	case .AT:
+		 	case Java8Parser.BOOLEAN:fallthrough
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.NEW:fallthrough
+		 	case Java8Parser.SHORT:fallthrough
+		 	case Java8Parser.SUPER:fallthrough
+		 	case Java8Parser.THIS:fallthrough
+		 	case Java8Parser.VOID:fallthrough
+		 	case Java8Parser.IntegerLiteral:fallthrough
+		 	case Java8Parser.FloatingPointLiteral:fallthrough
+		 	case Java8Parser.BooleanLiteral:fallthrough
+		 	case Java8Parser.CharacterLiteral:fallthrough
+		 	case Java8Parser.StringLiteral:fallthrough
+		 	case Java8Parser.NullLiteral:fallthrough
+		 	case Java8Parser.LPAREN:fallthrough
+		 	case Java8Parser.INC:fallthrough
+		 	case Java8Parser.DEC:fallthrough
+		 	case Java8Parser.Identifier:fallthrough
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1535)
+		 		setState(1370)
 		 		try expressionStatement()
 
 		 		break
 
-		 	case .ASSERT:
+		 	case Java8Parser.ASSERT:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1536)
+		 		setState(1371)
 		 		try assertStatement()
 
 		 		break
 
-		 	case .SWITCH:
+		 	case Java8Parser.SWITCH:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1537)
+		 		setState(1372)
 		 		try switchStatement()
 
 		 		break
 
-		 	case .DO:
+		 	case Java8Parser.DO:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1538)
+		 		setState(1373)
 		 		try doStatement()
 
 		 		break
 
-		 	case .BREAK:
+		 	case Java8Parser.BREAK:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1539)
+		 		setState(1374)
 		 		try breakStatement()
 
 		 		break
 
-		 	case .CONTINUE:
+		 	case Java8Parser.CONTINUE:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(1540)
+		 		setState(1375)
 		 		try continueStatement()
 
 		 		break
 
-		 	case .RETURN:
+		 	case Java8Parser.RETURN:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(1541)
+		 		setState(1376)
 		 		try returnStatement()
 
 		 		break
 
-		 	case .SYNCHRONIZED:
+		 	case Java8Parser.SYNCHRONIZED:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(1542)
+		 		setState(1377)
 		 		try synchronizedStatement()
 
 		 		break
 
-		 	case .THROW:
+		 	case Java8Parser.THROW:
 		 		try enterOuterAlt(_localctx, 11)
-		 		setState(1543)
+		 		setState(1378)
 		 		try throwStatement()
 
 		 		break
 
-		 	case .TRY:
+		 	case Java8Parser.TRY:
 		 		try enterOuterAlt(_localctx, 12)
-		 		setState(1544)
+		 		setState(1379)
 		 		try tryStatement()
 
 		 		break
@@ -10987,14 +9572,14 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func emptyStatement() throws -> EmptyStatementContext {
 		var _localctx: EmptyStatementContext = EmptyStatementContext(_ctx, getState())
-		try enterRule(_localctx, 268, Java8Parser.RULE_emptyStatement)
+		try enterRule(_localctx, 224, Java8Parser.RULE_emptyStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1547)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1382)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11006,7 +9591,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class LabeledStatementContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func statement() -> StatementContext? {
 			return getRuleContext(StatementContext.self,0)
 		}
@@ -11038,17 +9623,17 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func labeledStatement() throws -> LabeledStatementContext {
 		var _localctx: LabeledStatementContext = LabeledStatementContext(_ctx, getState())
-		try enterRule(_localctx, 270, Java8Parser.RULE_labeledStatement)
+		try enterRule(_localctx, 226, Java8Parser.RULE_labeledStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1549)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1550)
-		 	try match(Java8Parser.Tokens.COLON.rawValue)
-		 	setState(1551)
+		 	setState(1384)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1385)
+		 	try match(Java8Parser.COLON)
+		 	setState(1386)
 		 	try statement()
 
 		}
@@ -11061,7 +9646,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class LabeledStatementNoShortIfContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func statementNoShortIf() -> StatementNoShortIfContext? {
 			return getRuleContext(StatementNoShortIfContext.self,0)
 		}
@@ -11093,17 +9678,17 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func labeledStatementNoShortIf() throws -> LabeledStatementNoShortIfContext {
 		var _localctx: LabeledStatementNoShortIfContext = LabeledStatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 272, Java8Parser.RULE_labeledStatementNoShortIf)
+		try enterRule(_localctx, 228, Java8Parser.RULE_labeledStatementNoShortIf)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1553)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(1554)
-		 	try match(Java8Parser.Tokens.COLON.rawValue)
-		 	setState(1555)
+		 	setState(1388)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1389)
+		 	try match(Java8Parser.COLON)
+		 	setState(1390)
 		 	try statementNoShortIf()
 
 		}
@@ -11147,16 +9732,16 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func expressionStatement() throws -> ExpressionStatementContext {
 		var _localctx: ExpressionStatementContext = ExpressionStatementContext(_ctx, getState())
-		try enterRule(_localctx, 274, Java8Parser.RULE_expressionStatement)
+		try enterRule(_localctx, 230, Java8Parser.RULE_expressionStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1557)
+		 	setState(1392)
 		 	try statementExpression()
-		 	setState(1558)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1393)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11171,17 +9756,11 @@ open class Java8Parser: Parser {
 		open func assignment() -> AssignmentContext? {
 			return getRuleContext(AssignmentContext.self,0)
 		}
-		open func preIncrementExpression() -> PreIncrementExpressionContext? {
-			return getRuleContext(PreIncrementExpressionContext.self,0)
+		open func preIncDecExpression() -> PreIncDecExpressionContext? {
+			return getRuleContext(PreIncDecExpressionContext.self,0)
 		}
-		open func preDecrementExpression() -> PreDecrementExpressionContext? {
-			return getRuleContext(PreDecrementExpressionContext.self,0)
-		}
-		open func postIncrementExpression() -> PostIncrementExpressionContext? {
-			return getRuleContext(PostIncrementExpressionContext.self,0)
-		}
-		open func postDecrementExpression() -> PostDecrementExpressionContext? {
-			return getRuleContext(PostDecrementExpressionContext.self,0)
+		open func postIncDecExpression() -> PostIncDecExpressionContext? {
+			return getRuleContext(PostIncDecExpressionContext.self,0)
 		}
 		open func methodInvocation() -> MethodInvocationContext? {
 			return getRuleContext(MethodInvocationContext.self,0)
@@ -11217,53 +9796,41 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func statementExpression() throws -> StatementExpressionContext {
 		var _localctx: StatementExpressionContext = StatementExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 276, Java8Parser.RULE_statementExpression)
+		try enterRule(_localctx, 232, Java8Parser.RULE_statementExpression)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1567)
+		 	setState(1400)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,160, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,148, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1560)
+		 		setState(1395)
 		 		try assignment()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1561)
-		 		try preIncrementExpression()
+		 		setState(1396)
+		 		try preIncDecExpression()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1562)
-		 		try preDecrementExpression()
+		 		setState(1397)
+		 		try postIncDecExpression()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1563)
-		 		try postIncrementExpression()
+		 		setState(1398)
+		 		try methodInvocation()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1564)
-		 		try postDecrementExpression()
-
-		 		break
-		 	case 6:
-		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1565)
-		 		try methodInvocation()
-
-		 		break
-		 	case 7:
-		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1566)
+		 		setState(1399)
 		 		try classInstanceCreationExpression()
 
 		 		break
@@ -11313,21 +9880,21 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func ifThenStatement() throws -> IfThenStatementContext {
 		var _localctx: IfThenStatementContext = IfThenStatementContext(_ctx, getState())
-		try enterRule(_localctx, 278, Java8Parser.RULE_ifThenStatement)
+		try enterRule(_localctx, 234, Java8Parser.RULE_ifThenStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1569)
-		 	try match(Java8Parser.Tokens.IF.rawValue)
-		 	setState(1570)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1571)
+		 	setState(1402)
+		 	try match(Java8Parser.IF)
+		 	setState(1403)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1404)
 		 	try expression()
-		 	setState(1572)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1573)
+		 	setState(1405)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1406)
 		 	try statement()
 
 		}
@@ -11377,25 +9944,25 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func ifThenElseStatement() throws -> IfThenElseStatementContext {
 		var _localctx: IfThenElseStatementContext = IfThenElseStatementContext(_ctx, getState())
-		try enterRule(_localctx, 280, Java8Parser.RULE_ifThenElseStatement)
+		try enterRule(_localctx, 236, Java8Parser.RULE_ifThenElseStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1575)
-		 	try match(Java8Parser.Tokens.IF.rawValue)
-		 	setState(1576)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1577)
+		 	setState(1408)
+		 	try match(Java8Parser.IF)
+		 	setState(1409)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1410)
 		 	try expression()
-		 	setState(1578)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1579)
+		 	setState(1411)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1412)
 		 	try statementNoShortIf()
-		 	setState(1580)
-		 	try match(Java8Parser.Tokens.ELSE.rawValue)
-		 	setState(1581)
+		 	setState(1413)
+		 	try match(Java8Parser.ELSE)
+		 	setState(1414)
 		 	try statement()
 
 		}
@@ -11445,25 +10012,25 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func ifThenElseStatementNoShortIf() throws -> IfThenElseStatementNoShortIfContext {
 		var _localctx: IfThenElseStatementNoShortIfContext = IfThenElseStatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 282, Java8Parser.RULE_ifThenElseStatementNoShortIf)
+		try enterRule(_localctx, 238, Java8Parser.RULE_ifThenElseStatementNoShortIf)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1583)
-		 	try match(Java8Parser.Tokens.IF.rawValue)
-		 	setState(1584)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1585)
+		 	setState(1416)
+		 	try match(Java8Parser.IF)
+		 	setState(1417)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1418)
 		 	try expression()
-		 	setState(1586)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1587)
+		 	setState(1419)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1420)
 		 	try statementNoShortIf()
-		 	setState(1588)
-		 	try match(Java8Parser.Tokens.ELSE.rawValue)
-		 	setState(1589)
+		 	setState(1421)
+		 	try match(Java8Parser.ELSE)
+		 	setState(1422)
 		 	try statementNoShortIf()
 
 		}
@@ -11510,40 +10077,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func assertStatement() throws -> AssertStatementContext {
 		var _localctx: AssertStatementContext = AssertStatementContext(_ctx, getState())
-		try enterRule(_localctx, 284, Java8Parser.RULE_assertStatement)
+		try enterRule(_localctx, 240, Java8Parser.RULE_assertStatement)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1601)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(1424)
+		 	try match(Java8Parser.ASSERT)
+		 	setState(1425)
+		 	try expression()
+		 	setState(1428)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,161, _ctx)) {
-		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1591)
-		 		try match(Java8Parser.Tokens.ASSERT.rawValue)
-		 		setState(1592)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.COLON
+		 	      return testSet
+		 	 }()) {
+		 		setState(1426)
+		 		try match(Java8Parser.COLON)
+		 		setState(1427)
 		 		try expression()
-		 		setState(1593)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
 
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1595)
-		 		try match(Java8Parser.Tokens.ASSERT.rawValue)
-		 		setState(1596)
-		 		try expression()
-		 		setState(1597)
-		 		try match(Java8Parser.Tokens.COLON.rawValue)
-		 		setState(1598)
-		 		try expression()
-		 		setState(1599)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
-
-		 		break
-		 	default: break
 		 	}
+
+		 	setState(1430)
+		 	try match(Java8Parser.SEMI)
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -11588,21 +10150,21 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func switchStatement() throws -> SwitchStatementContext {
 		var _localctx: SwitchStatementContext = SwitchStatementContext(_ctx, getState())
-		try enterRule(_localctx, 286, Java8Parser.RULE_switchStatement)
+		try enterRule(_localctx, 242, Java8Parser.RULE_switchStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1603)
-		 	try match(Java8Parser.Tokens.SWITCH.rawValue)
-		 	setState(1604)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1605)
+		 	setState(1432)
+		 	try match(Java8Parser.SWITCH)
+		 	setState(1433)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1434)
 		 	try expression()
-		 	setState(1606)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1607)
+		 	setState(1435)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1436)
 		 	try switchBlock()
 
 		}
@@ -11655,7 +10217,7 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func switchBlock() throws -> SwitchBlockContext {
 		var _localctx: SwitchBlockContext = SwitchBlockContext(_ctx, getState())
-		try enterRule(_localctx, 288, Java8Parser.RULE_switchBlock)
+		try enterRule(_localctx, 244, Java8Parser.RULE_switchBlock)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -11663,40 +10225,40 @@ open class Java8Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1609)
-		 	try match(Java8Parser.Tokens.LBRACE.rawValue)
-		 	setState(1613)
+		 	setState(1438)
+		 	try match(Java8Parser.LBRACE)
+		 	setState(1442)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,162,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,150,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(1610)
+		 			setState(1439)
 		 			try switchBlockStatementGroup()
 
 		 	 
 		 		}
-		 		setState(1615)
+		 		setState(1444)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,162,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,150,_ctx)
 		 	}
-		 	setState(1619)
+		 	setState(1448)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.CASE.rawValue || _la == Java8Parser.Tokens.DEFAULT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.CASE || _la == Java8Parser.DEFAULT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1616)
+		 		setState(1445)
 		 		try switchLabel()
 
 
-		 		setState(1621)
+		 		setState(1450)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1622)
-		 	try match(Java8Parser.Tokens.RBRACE.rawValue)
+		 	setState(1451)
+		 	try match(Java8Parser.RBRACE)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11742,15 +10304,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func switchBlockStatementGroup() throws -> SwitchBlockStatementGroupContext {
 		var _localctx: SwitchBlockStatementGroupContext = SwitchBlockStatementGroupContext(_ctx, getState())
-		try enterRule(_localctx, 290, Java8Parser.RULE_switchBlockStatementGroup)
+		try enterRule(_localctx, 246, Java8Parser.RULE_switchBlockStatementGroup)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1624)
+		 	setState(1453)
 		 	try switchLabels()
-		 	setState(1625)
+		 	setState(1454)
 		 	try blockStatements()
 
 		}
@@ -11797,31 +10359,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func switchLabels() throws -> SwitchLabelsContext {
 		var _localctx: SwitchLabelsContext = SwitchLabelsContext(_ctx, getState())
-		try enterRule(_localctx, 292, Java8Parser.RULE_switchLabels)
+		try enterRule(_localctx, 248, Java8Parser.RULE_switchLabels)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1627)
-		 	try switchLabel()
-		 	setState(1631)
+		 	setState(1457) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.CASE.rawValue || _la == Java8Parser.Tokens.DEFAULT.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(1628)
+		 	repeat {
+		 		setState(1456)
 		 		try switchLabel()
 
 
-		 		setState(1633)
+		 		setState(1459); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
-		 	}
+		 	} while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.CASE || _la == Java8Parser.DEFAULT
+		 	      return testSet
+		 	 }())
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11833,12 +10393,10 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class SwitchLabelContext:ParserRuleContext {
-		open func constantExpression() -> ConstantExpressionContext? {
-			return getRuleContext(ConstantExpressionContext.self,0)
+		open func expression() -> ExpressionContext? {
+			return getRuleContext(ExpressionContext.self,0)
 		}
-		open func enumConstantName() -> EnumConstantNameContext? {
-			return getRuleContext(EnumConstantNameContext.self,0)
-		}
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_switchLabel }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -11867,92 +10425,49 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func switchLabel() throws -> SwitchLabelContext {
 		var _localctx: SwitchLabelContext = SwitchLabelContext(_ctx, getState())
-		try enterRule(_localctx, 294, Java8Parser.RULE_switchLabel)
+		try enterRule(_localctx, 250, Java8Parser.RULE_switchLabel)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1644)
+		 	setState(1469)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,165, _ctx)) {
-		 	case 1:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.CASE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1634)
-		 		try match(Java8Parser.Tokens.CASE.rawValue)
-		 		setState(1635)
-		 		try constantExpression()
-		 		setState(1636)
-		 		try match(Java8Parser.Tokens.COLON.rawValue)
+		 		setState(1461)
+		 		try match(Java8Parser.CASE)
+		 		setState(1464)
+		 		try _errHandler.sync(self)
+		 		switch(try getInterpreter().adaptivePredict(_input,153, _ctx)) {
+		 		case 1:
+		 			setState(1462)
+		 			try expression()
+
+		 			break
+		 		case 2:
+		 			setState(1463)
+		 			try match(Java8Parser.Identifier)
+
+		 			break
+		 		default: break
+		 		}
+		 		setState(1466)
+		 		try match(Java8Parser.COLON)
 
 		 		break
-		 	case 2:
+
+		 	case Java8Parser.DEFAULT:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1638)
-		 		try match(Java8Parser.Tokens.CASE.rawValue)
-		 		setState(1639)
-		 		try enumConstantName()
-		 		setState(1640)
-		 		try match(Java8Parser.Tokens.COLON.rawValue)
+		 		setState(1467)
+		 		try match(Java8Parser.DEFAULT)
+		 		setState(1468)
+		 		try match(Java8Parser.COLON)
 
 		 		break
-		 	case 3:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1642)
-		 		try match(Java8Parser.Tokens.DEFAULT.rawValue)
-		 		setState(1643)
-		 		try match(Java8Parser.Tokens.COLON.rawValue)
-
-		 		break
-		 	default: break
+		 	default:
+		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class EnumConstantNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_enumConstantName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterEnumConstantName(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitEnumConstantName(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitEnumConstantName(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitEnumConstantName(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func enumConstantName() throws -> EnumConstantNameContext {
-		var _localctx: EnumConstantNameContext = EnumConstantNameContext(_ctx, getState())
-		try enterRule(_localctx, 296, Java8Parser.RULE_enumConstantName)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1646)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -11997,21 +10512,21 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func whileStatement() throws -> WhileStatementContext {
 		var _localctx: WhileStatementContext = WhileStatementContext(_ctx, getState())
-		try enterRule(_localctx, 298, Java8Parser.RULE_whileStatement)
+		try enterRule(_localctx, 252, Java8Parser.RULE_whileStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1648)
-		 	try match(Java8Parser.Tokens.WHILE.rawValue)
-		 	setState(1649)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1650)
+		 	setState(1471)
+		 	try match(Java8Parser.WHILE)
+		 	setState(1472)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1473)
 		 	try expression()
-		 	setState(1651)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1652)
+		 	setState(1474)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1475)
 		 	try statement()
 
 		}
@@ -12058,21 +10573,21 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func whileStatementNoShortIf() throws -> WhileStatementNoShortIfContext {
 		var _localctx: WhileStatementNoShortIfContext = WhileStatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 300, Java8Parser.RULE_whileStatementNoShortIf)
+		try enterRule(_localctx, 254, Java8Parser.RULE_whileStatementNoShortIf)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1654)
-		 	try match(Java8Parser.Tokens.WHILE.rawValue)
-		 	setState(1655)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1656)
+		 	setState(1477)
+		 	try match(Java8Parser.WHILE)
+		 	setState(1478)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1479)
 		 	try expression()
-		 	setState(1657)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1658)
+		 	setState(1480)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1481)
 		 	try statementNoShortIf()
 
 		}
@@ -12119,26 +10634,26 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func doStatement() throws -> DoStatementContext {
 		var _localctx: DoStatementContext = DoStatementContext(_ctx, getState())
-		try enterRule(_localctx, 302, Java8Parser.RULE_doStatement)
+		try enterRule(_localctx, 256, Java8Parser.RULE_doStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1660)
-		 	try match(Java8Parser.Tokens.DO.rawValue)
-		 	setState(1661)
+		 	setState(1483)
+		 	try match(Java8Parser.DO)
+		 	setState(1484)
 		 	try statement()
-		 	setState(1662)
-		 	try match(Java8Parser.Tokens.WHILE.rawValue)
-		 	setState(1663)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1664)
+		 	setState(1485)
+		 	try match(Java8Parser.WHILE)
+		 	setState(1486)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1487)
 		 	try expression()
-		 	setState(1665)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1666)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1488)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1489)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12184,23 +10699,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func forStatement() throws -> ForStatementContext {
 		var _localctx: ForStatementContext = ForStatementContext(_ctx, getState())
-		try enterRule(_localctx, 304, Java8Parser.RULE_forStatement)
+		try enterRule(_localctx, 258, Java8Parser.RULE_forStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1670)
+		 	setState(1493)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,166, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,155, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1668)
+		 		setState(1491)
 		 		try basicForStatement()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1669)
+		 		setState(1492)
 		 		try enhancedForStatement()
 
 		 		break
@@ -12250,23 +10765,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func forStatementNoShortIf() throws -> ForStatementNoShortIfContext {
 		var _localctx: ForStatementNoShortIfContext = ForStatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 306, Java8Parser.RULE_forStatementNoShortIf)
+		try enterRule(_localctx, 260, Java8Parser.RULE_forStatementNoShortIf)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1674)
+		 	setState(1497)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,167, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,156, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1672)
+		 		setState(1495)
 		 		try basicForStatementNoShortIf()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1673)
+		 		setState(1496)
 		 		try enhancedForStatementNoShortIf()
 
 		 		break
@@ -12322,84 +10837,84 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func basicForStatement() throws -> BasicForStatementContext {
 		var _localctx: BasicForStatementContext = BasicForStatementContext(_ctx, getState())
-		try enterRule(_localctx, 308, Java8Parser.RULE_basicForStatement)
+		try enterRule(_localctx, 262, Java8Parser.RULE_basicForStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1676)
-		 	try match(Java8Parser.Tokens.FOR.rawValue)
-		 	setState(1677)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1679)
+		 	setState(1499)
+		 	try match(Java8Parser.FOR)
+		 	setState(1500)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1502)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1678)
+		 		setState(1501)
 		 		try forInit()
 
 		 	}
 
-		 	setState(1681)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-		 	setState(1683)
+		 	setState(1504)
+		 	try match(Java8Parser.SEMI)
+		 	setState(1506)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1682)
+		 		setState(1505)
 		 		try expression()
 
 		 	}
 
-		 	setState(1685)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-		 	setState(1687)
+		 	setState(1508)
+		 	try match(Java8Parser.SEMI)
+		 	setState(1510)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1686)
+		 		setState(1509)
 		 		try forUpdate()
 
 		 	}
 
-		 	setState(1689)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1690)
+		 	setState(1512)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1513)
 		 	try statement()
 
 		}
@@ -12452,84 +10967,84 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func basicForStatementNoShortIf() throws -> BasicForStatementNoShortIfContext {
 		var _localctx: BasicForStatementNoShortIfContext = BasicForStatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 310, Java8Parser.RULE_basicForStatementNoShortIf)
+		try enterRule(_localctx, 264, Java8Parser.RULE_basicForStatementNoShortIf)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1692)
-		 	try match(Java8Parser.Tokens.FOR.rawValue)
-		 	setState(1693)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1695)
+		 	setState(1515)
+		 	try match(Java8Parser.FOR)
+		 	setState(1516)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1518)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1694)
+		 		setState(1517)
 		 		try forInit()
 
 		 	}
 
-		 	setState(1697)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-		 	setState(1699)
+		 	setState(1520)
+		 	try match(Java8Parser.SEMI)
+		 	setState(1522)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1698)
+		 		setState(1521)
 		 		try expression()
 
 		 	}
 
-		 	setState(1701)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
-		 	setState(1703)
+		 	setState(1524)
+		 	try match(Java8Parser.SEMI)
+		 	setState(1526)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.INC,Java8Parser.DEC,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 79)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1702)
+		 		setState(1525)
 		 		try forUpdate()
 
 		 	}
 
-		 	setState(1705)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1706)
+		 	setState(1528)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1529)
 		 	try statementNoShortIf()
 
 		}
@@ -12576,23 +11091,23 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func forInit() throws -> ForInitContext {
 		var _localctx: ForInitContext = ForInitContext(_ctx, getState())
-		try enterRule(_localctx, 312, Java8Parser.RULE_forInit)
+		try enterRule(_localctx, 266, Java8Parser.RULE_forInit)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1710)
+		 	setState(1533)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,174, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,163, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1708)
+		 		setState(1531)
 		 		try statementExpressionList()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1709)
+		 		setState(1532)
 		 		try localVariableDeclaration()
 
 		 		break
@@ -12639,13 +11154,13 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func forUpdate() throws -> ForUpdateContext {
 		var _localctx: ForUpdateContext = ForUpdateContext(_ctx, getState())
-		try enterRule(_localctx, 314, Java8Parser.RULE_forUpdate)
+		try enterRule(_localctx, 268, Java8Parser.RULE_forUpdate)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1712)
+		 	setState(1535)
 		 	try statementExpressionList()
 
 		}
@@ -12692,30 +11207,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func statementExpressionList() throws -> StatementExpressionListContext {
 		var _localctx: StatementExpressionListContext = StatementExpressionListContext(_ctx, getState())
-		try enterRule(_localctx, 316, Java8Parser.RULE_statementExpressionList)
+		try enterRule(_localctx, 270, Java8Parser.RULE_statementExpressionList)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1714)
+		 	setState(1537)
 		 	try statementExpression()
-		 	setState(1719)
+		 	setState(1542)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(1715)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(1716)
+		 		setState(1538)
+		 		try match(Java8Parser.COMMA)
+		 		setState(1539)
 		 		try statementExpression()
 
 
-		 		setState(1721)
+		 		setState(1544)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -12776,45 +11291,45 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enhancedForStatement() throws -> EnhancedForStatementContext {
 		var _localctx: EnhancedForStatementContext = EnhancedForStatementContext(_ctx, getState())
-		try enterRule(_localctx, 318, Java8Parser.RULE_enhancedForStatement)
+		try enterRule(_localctx, 272, Java8Parser.RULE_enhancedForStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1722)
-		 	try match(Java8Parser.Tokens.FOR.rawValue)
-		 	setState(1723)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1727)
+		 	setState(1545)
+		 	try match(Java8Parser.FOR)
+		 	setState(1546)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1550)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.FINAL
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1724)
+		 		setState(1547)
 		 		try variableModifier()
 
 
-		 		setState(1729)
+		 		setState(1552)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1730)
+		 	setState(1553)
 		 	try unannType()
-		 	setState(1731)
+		 	setState(1554)
 		 	try variableDeclaratorId()
-		 	setState(1732)
-		 	try match(Java8Parser.Tokens.COLON.rawValue)
-		 	setState(1733)
+		 	setState(1555)
+		 	try match(Java8Parser.COLON)
+		 	setState(1556)
 		 	try expression()
-		 	setState(1734)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1735)
+		 	setState(1557)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1558)
 		 	try statement()
 
 		}
@@ -12873,45 +11388,45 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func enhancedForStatementNoShortIf() throws -> EnhancedForStatementNoShortIfContext {
 		var _localctx: EnhancedForStatementNoShortIfContext = EnhancedForStatementNoShortIfContext(_ctx, getState())
-		try enterRule(_localctx, 320, Java8Parser.RULE_enhancedForStatementNoShortIf)
+		try enterRule(_localctx, 274, Java8Parser.RULE_enhancedForStatementNoShortIf)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1737)
-		 	try match(Java8Parser.Tokens.FOR.rawValue)
-		 	setState(1738)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1742)
+		 	setState(1560)
+		 	try match(Java8Parser.FOR)
+		 	setState(1561)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1565)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.FINAL
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1739)
+		 		setState(1562)
 		 		try variableModifier()
 
 
-		 		setState(1744)
+		 		setState(1567)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1745)
+		 	setState(1568)
 		 	try unannType()
-		 	setState(1746)
+		 	setState(1569)
 		 	try variableDeclaratorId()
-		 	setState(1747)
-		 	try match(Java8Parser.Tokens.COLON.rawValue)
-		 	setState(1748)
+		 	setState(1570)
+		 	try match(Java8Parser.COLON)
+		 	setState(1571)
 		 	try expression()
-		 	setState(1749)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1750)
+		 	setState(1572)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1573)
 		 	try statementNoShortIf()
 
 		}
@@ -12924,7 +11439,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class BreakStatementContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_breakStatement }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -12953,30 +11468,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func breakStatement() throws -> BreakStatementContext {
 		var _localctx: BreakStatementContext = BreakStatementContext(_ctx, getState())
-		try enterRule(_localctx, 322, Java8Parser.RULE_breakStatement)
+		try enterRule(_localctx, 276, Java8Parser.RULE_breakStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1752)
-		 	try match(Java8Parser.Tokens.BREAK.rawValue)
-		 	setState(1754)
+		 	setState(1575)
+		 	try match(Java8Parser.BREAK)
+		 	setState(1577)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.Identifier.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.Identifier
 		 	      return testSet
 		 	 }()) {
-		 		setState(1753)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(1576)
+		 		try match(Java8Parser.Identifier)
 
 		 	}
 
-		 	setState(1756)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1579)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12988,7 +11503,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ContinueStatementContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_continueStatement }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -13017,30 +11532,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func continueStatement() throws -> ContinueStatementContext {
 		var _localctx: ContinueStatementContext = ContinueStatementContext(_ctx, getState())
-		try enterRule(_localctx, 324, Java8Parser.RULE_continueStatement)
+		try enterRule(_localctx, 278, Java8Parser.RULE_continueStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1758)
-		 	try match(Java8Parser.Tokens.CONTINUE.rawValue)
-		 	setState(1760)
+		 	setState(1581)
+		 	try match(Java8Parser.CONTINUE)
+		 	setState(1583)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.Identifier.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.Identifier
 		 	      return testSet
 		 	 }()) {
-		 		setState(1759)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(1582)
+		 		try match(Java8Parser.Identifier)
 
 		 	}
 
-		 	setState(1762)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1585)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13083,37 +11598,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func returnStatement() throws -> ReturnStatementContext {
 		var _localctx: ReturnStatementContext = ReturnStatementContext(_ctx, getState())
-		try enterRule(_localctx, 326, Java8Parser.RULE_returnStatement)
+		try enterRule(_localctx, 280, Java8Parser.RULE_returnStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1764)
-		 	try match(Java8Parser.Tokens.RETURN.rawValue)
-		 	setState(1766)
+		 	setState(1587)
+		 	try match(Java8Parser.RETURN)
+		 	setState(1589)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1765)
+		 		setState(1588)
 		 		try expression()
 
 		 	}
 
-		 	setState(1768)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1591)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13156,18 +11671,18 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func throwStatement() throws -> ThrowStatementContext {
 		var _localctx: ThrowStatementContext = ThrowStatementContext(_ctx, getState())
-		try enterRule(_localctx, 328, Java8Parser.RULE_throwStatement)
+		try enterRule(_localctx, 282, Java8Parser.RULE_throwStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1770)
-		 	try match(Java8Parser.Tokens.THROW.rawValue)
-		 	setState(1771)
+		 	setState(1593)
+		 	try match(Java8Parser.THROW)
+		 	setState(1594)
 		 	try expression()
-		 	setState(1772)
-		 	try match(Java8Parser.Tokens.SEMI.rawValue)
+		 	setState(1595)
+		 	try match(Java8Parser.SEMI)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13213,21 +11728,21 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func synchronizedStatement() throws -> SynchronizedStatementContext {
 		var _localctx: SynchronizedStatementContext = SynchronizedStatementContext(_ctx, getState())
-		try enterRule(_localctx, 330, Java8Parser.RULE_synchronizedStatement)
+		try enterRule(_localctx, 284, Java8Parser.RULE_synchronizedStatement)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1774)
-		 	try match(Java8Parser.Tokens.SYNCHRONIZED.rawValue)
-		 	setState(1775)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1776)
+		 	setState(1597)
+		 	try match(Java8Parser.SYNCHRONIZED)
+		 	setState(1598)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1599)
 		 	try expression()
-		 	setState(1777)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1778)
+		 	setState(1600)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1601)
 		 	try block()
 
 		}
@@ -13280,51 +11795,51 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func tryStatement() throws -> TryStatementContext {
 		var _localctx: TryStatementContext = TryStatementContext(_ctx, getState())
-		try enterRule(_localctx, 332, Java8Parser.RULE_tryStatement)
+		try enterRule(_localctx, 286, Java8Parser.RULE_tryStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1792)
+		 	setState(1615)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,182, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,171, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1780)
-		 		try match(Java8Parser.Tokens.TRY.rawValue)
-		 		setState(1781)
+		 		setState(1603)
+		 		try match(Java8Parser.TRY)
+		 		setState(1604)
 		 		try block()
-		 		setState(1782)
+		 		setState(1605)
 		 		try catches()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1784)
-		 		try match(Java8Parser.Tokens.TRY.rawValue)
-		 		setState(1785)
+		 		setState(1607)
+		 		try match(Java8Parser.TRY)
+		 		setState(1608)
 		 		try block()
-		 		setState(1787)
+		 		setState(1610)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.CATCH.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.CATCH
 		 		      return testSet
 		 		 }()) {
-		 			setState(1786)
+		 			setState(1609)
 		 			try catches()
 
 		 		}
 
-		 		setState(1789)
+		 		setState(1612)
 		 		try finally_()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1791)
+		 		setState(1614)
 		 		try tryWithResourcesStatement()
 
 		 		break
@@ -13374,31 +11889,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func catches() throws -> CatchesContext {
 		var _localctx: CatchesContext = CatchesContext(_ctx, getState())
-		try enterRule(_localctx, 334, Java8Parser.RULE_catches)
+		try enterRule(_localctx, 288, Java8Parser.RULE_catches)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1794)
-		 	try catchClause()
-		 	setState(1798)
+		 	setState(1618) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.CATCH.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(1795)
+		 	repeat {
+		 		setState(1617)
 		 		try catchClause()
 
 
-		 		setState(1800)
+		 		setState(1620); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
-		 	}
+		 	} while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.CATCH
+		 	      return testSet
+		 	 }())
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13444,21 +11957,21 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func catchClause() throws -> CatchClauseContext {
 		var _localctx: CatchClauseContext = CatchClauseContext(_ctx, getState())
-		try enterRule(_localctx, 336, Java8Parser.RULE_catchClause)
+		try enterRule(_localctx, 290, Java8Parser.RULE_catchClause)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1801)
-		 	try match(Java8Parser.Tokens.CATCH.rawValue)
-		 	setState(1802)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1803)
+		 	setState(1622)
+		 	try match(Java8Parser.CATCH)
+		 	setState(1623)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1624)
 		 	try catchFormalParameter()
-		 	setState(1804)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(1805)
+		 	setState(1625)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1626)
 		 	try block()
 
 		}
@@ -13511,33 +12024,33 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func catchFormalParameter() throws -> CatchFormalParameterContext {
 		var _localctx: CatchFormalParameterContext = CatchFormalParameterContext(_ctx, getState())
-		try enterRule(_localctx, 338, Java8Parser.RULE_catchFormalParameter)
+		try enterRule(_localctx, 292, Java8Parser.RULE_catchFormalParameter)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1810)
+		 	setState(1631)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.FINAL
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1807)
+		 		setState(1628)
 		 		try variableModifier()
 
 
-		 		setState(1812)
+		 		setState(1633)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1813)
+		 	setState(1634)
 		 	try catchType()
-		 	setState(1814)
+		 	setState(1635)
 		 	try variableDeclaratorId()
 
 		}
@@ -13587,30 +12100,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func catchType() throws -> CatchTypeContext {
 		var _localctx: CatchTypeContext = CatchTypeContext(_ctx, getState())
-		try enterRule(_localctx, 340, Java8Parser.RULE_catchType)
+		try enterRule(_localctx, 294, Java8Parser.RULE_catchType)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1816)
+		 	setState(1637)
 		 	try unannClassType()
-		 	setState(1821)
+		 	setState(1642)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.BITOR.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.BITOR
 		 	      return testSet
 		 	 }()) {
-		 		setState(1817)
-		 		try match(Java8Parser.Tokens.BITOR.rawValue)
-		 		setState(1818)
+		 		setState(1638)
+		 		try match(Java8Parser.BITOR)
+		 		setState(1639)
 		 		try classType()
 
 
-		 		setState(1823)
+		 		setState(1644)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -13656,15 +12169,15 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func finally_() throws -> Finally_Context {
 		var _localctx: Finally_Context = Finally_Context(_ctx, getState())
-		try enterRule(_localctx, 342, Java8Parser.RULE_finally_)
+		try enterRule(_localctx, 296, Java8Parser.RULE_finally_)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1824)
-		 	try match(Java8Parser.Tokens.FINALLY.rawValue)
-		 	setState(1825)
+		 	setState(1645)
+		 	try match(Java8Parser.FINALLY)
+		 	setState(1646)
 		 	try block()
 
 		}
@@ -13717,41 +12230,41 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func tryWithResourcesStatement() throws -> TryWithResourcesStatementContext {
 		var _localctx: TryWithResourcesStatementContext = TryWithResourcesStatementContext(_ctx, getState())
-		try enterRule(_localctx, 344, Java8Parser.RULE_tryWithResourcesStatement)
+		try enterRule(_localctx, 298, Java8Parser.RULE_tryWithResourcesStatement)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1827)
-		 	try match(Java8Parser.Tokens.TRY.rawValue)
-		 	setState(1828)
+		 	setState(1648)
+		 	try match(Java8Parser.TRY)
+		 	setState(1649)
 		 	try resourceSpecification()
-		 	setState(1829)
+		 	setState(1650)
 		 	try block()
-		 	setState(1831)
+		 	setState(1652)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.CATCH.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.CATCH
 		 	      return testSet
 		 	 }()) {
-		 		setState(1830)
+		 		setState(1651)
 		 		try catches()
 
 		 	}
 
-		 	setState(1834)
+		 	setState(1655)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.FINALLY.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.FINALLY
 		 	      return testSet
 		 	 }()) {
-		 		setState(1833)
+		 		setState(1654)
 		 		try finally_()
 
 		 	}
@@ -13798,32 +12311,32 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func resourceSpecification() throws -> ResourceSpecificationContext {
 		var _localctx: ResourceSpecificationContext = ResourceSpecificationContext(_ctx, getState())
-		try enterRule(_localctx, 346, Java8Parser.RULE_resourceSpecification)
+		try enterRule(_localctx, 300, Java8Parser.RULE_resourceSpecification)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1836)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(1837)
+		 	setState(1657)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1658)
 		 	try resourceList()
-		 	setState(1839)
+		 	setState(1660)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.SEMI.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.SEMI
 		 	      return testSet
 		 	 }()) {
-		 		setState(1838)
-		 		try match(Java8Parser.Tokens.SEMI.rawValue)
+		 		setState(1659)
+		 		try match(Java8Parser.SEMI)
 
 		 	}
 
-		 	setState(1841)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 	setState(1662)
+		 	try match(Java8Parser.RPAREN)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13869,30 +12382,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func resourceList() throws -> ResourceListContext {
 		var _localctx: ResourceListContext = ResourceListContext(_ctx, getState())
-		try enterRule(_localctx, 348, Java8Parser.RULE_resourceList)
+		try enterRule(_localctx, 302, Java8Parser.RULE_resourceList)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1843)
+		 	setState(1664)
 		 	try resource()
-		 	setState(1848)
+		 	setState(1669)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,189,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,178,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(1844)
-		 			try match(Java8Parser.Tokens.SEMI.rawValue)
-		 			setState(1845)
+		 			setState(1665)
+		 			try match(Java8Parser.SEMI)
+		 			setState(1666)
 		 			try resource()
 
 		 	 
 		 		}
-		 		setState(1850)
+		 		setState(1671)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,189,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,178,_ctx)
 		 	}
 
 		}
@@ -13948,37 +12461,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func resource() throws -> ResourceContext {
 		var _localctx: ResourceContext = ResourceContext(_ctx, getState())
-		try enterRule(_localctx, 350, Java8Parser.RULE_resource)
+		try enterRule(_localctx, 304, Java8Parser.RULE_resource)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1854)
+		 	setState(1675)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      var testSet: Bool = _la == Java8Parser.Tokens.FINAL.rawValue
-		 	          testSet = testSet || _la == Java8Parser.Tokens.AT.rawValue
+		 	      var testSet: Bool = _la == Java8Parser.FINAL
+		 	          testSet = testSet || _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(1851)
+		 		setState(1672)
 		 		try variableModifier()
 
 
-		 		setState(1856)
+		 		setState(1677)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(1857)
+		 	setState(1678)
 		 	try unannType()
-		 	setState(1858)
+		 	setState(1679)
 		 	try variableDeclaratorId()
-		 	setState(1859)
-		 	try match(Java8Parser.Tokens.ASSIGN.rawValue)
-		 	setState(1860)
+		 	setState(1680)
+		 	try match(Java8Parser.ASSIGN)
+		 	setState(1681)
 		 	try expression()
 
 		}
@@ -14031,41 +12544,41 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primary() throws -> PrimaryContext {
 		var _localctx: PrimaryContext = PrimaryContext(_ctx, getState())
-		try enterRule(_localctx, 352, Java8Parser.RULE_primary)
+		try enterRule(_localctx, 306, Java8Parser.RULE_primary)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1864)
+		 	setState(1685)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,191, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,180, _ctx)) {
 		 	case 1:
-		 		setState(1862)
+		 		setState(1683)
 		 		try primaryNoNewArray_lfno_primary()
 
 		 		break
 		 	case 2:
-		 		setState(1863)
+		 		setState(1684)
 		 		try arrayCreationExpression()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(1869)
+		 	setState(1690)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,192,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,181,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(1866)
+		 			setState(1687)
 		 			try primaryNoNewArray_lf_primary()
 
 		 	 
 		 		}
-		 		setState(1871)
+		 		setState(1692)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,192,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,181,_ctx)
 		 	}
 
 		}
@@ -14130,162 +12643,117 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primaryNoNewArray() throws -> PrimaryNoNewArrayContext {
 		var _localctx: PrimaryNoNewArrayContext = PrimaryNoNewArrayContext(_ctx, getState())
-		try enterRule(_localctx, 354, Java8Parser.RULE_primaryNoNewArray)
+		try enterRule(_localctx, 308, Java8Parser.RULE_primaryNoNewArray)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1901)
+		 	setState(1722)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,194, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,183, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1872)
+		 		setState(1693)
 		 		try literal()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1873)
+		 		setState(1694)
 		 		try typeName()
-		 		setState(1878)
+		 		setState(1699)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACK
 		 		      return testSet
 		 		 }()) {
-		 			setState(1874)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(1875)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(1695)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(1696)
+		 			try match(Java8Parser.RBRACK)
 
 
-		 			setState(1880)
+		 			setState(1701)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1881)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1882)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1702)
+		 		try match(Java8Parser.DOT)
+		 		setState(1703)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1884)
-		 		try match(Java8Parser.Tokens.VOID.rawValue)
-		 		setState(1885)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1886)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1705)
+		 		try match(Java8Parser.VOID)
+		 		setState(1706)
+		 		try match(Java8Parser.DOT)
+		 		setState(1707)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1887)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1708)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1888)
+		 		setState(1709)
 		 		try typeName()
-		 		setState(1889)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1890)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1710)
+		 		try match(Java8Parser.DOT)
+		 		setState(1711)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1892)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1893)
+		 		setState(1713)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1714)
 		 		try expression()
-		 		setState(1894)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(1715)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1896)
+		 		setState(1717)
 		 		try classInstanceCreationExpression()
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(1897)
+		 		setState(1718)
 		 		try fieldAccess()
 
 		 		break
 		 	case 9:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(1898)
+		 		setState(1719)
 		 		try arrayAccess()
 
 		 		break
 		 	case 10:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(1899)
+		 		setState(1720)
 		 		try methodInvocation()
 
 		 		break
 		 	case 11:
 		 		try enterOuterAlt(_localctx, 11)
-		 		setState(1900)
+		 		setState(1721)
 		 		try methodReference()
 
 		 		break
 		 	default: break
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PrimaryNoNewArray_lf_arrayAccessContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_primaryNoNewArray_lf_arrayAccess }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPrimaryNoNewArray_lf_arrayAccess(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPrimaryNoNewArray_lf_arrayAccess(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPrimaryNoNewArray_lf_arrayAccess(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPrimaryNoNewArray_lf_arrayAccess(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func primaryNoNewArray_lf_arrayAccess() throws -> PrimaryNoNewArray_lf_arrayAccessContext {
-		var _localctx: PrimaryNoNewArray_lf_arrayAccessContext = PrimaryNoNewArray_lf_arrayAccessContext(_ctx, getState())
-		try enterRule(_localctx, 356, Java8Parser.RULE_primaryNoNewArray_lf_arrayAccess)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -14345,106 +12813,106 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primaryNoNewArray_lfno_arrayAccess() throws -> PrimaryNoNewArray_lfno_arrayAccessContext {
 		var _localctx: PrimaryNoNewArray_lfno_arrayAccessContext = PrimaryNoNewArray_lfno_arrayAccessContext(_ctx, getState())
-		try enterRule(_localctx, 358, Java8Parser.RULE_primaryNoNewArray_lfno_arrayAccess)
+		try enterRule(_localctx, 310, Java8Parser.RULE_primaryNoNewArray_lfno_arrayAccess)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1933)
+		 	setState(1752)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,196, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,185, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1905)
+		 		setState(1724)
 		 		try literal()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1906)
+		 		setState(1725)
 		 		try typeName()
-		 		setState(1911)
+		 		setState(1730)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACK
 		 		      return testSet
 		 		 }()) {
-		 			setState(1907)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(1908)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(1726)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(1727)
+		 			try match(Java8Parser.RBRACK)
 
 
-		 			setState(1913)
+		 			setState(1732)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1914)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1915)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1733)
+		 		try match(Java8Parser.DOT)
+		 		setState(1734)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1917)
-		 		try match(Java8Parser.Tokens.VOID.rawValue)
-		 		setState(1918)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1919)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1736)
+		 		try match(Java8Parser.VOID)
+		 		setState(1737)
+		 		try match(Java8Parser.DOT)
+		 		setState(1738)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1920)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1739)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1921)
+		 		setState(1740)
 		 		try typeName()
-		 		setState(1922)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1923)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1741)
+		 		try match(Java8Parser.DOT)
+		 		setState(1742)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1925)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1926)
+		 		setState(1744)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1745)
 		 		try expression()
-		 		setState(1927)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(1746)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1929)
+		 		setState(1748)
 		 		try classInstanceCreationExpression()
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(1930)
+		 		setState(1749)
 		 		try fieldAccess()
 
 		 		break
 		 	case 9:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(1931)
+		 		setState(1750)
 		 		try methodInvocation()
 
 		 		break
 		 	case 10:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(1932)
+		 		setState(1751)
 		 		try methodReference()
 
 		 		break
@@ -14503,91 +12971,46 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primaryNoNewArray_lf_primary() throws -> PrimaryNoNewArray_lf_primaryContext {
 		var _localctx: PrimaryNoNewArray_lf_primaryContext = PrimaryNoNewArray_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 360, Java8Parser.RULE_primaryNoNewArray_lf_primary)
+		try enterRule(_localctx, 312, Java8Parser.RULE_primaryNoNewArray_lf_primary)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1940)
+		 	setState(1759)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,197, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,186, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1935)
+		 		setState(1754)
 		 		try classInstanceCreationExpression_lf_primary()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1936)
+		 		setState(1755)
 		 		try fieldAccess_lf_primary()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1937)
+		 		setState(1756)
 		 		try arrayAccess_lf_primary()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1938)
+		 		setState(1757)
 		 		try methodInvocation_lf_primary()
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1939)
+		 		setState(1758)
 		 		try methodReference_lf_primary()
 
 		 		break
 		 	default: break
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary() throws -> PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext {
-		var _localctx: PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext = PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 362, Java8Parser.RULE_primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -14638,35 +13061,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary() throws -> PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext {
 		var _localctx: PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext = PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 364, Java8Parser.RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary)
+		try enterRule(_localctx, 314, Java8Parser.RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1948)
+		 	setState(1765)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,198, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,187, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1944)
+		 		setState(1761)
 		 		try classInstanceCreationExpression_lf_primary()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1945)
+		 		setState(1762)
 		 		try fieldAccess_lf_primary()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1946)
+		 		setState(1763)
 		 		try methodInvocation_lf_primary()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1947)
+		 		setState(1764)
 		 		try methodReference_lf_primary()
 
 		 		break
@@ -14737,190 +13160,145 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primaryNoNewArray_lfno_primary() throws -> PrimaryNoNewArray_lfno_primaryContext {
 		var _localctx: PrimaryNoNewArray_lfno_primaryContext = PrimaryNoNewArray_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 366, Java8Parser.RULE_primaryNoNewArray_lfno_primary)
+		try enterRule(_localctx, 316, Java8Parser.RULE_primaryNoNewArray_lfno_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1990)
+		 	setState(1807)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,201, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,190, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1950)
+		 		setState(1767)
 		 		try literal()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1951)
+		 		setState(1768)
 		 		try typeName()
-		 		setState(1956)
+		 		setState(1773)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACK
 		 		      return testSet
 		 		 }()) {
-		 			setState(1952)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(1953)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(1769)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(1770)
+		 			try match(Java8Parser.RBRACK)
 
 
-		 			setState(1958)
+		 			setState(1775)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1959)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1960)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1776)
+		 		try match(Java8Parser.DOT)
+		 		setState(1777)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1962)
+		 		setState(1779)
 		 		try unannPrimitiveType()
-		 		setState(1967)
+		 		setState(1784)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACK
 		 		      return testSet
 		 		 }()) {
-		 			setState(1963)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(1964)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(1780)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(1781)
+		 			try match(Java8Parser.RBRACK)
 
 
-		 			setState(1969)
+		 			setState(1786)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(1970)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1971)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1787)
+		 		try match(Java8Parser.DOT)
+		 		setState(1788)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(1973)
-		 		try match(Java8Parser.Tokens.VOID.rawValue)
-		 		setState(1974)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1975)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1790)
+		 		try match(Java8Parser.VOID)
+		 		setState(1791)
+		 		try match(Java8Parser.DOT)
+		 		setState(1792)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(1976)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1793)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(1977)
+		 		setState(1794)
 		 		try typeName()
-		 		setState(1978)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(1979)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1795)
+		 		try match(Java8Parser.DOT)
+		 		setState(1796)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(1981)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(1982)
+		 		setState(1798)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1799)
 		 		try expression()
-		 		setState(1983)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(1800)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(1985)
+		 		setState(1802)
 		 		try classInstanceCreationExpression_lfno_primary()
 
 		 		break
 		 	case 9:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(1986)
+		 		setState(1803)
 		 		try fieldAccess_lfno_primary()
 
 		 		break
 		 	case 10:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(1987)
+		 		setState(1804)
 		 		try arrayAccess_lfno_primary()
 
 		 		break
 		 	case 11:
 		 		try enterOuterAlt(_localctx, 11)
-		 		setState(1988)
+		 		setState(1805)
 		 		try methodInvocation_lfno_primary()
 
 		 		break
 		 	case 12:
 		 		try enterOuterAlt(_localctx, 12)
-		 		setState(1989)
+		 		setState(1806)
 		 		try methodReference_lfno_primary()
 
 		 		break
 		 	default: break
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary() throws -> PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext {
-		var _localctx: PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext = PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 368, Java8Parser.RULE_primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -14983,134 +13361,134 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary() throws -> PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext {
 		var _localctx: PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext = PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 370, Java8Parser.RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary)
+		try enterRule(_localctx, 318, Java8Parser.RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2033)
+		 	setState(1848)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,204, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,193, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1994)
+		 		setState(1809)
 		 		try literal()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1995)
+		 		setState(1810)
 		 		try typeName()
-		 		setState(2000)
+		 		setState(1815)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACK
 		 		      return testSet
 		 		 }()) {
-		 			setState(1996)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(1997)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(1811)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(1812)
+		 			try match(Java8Parser.RBRACK)
 
 
-		 			setState(2002)
+		 			setState(1817)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2003)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2004)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1818)
+		 		try match(Java8Parser.DOT)
+		 		setState(1819)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2006)
+		 		setState(1821)
 		 		try unannPrimitiveType()
-		 		setState(2011)
+		 		setState(1826)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACK
 		 		      return testSet
 		 		 }()) {
-		 			setState(2007)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(2008)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(1822)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(1823)
+		 			try match(Java8Parser.RBRACK)
 
 
-		 			setState(2013)
+		 			setState(1828)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2014)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2015)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1829)
+		 		try match(Java8Parser.DOT)
+		 		setState(1830)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2017)
-		 		try match(Java8Parser.Tokens.VOID.rawValue)
-		 		setState(2018)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2019)
-		 		try match(Java8Parser.Tokens.CLASS.rawValue)
+		 		setState(1832)
+		 		try match(Java8Parser.VOID)
+		 		setState(1833)
+		 		try match(Java8Parser.DOT)
+		 		setState(1834)
+		 		try match(Java8Parser.CLASS)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(2020)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1835)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(2021)
+		 		setState(1836)
 		 		try typeName()
-		 		setState(2022)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2023)
-		 		try match(Java8Parser.Tokens.THIS.rawValue)
+		 		setState(1837)
+		 		try match(Java8Parser.DOT)
+		 		setState(1838)
+		 		try match(Java8Parser.THIS)
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(2025)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2026)
+		 		setState(1840)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1841)
 		 		try expression()
-		 		setState(2027)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(1842)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(2029)
+		 		setState(1844)
 		 		try classInstanceCreationExpression_lfno_primary()
 
 		 		break
 		 	case 9:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(2030)
+		 		setState(1845)
 		 		try fieldAccess_lfno_primary()
 
 		 		break
 		 	case 10:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(2031)
+		 		setState(1846)
 		 		try methodInvocation_lfno_primary()
 
 		 		break
 		 	case 11:
 		 		try enterOuterAlt(_localctx, 11)
-		 		setState(2032)
+		 		setState(1847)
 		 		try methodReference_lfno_primary()
 
 		 		break
@@ -15126,9 +13504,9 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ClassInstanceCreationExpressionContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Tokens.Identifier.rawValue) }
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
 		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Java8Parser.Tokens.Identifier.rawValue, i)
+			return getToken(Java8Parser.Identifier, i)
 		}
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
@@ -15182,130 +13560,130 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classInstanceCreationExpression() throws -> ClassInstanceCreationExpressionContext {
 		var _localctx: ClassInstanceCreationExpressionContext = ClassInstanceCreationExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 372, Java8Parser.RULE_classInstanceCreationExpression)
+		try enterRule(_localctx, 320, Java8Parser.RULE_classInstanceCreationExpression)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2118)
+		 	setState(1933)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,222, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,211, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2035)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2037)
+		 		setState(1850)
+		 		try match(Java8Parser.NEW)
+		 		setState(1852)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2036)
+		 			setState(1851)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2042)
+		 		setState(1857)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2039)
+		 			setState(1854)
 		 			try annotation()
 
 
-		 			setState(2044)
+		 			setState(1859)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2045)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2056)
+		 		setState(1860)
+		 		try match(Java8Parser.Identifier)
+		 		setState(1871)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.DOT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.DOT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2046)
-		 			try match(Java8Parser.Tokens.DOT.rawValue)
-		 			setState(2050)
+		 			setState(1861)
+		 			try match(Java8Parser.DOT)
+		 			setState(1865)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 			while (//closure
 		 			 { () -> Bool in
-		 			      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 			      let testSet: Bool = _la == Java8Parser.AT
 		 			      return testSet
 		 			 }()) {
-		 				setState(2047)
+		 				setState(1862)
 		 				try annotation()
 
 
-		 				setState(2052)
+		 				setState(1867)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 			}
-		 			setState(2053)
-		 			try match(Java8Parser.Tokens.Identifier.rawValue)
+		 			setState(1868)
+		 			try match(Java8Parser.Identifier)
 
 
-		 			setState(2058)
+		 			setState(1873)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2060)
+		 		setState(1875)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2059)
+		 			setState(1874)
 		 			try typeArgumentsOrDiamond()
 
 		 		}
 
-		 		setState(2062)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2064)
+		 		setState(1877)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1879)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2063)
+		 			setState(1878)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2066)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2068)
+		 		setState(1881)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1883)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACE.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACE
 		 		      return testSet
 		 		 }()) {
-		 			setState(2067)
+		 			setState(1882)
 		 			try classBody()
 
 		 		}
@@ -15314,89 +13692,89 @@ open class Java8Parser: Parser {
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2070)
+		 		setState(1885)
 		 		try expressionName()
-		 		setState(2071)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2072)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2074)
+		 		setState(1886)
+		 		try match(Java8Parser.DOT)
+		 		setState(1887)
+		 		try match(Java8Parser.NEW)
+		 		setState(1889)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2073)
+		 			setState(1888)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2079)
+		 		setState(1894)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2076)
+		 			setState(1891)
 		 			try annotation()
 
 
-		 			setState(2081)
+		 			setState(1896)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2082)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2084)
+		 		setState(1897)
+		 		try match(Java8Parser.Identifier)
+		 		setState(1899)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2083)
+		 			setState(1898)
 		 			try typeArgumentsOrDiamond()
 
 		 		}
 
-		 		setState(2086)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2088)
+		 		setState(1901)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1903)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2087)
+		 			setState(1902)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2090)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2092)
+		 		setState(1905)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1907)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACE.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACE
 		 		      return testSet
 		 		 }()) {
-		 			setState(2091)
+		 			setState(1906)
 		 			try classBody()
 
 		 		}
@@ -15405,89 +13783,89 @@ open class Java8Parser: Parser {
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2094)
+		 		setState(1909)
 		 		try primary()
-		 		setState(2095)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2096)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2098)
+		 		setState(1910)
+		 		try match(Java8Parser.DOT)
+		 		setState(1911)
+		 		try match(Java8Parser.NEW)
+		 		setState(1913)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2097)
+		 			setState(1912)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2103)
+		 		setState(1918)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2100)
+		 			setState(1915)
 		 			try annotation()
 
 
-		 			setState(2105)
+		 			setState(1920)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2106)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2108)
+		 		setState(1921)
+		 		try match(Java8Parser.Identifier)
+		 		setState(1923)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2107)
+		 			setState(1922)
 		 			try typeArgumentsOrDiamond()
 
 		 		}
 
-		 		setState(2110)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2112)
+		 		setState(1925)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1927)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2111)
+		 			setState(1926)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2114)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2116)
+		 		setState(1929)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1931)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LBRACE.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LBRACE
 		 		      return testSet
 		 		 }()) {
-		 			setState(2115)
+		 			setState(1930)
 		 			try classBody()
 
 		 		}
@@ -15506,7 +13884,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ClassInstanceCreationExpression_lf_primaryContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -15553,90 +13931,90 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classInstanceCreationExpression_lf_primary() throws -> ClassInstanceCreationExpression_lf_primaryContext {
 		var _localctx: ClassInstanceCreationExpression_lf_primaryContext = ClassInstanceCreationExpression_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 374, Java8Parser.RULE_classInstanceCreationExpression_lf_primary)
+		try enterRule(_localctx, 322, Java8Parser.RULE_classInstanceCreationExpression_lf_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2120)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(2121)
-		 	try match(Java8Parser.Tokens.NEW.rawValue)
-		 	setState(2123)
+		 	setState(1935)
+		 	try match(Java8Parser.DOT)
+		 	setState(1936)
+		 	try match(Java8Parser.NEW)
+		 	setState(1938)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(2122)
+		 		setState(1937)
 		 		try typeArguments()
 
 		 	}
 
-		 	setState(2128)
+		 	setState(1943)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(2125)
+		 		setState(1940)
 		 		try annotation()
 
 
-		 		setState(2130)
+		 		setState(1945)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(2131)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(2133)
+		 	setState(1946)
+		 	try match(Java8Parser.Identifier)
+		 	setState(1948)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(2132)
+		 		setState(1947)
 		 		try typeArgumentsOrDiamond()
 
 		 	}
 
-		 	setState(2135)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(2137)
+		 	setState(1950)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(1952)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(2136)
+		 		setState(1951)
 		 		try argumentList()
 
 		 	}
 
-		 	setState(2139)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 	setState(2141)
+		 	setState(1954)
+		 	try match(Java8Parser.RPAREN)
+		 	setState(1956)
 		 	try _errHandler.sync(self)
-		 	switch (try getInterpreter().adaptivePredict(_input,227,_ctx)) {
+		 	switch (try getInterpreter().adaptivePredict(_input,216,_ctx)) {
 		 	case 1:
-		 		setState(2140)
+		 		setState(1955)
 		 		try classBody()
 
 		 		break
@@ -15653,9 +14031,9 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class ClassInstanceCreationExpression_lfno_primaryContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Tokens.Identifier.rawValue) }
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
 		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Java8Parser.Tokens.Identifier.rawValue, i)
+			return getToken(Java8Parser.Identifier, i)
 		}
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
@@ -15706,126 +14084,126 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func classInstanceCreationExpression_lfno_primary() throws -> ClassInstanceCreationExpression_lfno_primaryContext {
 		var _localctx: ClassInstanceCreationExpression_lfno_primaryContext = ClassInstanceCreationExpression_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 376, Java8Parser.RULE_classInstanceCreationExpression_lfno_primary)
+		try enterRule(_localctx, 324, Java8Parser.RULE_classInstanceCreationExpression_lfno_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2202)
+		 	setState(2017)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .NEW:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.NEW:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2143)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2145)
+		 		setState(1958)
+		 		try match(Java8Parser.NEW)
+		 		setState(1960)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2144)
+		 			setState(1959)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2150)
+		 		setState(1965)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2147)
+		 			setState(1962)
 		 			try annotation()
 
 
-		 			setState(2152)
+		 			setState(1967)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2153)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2164)
+		 		setState(1968)
+		 		try match(Java8Parser.Identifier)
+		 		setState(1979)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.DOT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.DOT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2154)
-		 			try match(Java8Parser.Tokens.DOT.rawValue)
-		 			setState(2158)
+		 			setState(1969)
+		 			try match(Java8Parser.DOT)
+		 			setState(1973)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 			while (//closure
 		 			 { () -> Bool in
-		 			      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 			      let testSet: Bool = _la == Java8Parser.AT
 		 			      return testSet
 		 			 }()) {
-		 				setState(2155)
+		 				setState(1970)
 		 				try annotation()
 
 
-		 				setState(2160)
+		 				setState(1975)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 			}
-		 			setState(2161)
-		 			try match(Java8Parser.Tokens.Identifier.rawValue)
+		 			setState(1976)
+		 			try match(Java8Parser.Identifier)
 
 
-		 			setState(2166)
+		 			setState(1981)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2168)
+		 		setState(1983)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2167)
+		 			setState(1982)
 		 			try typeArgumentsOrDiamond()
 
 		 		}
 
-		 		setState(2170)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2172)
+		 		setState(1985)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(1987)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2171)
+		 			setState(1986)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2174)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2176)
+		 		setState(1989)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(1991)
 		 		try _errHandler.sync(self)
-		 		switch (try getInterpreter().adaptivePredict(_input,234,_ctx)) {
+		 		switch (try getInterpreter().adaptivePredict(_input,223,_ctx)) {
 		 		case 1:
-		 			setState(2175)
+		 			setState(1990)
 		 			try classBody()
 
 		 			break
@@ -15834,87 +14212,87 @@ open class Java8Parser: Parser {
 
 		 		break
 
-		 	case .Identifier:
+		 	case Java8Parser.Identifier:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2178)
+		 		setState(1993)
 		 		try expressionName()
-		 		setState(2179)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2180)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2182)
+		 		setState(1994)
+		 		try match(Java8Parser.DOT)
+		 		setState(1995)
+		 		try match(Java8Parser.NEW)
+		 		setState(1997)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2181)
+		 			setState(1996)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2187)
+		 		setState(2002)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2184)
+		 			setState(1999)
 		 			try annotation()
 
 
-		 			setState(2189)
+		 			setState(2004)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2190)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2192)
+		 		setState(2005)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2007)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2191)
+		 			setState(2006)
 		 			try typeArgumentsOrDiamond()
 
 		 		}
 
-		 		setState(2194)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2196)
+		 		setState(2009)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2011)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2195)
+		 			setState(2010)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2198)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2200)
+		 		setState(2013)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(2015)
 		 		try _errHandler.sync(self)
-		 		switch (try getInterpreter().adaptivePredict(_input,239,_ctx)) {
+		 		switch (try getInterpreter().adaptivePredict(_input,228,_ctx)) {
 		 		case 1:
-		 			setState(2199)
+		 			setState(2014)
 		 			try classBody()
 
 		 			break
@@ -15966,26 +14344,26 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func typeArgumentsOrDiamond() throws -> TypeArgumentsOrDiamondContext {
 		var _localctx: TypeArgumentsOrDiamondContext = TypeArgumentsOrDiamondContext(_ctx, getState())
-		try enterRule(_localctx, 378, Java8Parser.RULE_typeArgumentsOrDiamond)
+		try enterRule(_localctx, 326, Java8Parser.RULE_typeArgumentsOrDiamond)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2207)
+		 	setState(2022)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,241, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,230, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2204)
+		 		setState(2019)
 		 		try typeArguments()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2205)
-		 		try match(Java8Parser.Tokens.LT.rawValue)
-		 		setState(2206)
-		 		try match(Java8Parser.Tokens.GT.rawValue)
+		 		setState(2020)
+		 		try match(Java8Parser.LT)
+		 		setState(2021)
+		 		try match(Java8Parser.GT)
 
 		 		break
 		 	default: break
@@ -16003,7 +14381,7 @@ open class Java8Parser: Parser {
 		open func primary() -> PrimaryContext? {
 			return getRuleContext(PrimaryContext.self,0)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeName() -> TypeNameContext? {
 			return getRuleContext(TypeNameContext.self,0)
 		}
@@ -16035,46 +14413,46 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func fieldAccess() throws -> FieldAccessContext {
 		var _localctx: FieldAccessContext = FieldAccessContext(_ctx, getState())
-		try enterRule(_localctx, 380, Java8Parser.RULE_fieldAccess)
+		try enterRule(_localctx, 328, Java8Parser.RULE_fieldAccess)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2222)
+		 	setState(2037)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,242, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,231, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2209)
+		 		setState(2024)
 		 		try primary()
-		 		setState(2210)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2211)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2025)
+		 		try match(Java8Parser.DOT)
+		 		setState(2026)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2213)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2214)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2215)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2028)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2029)
+		 		try match(Java8Parser.DOT)
+		 		setState(2030)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2216)
+		 		setState(2031)
 		 		try typeName()
-		 		setState(2217)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2218)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2219)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2220)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2032)
+		 		try match(Java8Parser.DOT)
+		 		setState(2033)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2034)
+		 		try match(Java8Parser.DOT)
+		 		setState(2035)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	default: break
@@ -16089,7 +14467,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class FieldAccess_lf_primaryContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_fieldAccess_lf_primary }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
@@ -16118,16 +14496,16 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func fieldAccess_lf_primary() throws -> FieldAccess_lf_primaryContext {
 		var _localctx: FieldAccess_lf_primaryContext = FieldAccess_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 382, Java8Parser.RULE_fieldAccess_lf_primary)
+		try enterRule(_localctx, 330, Java8Parser.RULE_fieldAccess_lf_primary)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2224)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(2225)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	setState(2039)
+		 	try match(Java8Parser.DOT)
+		 	setState(2040)
+		 	try match(Java8Parser.Identifier)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16139,7 +14517,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class FieldAccess_lfno_primaryContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeName() -> TypeNameContext? {
 			return getRuleContext(TypeNameContext.self,0)
 		}
@@ -16171,42 +14549,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func fieldAccess_lfno_primary() throws -> FieldAccess_lfno_primaryContext {
 		var _localctx: FieldAccess_lfno_primaryContext = FieldAccess_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 384, Java8Parser.RULE_fieldAccess_lfno_primary)
+		try enterRule(_localctx, 332, Java8Parser.RULE_fieldAccess_lfno_primary)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2236)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(2045)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .SUPER:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2227)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2228)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2229)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-
-		 		break
-
-		 	case .Identifier:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2230)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.Identifier
+		 	      return testSet
+		 	 }()) {
+		 		setState(2042)
 		 		try typeName()
-		 		setState(2231)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2232)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2233)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2234)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2043)
+		 		try match(Java8Parser.DOT)
 
-		 		break
-		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
+		 	setState(2047)
+		 	try match(Java8Parser.SUPER)
+		 	setState(2048)
+		 	try match(Java8Parser.DOT)
+		 	setState(2049)
+		 	try match(Java8Parser.Identifier)
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -16220,20 +14591,14 @@ open class Java8Parser: Parser {
 		open func expressionName() -> ExpressionNameContext? {
 			return getRuleContext(ExpressionNameContext.self,0)
 		}
+		open func primaryNoNewArray_lfno_arrayAccess() -> PrimaryNoNewArray_lfno_arrayAccessContext? {
+			return getRuleContext(PrimaryNoNewArray_lfno_arrayAccessContext.self,0)
+		}
 		open func expression() -> Array<ExpressionContext> {
 			return getRuleContexts(ExpressionContext.self)
 		}
 		open func expression(_ i: Int) -> ExpressionContext? {
 			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func primaryNoNewArray_lfno_arrayAccess() -> PrimaryNoNewArray_lfno_arrayAccessContext? {
-			return getRuleContext(PrimaryNoNewArray_lfno_arrayAccessContext.self,0)
-		}
-		open func primaryNoNewArray_lf_arrayAccess() -> Array<PrimaryNoNewArray_lf_arrayAccessContext> {
-			return getRuleContexts(PrimaryNoNewArray_lf_arrayAccessContext.self)
-		}
-		open func primaryNoNewArray_lf_arrayAccess(_ i: Int) -> PrimaryNoNewArray_lf_arrayAccessContext? {
-			return getRuleContext(PrimaryNoNewArray_lf_arrayAccessContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_arrayAccess }
 		override
@@ -16263,62 +14628,48 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func arrayAccess() throws -> ArrayAccessContext {
 		var _localctx: ArrayAccessContext = ArrayAccessContext(_ctx, getState())
-		try enterRule(_localctx, 386, Java8Parser.RULE_arrayAccess)
+		try enterRule(_localctx, 334, Java8Parser.RULE_arrayAccess)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2248)
+		 	setState(2053)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,244, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,233, _ctx)) {
 		 	case 1:
-		 		setState(2238)
+		 		setState(2051)
 		 		try expressionName()
-		 		setState(2239)
-		 		try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 		setState(2240)
-		 		try expression()
-		 		setState(2241)
-		 		try match(Java8Parser.Tokens.RBRACK.rawValue)
 
 		 		break
 		 	case 2:
-		 		setState(2243)
+		 		setState(2052)
 		 		try primaryNoNewArray_lfno_arrayAccess()
-		 		setState(2244)
-		 		try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 		setState(2245)
-		 		try expression()
-		 		setState(2246)
-		 		try match(Java8Parser.Tokens.RBRACK.rawValue)
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(2257)
+		 	setState(2059) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LBRACK.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(2250)
-		 		try primaryNoNewArray_lf_arrayAccess()
-		 		setState(2251)
-		 		try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 		setState(2252)
+		 	repeat {
+		 		setState(2055)
+		 		try match(Java8Parser.LBRACK)
+		 		setState(2056)
 		 		try expression()
-		 		setState(2253)
-		 		try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 		setState(2057)
+		 		try match(Java8Parser.RBRACK)
 
 
-		 		setState(2259)
+		 		setState(2061); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
-		 	}
+		 	} while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.LBRACK
+		 	      return testSet
+		 	 }())
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16338,12 +14689,6 @@ open class Java8Parser: Parser {
 		}
 		open func expression(_ i: Int) -> ExpressionContext? {
 			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary() -> Array<PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext> {
-			return getRuleContexts(PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext.self)
-		}
-		open func primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(_ i: Int) -> PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext? {
-			return getRuleContext(PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_arrayAccess_lf_primary }
 		override
@@ -16373,42 +14718,37 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func arrayAccess_lf_primary() throws -> ArrayAccess_lf_primaryContext {
 		var _localctx: ArrayAccess_lf_primaryContext = ArrayAccess_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 388, Java8Parser.RULE_arrayAccess_lf_primary)
+		try enterRule(_localctx, 336, Java8Parser.RULE_arrayAccess_lf_primary)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2260)
+		 	setState(2063)
 		 	try primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary()
-		 	setState(2261)
-		 	try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 	setState(2262)
-		 	try expression()
-		 	setState(2263)
-		 	try match(Java8Parser.Tokens.RBRACK.rawValue)
-
-		 	setState(2272)
+		 	setState(2068); 
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,246,_ctx)
-		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 		if ( _alt==1 ) {
-		 			setState(2265)
-		 			try primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary()
-		 			setState(2266)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(2267)
+		 	_alt = 1;
+		 	repeat {
+		 		switch (_alt) {
+		 		case 1:
+		 			setState(2064)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(2065)
 		 			try expression()
-		 			setState(2268)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(2066)
+		 			try match(Java8Parser.RBRACK)
 
-		 	 
+
+		 			break
+		 		default:
+		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
-		 		setState(2274)
+		 		setState(2070); 
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,246,_ctx)
-		 	}
+		 		_alt = try getInterpreter().adaptivePredict(_input,235,_ctx)
+		 	} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16423,20 +14763,14 @@ open class Java8Parser: Parser {
 		open func expressionName() -> ExpressionNameContext? {
 			return getRuleContext(ExpressionNameContext.self,0)
 		}
+		open func primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary() -> PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext? {
+			return getRuleContext(PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext.self,0)
+		}
 		open func expression() -> Array<ExpressionContext> {
 			return getRuleContexts(ExpressionContext.self)
 		}
 		open func expression(_ i: Int) -> ExpressionContext? {
 			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary() -> PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext? {
-			return getRuleContext(PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext.self,0)
-		}
-		open func primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary() -> Array<PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext> {
-			return getRuleContexts(PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext.self)
-		}
-		open func primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(_ i: Int) -> PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext? {
-			return getRuleContext(PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_arrayAccess_lfno_primary }
 		override
@@ -16466,60 +14800,50 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func arrayAccess_lfno_primary() throws -> ArrayAccess_lfno_primaryContext {
 		var _localctx: ArrayAccess_lfno_primaryContext = ArrayAccess_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 390, Java8Parser.RULE_arrayAccess_lfno_primary)
+		try enterRule(_localctx, 338, Java8Parser.RULE_arrayAccess_lfno_primary)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2285)
+		 	setState(2074)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,247, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,236, _ctx)) {
 		 	case 1:
-		 		setState(2275)
+		 		setState(2072)
 		 		try expressionName()
-		 		setState(2276)
-		 		try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 		setState(2277)
-		 		try expression()
-		 		setState(2278)
-		 		try match(Java8Parser.Tokens.RBRACK.rawValue)
 
 		 		break
 		 	case 2:
-		 		setState(2280)
+		 		setState(2073)
 		 		try primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary()
-		 		setState(2281)
-		 		try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 		setState(2282)
-		 		try expression()
-		 		setState(2283)
-		 		try match(Java8Parser.Tokens.RBRACK.rawValue)
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(2294)
+		 	setState(2080); 
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,248,_ctx)
-		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 		if ( _alt==1 ) {
-		 			setState(2287)
-		 			try primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary()
-		 			setState(2288)
-		 			try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 			setState(2289)
+		 	_alt = 1;
+		 	repeat {
+		 		switch (_alt) {
+		 		case 1:
+		 			setState(2076)
+		 			try match(Java8Parser.LBRACK)
+		 			setState(2077)
 		 			try expression()
-		 			setState(2290)
-		 			try match(Java8Parser.Tokens.RBRACK.rawValue)
+		 			setState(2078)
+		 			try match(Java8Parser.RBRACK)
 
-		 	 
+
+		 			break
+		 		default:
+		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
-		 		setState(2296)
+		 		setState(2082); 
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,248,_ctx)
-		 	}
+		 		_alt = try getInterpreter().adaptivePredict(_input,237,_ctx)
+		 	} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16531,16 +14855,13 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class MethodInvocationContext:ParserRuleContext {
-		open func methodName() -> MethodNameContext? {
-			return getRuleContext(MethodNameContext.self,0)
-		}
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func argumentList() -> ArgumentListContext? {
 			return getRuleContext(ArgumentListContext.self,0)
 		}
 		open func typeName() -> TypeNameContext? {
 			return getRuleContext(TypeNameContext.self,0)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -16578,282 +14899,282 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodInvocation() throws -> MethodInvocationContext {
 		var _localctx: MethodInvocationContext = MethodInvocationContext(_ctx, getState())
-		try enterRule(_localctx, 392, Java8Parser.RULE_methodInvocation)
+		try enterRule(_localctx, 340, Java8Parser.RULE_methodInvocation)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2365)
+		 	setState(2151)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,260, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,249, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2297)
-		 		try methodName()
-		 		setState(2298)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2300)
+		 		setState(2084)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2085)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2087)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2299)
+		 			setState(2086)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2302)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2089)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2304)
+		 		setState(2090)
 		 		try typeName()
-		 		setState(2305)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2307)
+		 		setState(2091)
+		 		try match(Java8Parser.DOT)
+		 		setState(2093)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2306)
+		 			setState(2092)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2309)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2310)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2312)
+		 		setState(2095)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2096)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2098)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2311)
+		 			setState(2097)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2314)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2100)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2316)
+		 		setState(2102)
 		 		try expressionName()
-		 		setState(2317)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2319)
+		 		setState(2103)
+		 		try match(Java8Parser.DOT)
+		 		setState(2105)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2318)
+		 			setState(2104)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2321)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2322)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2324)
+		 		setState(2107)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2108)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2110)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2323)
+		 			setState(2109)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2326)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2112)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2328)
+		 		setState(2114)
 		 		try primary()
-		 		setState(2329)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2331)
+		 		setState(2115)
+		 		try match(Java8Parser.DOT)
+		 		setState(2117)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2330)
+		 			setState(2116)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2333)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2334)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2336)
+		 		setState(2119)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2120)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2122)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2335)
+		 			setState(2121)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2338)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2124)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(2340)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2341)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2343)
+		 		setState(2126)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2127)
+		 		try match(Java8Parser.DOT)
+		 		setState(2129)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2342)
+		 			setState(2128)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2345)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2346)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2348)
+		 		setState(2131)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2132)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2134)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2347)
+		 			setState(2133)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2350)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2136)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(2351)
+		 		setState(2137)
 		 		try typeName()
-		 		setState(2352)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2353)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2354)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2356)
+		 		setState(2138)
+		 		try match(Java8Parser.DOT)
+		 		setState(2139)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2140)
+		 		try match(Java8Parser.DOT)
+		 		setState(2142)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2355)
+		 			setState(2141)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2358)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2359)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2361)
+		 		setState(2144)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2145)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2147)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2360)
+		 			setState(2146)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2363)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2149)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	default: break
@@ -16868,7 +15189,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class MethodInvocation_lf_primaryContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -16903,54 +15224,54 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodInvocation_lf_primary() throws -> MethodInvocation_lf_primaryContext {
 		var _localctx: MethodInvocation_lf_primaryContext = MethodInvocation_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 394, Java8Parser.RULE_methodInvocation_lf_primary)
+		try enterRule(_localctx, 342, Java8Parser.RULE_methodInvocation_lf_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2367)
-		 	try match(Java8Parser.Tokens.DOT.rawValue)
-		 	setState(2369)
+		 	setState(2153)
+		 	try match(Java8Parser.DOT)
+		 	setState(2155)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(2368)
+		 		setState(2154)
 		 		try typeArguments()
 
 		 	}
 
-		 	setState(2371)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(2372)
-		 	try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 	setState(2374)
+		 	setState(2157)
+		 	try match(Java8Parser.Identifier)
+		 	setState(2158)
+		 	try match(Java8Parser.LPAREN)
+		 	setState(2160)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(2373)
+		 		setState(2159)
 		 		try argumentList()
 
 		 	}
 
-		 	setState(2376)
-		 	try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 	setState(2162)
+		 	try match(Java8Parser.RPAREN)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16962,16 +15283,13 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class MethodInvocation_lfno_primaryContext:ParserRuleContext {
-		open func methodName() -> MethodNameContext? {
-			return getRuleContext(MethodNameContext.self,0)
-		}
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func argumentList() -> ArgumentListContext? {
 			return getRuleContext(ArgumentListContext.self,0)
 		}
 		open func typeName() -> TypeNameContext? {
 			return getRuleContext(TypeNameContext.self,0)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -17006,235 +15324,235 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodInvocation_lfno_primary() throws -> MethodInvocation_lfno_primaryContext {
 		var _localctx: MethodInvocation_lfno_primaryContext = MethodInvocation_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 396, Java8Parser.RULE_methodInvocation_lfno_primary)
+		try enterRule(_localctx, 344, Java8Parser.RULE_methodInvocation_lfno_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2434)
+		 	setState(2219)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,272, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,261, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2378)
-		 		try methodName()
-		 		setState(2379)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2381)
+		 		setState(2164)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2165)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2167)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2380)
+		 			setState(2166)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2383)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2169)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2385)
+		 		setState(2170)
 		 		try typeName()
-		 		setState(2386)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2388)
+		 		setState(2171)
+		 		try match(Java8Parser.DOT)
+		 		setState(2173)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2387)
+		 			setState(2172)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2390)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2391)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2393)
+		 		setState(2175)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2176)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2178)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2392)
+		 			setState(2177)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2395)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2180)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2397)
+		 		setState(2182)
 		 		try expressionName()
-		 		setState(2398)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2400)
+		 		setState(2183)
+		 		try match(Java8Parser.DOT)
+		 		setState(2185)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2399)
+		 			setState(2184)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2402)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2403)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2405)
+		 		setState(2187)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2188)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2190)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2404)
+		 			setState(2189)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2407)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2192)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2409)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2410)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2412)
+		 		setState(2194)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2195)
+		 		try match(Java8Parser.DOT)
+		 		setState(2197)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2411)
+		 			setState(2196)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2414)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2415)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2417)
+		 		setState(2199)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2200)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2202)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2416)
+		 			setState(2201)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2419)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2204)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(2420)
+		 		setState(2205)
 		 		try typeName()
-		 		setState(2421)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2422)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2423)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2425)
+		 		setState(2206)
+		 		try match(Java8Parser.DOT)
+		 		setState(2207)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2208)
+		 		try match(Java8Parser.DOT)
+		 		setState(2210)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2424)
+		 			setState(2209)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2427)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
-		 		setState(2428)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2430)
+		 		setState(2212)
+		 		try match(Java8Parser.Identifier)
+		 		setState(2213)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2215)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.NEW.rawValue,Java8Parser.Tokens.SHORT.rawValue,Java8Parser.Tokens.SUPER.rawValue,Java8Parser.Tokens.THIS.rawValue,Java8Parser.Tokens.VOID.rawValue,Java8Parser.Tokens.IntegerLiteral.rawValue,Java8Parser.Tokens.FloatingPointLiteral.rawValue,Java8Parser.Tokens.BooleanLiteral.rawValue,Java8Parser.Tokens.CharacterLiteral.rawValue,Java8Parser.Tokens.StringLiteral.rawValue,Java8Parser.Tokens.NullLiteral.rawValue,Java8Parser.Tokens.LPAREN.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.NEW,Java8Parser.SHORT,Java8Parser.SUPER,Java8Parser.THIS,Java8Parser.VOID,Java8Parser.IntegerLiteral,Java8Parser.FloatingPointLiteral,Java8Parser.BooleanLiteral,Java8Parser.CharacterLiteral,Java8Parser.StringLiteral,Java8Parser.NullLiteral,Java8Parser.LPAREN]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Java8Parser.Tokens.BANG.rawValue,Java8Parser.Tokens.TILDE.rawValue,Java8Parser.Tokens.INC.rawValue,Java8Parser.Tokens.DEC.rawValue,Java8Parser.Tokens.ADD.rawValue,Java8Parser.Tokens.SUB.rawValue,Java8Parser.Tokens.Identifier.rawValue,Java8Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Java8Parser.BANG,Java8Parser.TILDE,Java8Parser.INC,Java8Parser.DEC,Java8Parser.ADD,Java8Parser.SUB,Java8Parser.Identifier,Java8Parser.AT]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 69)
 		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(2429)
+		 			setState(2214)
 		 			try argumentList()
 
 		 		}
 
-		 		setState(2432)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2217)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	default: break
@@ -17283,30 +15601,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func argumentList() throws -> ArgumentListContext {
 		var _localctx: ArgumentListContext = ArgumentListContext(_ctx, getState())
-		try enterRule(_localctx, 398, Java8Parser.RULE_argumentList)
+		try enterRule(_localctx, 346, Java8Parser.RULE_argumentList)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2436)
+		 	setState(2221)
 		 	try expression()
-		 	setState(2441)
+		 	setState(2226)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(2437)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(2438)
+		 		setState(2222)
+		 		try match(Java8Parser.COMMA)
+		 		setState(2223)
 		 		try expression()
 
 
-		 		setState(2443)
+		 		setState(2228)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -17324,7 +15642,7 @@ open class Java8Parser: Parser {
 		open func expressionName() -> ExpressionNameContext? {
 			return getRuleContext(ExpressionNameContext.self,0)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -17371,165 +15689,165 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodReference() throws -> MethodReferenceContext {
 		var _localctx: MethodReferenceContext = MethodReferenceContext(_ctx, getState())
-		try enterRule(_localctx, 400, Java8Parser.RULE_methodReference)
+		try enterRule(_localctx, 348, Java8Parser.RULE_methodReference)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2491)
+		 	setState(2276)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,280, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,269, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2444)
+		 		setState(2229)
 		 		try expressionName()
-		 		setState(2445)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2447)
+		 		setState(2230)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2232)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2446)
+		 			setState(2231)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2449)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2234)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2451)
+		 		setState(2236)
 		 		try referenceType()
-		 		setState(2452)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2454)
+		 		setState(2237)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2239)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2453)
+		 			setState(2238)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2456)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2241)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2458)
+		 		setState(2243)
 		 		try primary()
-		 		setState(2459)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2461)
+		 		setState(2244)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2246)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2460)
+		 			setState(2245)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2463)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2248)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2465)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2466)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2468)
+		 		setState(2250)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2251)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2253)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2467)
+		 			setState(2252)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2470)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2255)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(2471)
+		 		setState(2256)
 		 		try typeName()
-		 		setState(2472)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2473)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2474)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2476)
+		 		setState(2257)
+		 		try match(Java8Parser.DOT)
+		 		setState(2258)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2259)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2261)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2475)
+		 			setState(2260)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2478)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2263)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(2480)
+		 		setState(2265)
 		 		try classType()
-		 		setState(2481)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2483)
+		 		setState(2266)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2268)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2482)
+		 			setState(2267)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2485)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
+		 		setState(2270)
+		 		try match(Java8Parser.NEW)
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(2487)
+		 		setState(2272)
 		 		try arrayType()
-		 		setState(2488)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2489)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
+		 		setState(2273)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2274)
+		 		try match(Java8Parser.NEW)
 
 		 		break
 		 	default: break
@@ -17544,7 +15862,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class MethodReference_lf_primaryContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -17576,30 +15894,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodReference_lf_primary() throws -> MethodReference_lf_primaryContext {
 		var _localctx: MethodReference_lf_primaryContext = MethodReference_lf_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 402, Java8Parser.RULE_methodReference_lf_primary)
+		try enterRule(_localctx, 350, Java8Parser.RULE_methodReference_lf_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2493)
-		 	try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 	setState(2495)
+		 	setState(2278)
+		 	try match(Java8Parser.COLONCOLON)
+		 	setState(2280)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.LT
 		 	      return testSet
 		 	 }()) {
-		 		setState(2494)
+		 		setState(2279)
 		 		try typeArguments()
 
 		 	}
 
-		 	setState(2497)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
+		 	setState(2282)
+		 	try match(Java8Parser.Identifier)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17614,7 +15932,7 @@ open class Java8Parser: Parser {
 		open func expressionName() -> ExpressionNameContext? {
 			return getRuleContext(ExpressionNameContext.self,0)
 		}
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func typeArguments() -> TypeArgumentsContext? {
 			return getRuleContext(TypeArgumentsContext.self,0)
 		}
@@ -17658,142 +15976,142 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func methodReference_lfno_primary() throws -> MethodReference_lfno_primaryContext {
 		var _localctx: MethodReference_lfno_primaryContext = MethodReference_lfno_primaryContext(_ctx, getState())
-		try enterRule(_localctx, 404, Java8Parser.RULE_methodReference_lfno_primary)
+		try enterRule(_localctx, 352, Java8Parser.RULE_methodReference_lfno_primary)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2539)
+		 	setState(2324)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,287, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,276, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2499)
+		 		setState(2284)
 		 		try expressionName()
-		 		setState(2500)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2502)
+		 		setState(2285)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2287)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2501)
+		 			setState(2286)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2504)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2289)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2506)
+		 		setState(2291)
 		 		try referenceType()
-		 		setState(2507)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2509)
+		 		setState(2292)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2294)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2508)
+		 			setState(2293)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2511)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2296)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2513)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2514)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2516)
+		 		setState(2298)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2299)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2301)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2515)
+		 			setState(2300)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2518)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2303)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2519)
+		 		setState(2304)
 		 		try typeName()
-		 		setState(2520)
-		 		try match(Java8Parser.Tokens.DOT.rawValue)
-		 		setState(2521)
-		 		try match(Java8Parser.Tokens.SUPER.rawValue)
-		 		setState(2522)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2524)
+		 		setState(2305)
+		 		try match(Java8Parser.DOT)
+		 		setState(2306)
+		 		try match(Java8Parser.SUPER)
+		 		setState(2307)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2309)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2523)
+		 			setState(2308)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2526)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2311)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(2528)
+		 		setState(2313)
 		 		try classType()
-		 		setState(2529)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2531)
+		 		setState(2314)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2316)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.LT.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.LT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2530)
+		 			setState(2315)
 		 			try typeArguments()
 
 		 		}
 
-		 		setState(2533)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
+		 		setState(2318)
+		 		try match(Java8Parser.NEW)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(2535)
+		 		setState(2320)
 		 		try arrayType()
-		 		setState(2536)
-		 		try match(Java8Parser.Tokens.COLONCOLON.rawValue)
-		 		setState(2537)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
+		 		setState(2321)
+		 		try match(Java8Parser.COLONCOLON)
+		 		setState(2322)
+		 		try match(Java8Parser.NEW)
 
 		 		break
 		 	default: break
@@ -17851,27 +16169,27 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func arrayCreationExpression() throws -> ArrayCreationExpressionContext {
 		var _localctx: ArrayCreationExpressionContext = ArrayCreationExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 406, Java8Parser.RULE_arrayCreationExpression)
+		try enterRule(_localctx, 354, Java8Parser.RULE_arrayCreationExpression)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2563)
+		 	setState(2348)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,290, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,279, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2541)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2542)
+		 		setState(2326)
+		 		try match(Java8Parser.NEW)
+		 		setState(2327)
 		 		try primitiveType()
-		 		setState(2543)
+		 		setState(2328)
 		 		try dimExprs()
-		 		setState(2545)
+		 		setState(2330)
 		 		try _errHandler.sync(self)
-		 		switch (try getInterpreter().adaptivePredict(_input,288,_ctx)) {
+		 		switch (try getInterpreter().adaptivePredict(_input,277,_ctx)) {
 		 		case 1:
-		 			setState(2544)
+		 			setState(2329)
 		 			try dims()
 
 		 			break
@@ -17881,17 +16199,17 @@ open class Java8Parser: Parser {
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2547)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2548)
+		 		setState(2332)
+		 		try match(Java8Parser.NEW)
+		 		setState(2333)
 		 		try classOrInterfaceType()
-		 		setState(2549)
+		 		setState(2334)
 		 		try dimExprs()
-		 		setState(2551)
+		 		setState(2336)
 		 		try _errHandler.sync(self)
-		 		switch (try getInterpreter().adaptivePredict(_input,289,_ctx)) {
+		 		switch (try getInterpreter().adaptivePredict(_input,278,_ctx)) {
 		 		case 1:
-		 			setState(2550)
+		 			setState(2335)
 		 			try dims()
 
 		 			break
@@ -17901,25 +16219,25 @@ open class Java8Parser: Parser {
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2553)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2554)
+		 		setState(2338)
+		 		try match(Java8Parser.NEW)
+		 		setState(2339)
 		 		try primitiveType()
-		 		setState(2555)
+		 		setState(2340)
 		 		try dims()
-		 		setState(2556)
+		 		setState(2341)
 		 		try arrayInitializer()
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2558)
-		 		try match(Java8Parser.Tokens.NEW.rawValue)
-		 		setState(2559)
+		 		setState(2343)
+		 		try match(Java8Parser.NEW)
+		 		setState(2344)
 		 		try classOrInterfaceType()
-		 		setState(2560)
+		 		setState(2345)
 		 		try dims()
-		 		setState(2561)
+		 		setState(2346)
 		 		try arrayInitializer()
 
 		 		break
@@ -17969,29 +16287,31 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func dimExprs() throws -> DimExprsContext {
 		var _localctx: DimExprsContext = DimExprsContext(_ctx, getState())
-		try enterRule(_localctx, 408, Java8Parser.RULE_dimExprs)
+		try enterRule(_localctx, 356, Java8Parser.RULE_dimExprs)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2565)
-		 	try dimExpr()
-		 	setState(2569)
+		 	setState(2351); 
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,291,_ctx)
-		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 		if ( _alt==1 ) {
-		 			setState(2566)
+		 	_alt = 1;
+		 	repeat {
+		 		switch (_alt) {
+		 		case 1:
+		 			setState(2350)
 		 			try dimExpr()
 
-		 	 
+
+		 			break
+		 		default:
+		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
-		 		setState(2571)
+		 		setState(2353); 
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,291,_ctx)
-		 	}
+		 		_alt = try getInterpreter().adaptivePredict(_input,280,_ctx)
+		 	} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18040,85 +16360,35 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func dimExpr() throws -> DimExprContext {
 		var _localctx: DimExprContext = DimExprContext(_ctx, getState())
-		try enterRule(_localctx, 410, Java8Parser.RULE_dimExpr)
+		try enterRule(_localctx, 358, Java8Parser.RULE_dimExpr)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2575)
+		 	setState(2358)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.AT.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.AT
 		 	      return testSet
 		 	 }()) {
-		 		setState(2572)
+		 		setState(2355)
 		 		try annotation()
 
 
-		 		setState(2577)
+		 		setState(2360)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(2578)
-		 	try match(Java8Parser.Tokens.LBRACK.rawValue)
-		 	setState(2579)
+		 	setState(2361)
+		 	try match(Java8Parser.LBRACK)
+		 	setState(2362)
 		 	try expression()
-		 	setState(2580)
-		 	try match(Java8Parser.Tokens.RBRACK.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class ConstantExpressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_constantExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterConstantExpression(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitConstantExpression(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitConstantExpression(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitConstantExpression(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func constantExpression() throws -> ConstantExpressionContext {
-		var _localctx: ConstantExpressionContext = ConstantExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 412, Java8Parser.RULE_constantExpression)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2582)
-		 	try expression()
+		 	setState(2363)
+		 	try match(Java8Parser.RBRACK)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18133,8 +16403,11 @@ open class Java8Parser: Parser {
 		open func lambdaExpression() -> LambdaExpressionContext? {
 			return getRuleContext(LambdaExpressionContext.self,0)
 		}
-		open func assignmentExpression() -> AssignmentExpressionContext? {
-			return getRuleContext(AssignmentExpressionContext.self,0)
+		open func conditionalExpression() -> ConditionalExpressionContext? {
+			return getRuleContext(ConditionalExpressionContext.self,0)
+		}
+		open func assignment() -> AssignmentContext? {
+			return getRuleContext(AssignmentContext.self,0)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_expression }
 		override
@@ -18164,24 +16437,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 414, Java8Parser.RULE_expression)
+		try enterRule(_localctx, 360, Java8Parser.RULE_expression)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2586)
+		 	setState(2368)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,293, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,282, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2584)
+		 		setState(2365)
 		 		try lambdaExpression()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2585)
-		 		try assignmentExpression()
+		 		setState(2366)
+		 		try conditionalExpression()
+
+		 		break
+		 	case 3:
+		 		try enterOuterAlt(_localctx, 3)
+		 		setState(2367)
+		 		try assignment()
 
 		 		break
 		 	default: break
@@ -18230,17 +16509,17 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func lambdaExpression() throws -> LambdaExpressionContext {
 		var _localctx: LambdaExpressionContext = LambdaExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 416, Java8Parser.RULE_lambdaExpression)
+		try enterRule(_localctx, 362, Java8Parser.RULE_lambdaExpression)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2588)
+		 	setState(2370)
 		 	try lambdaParameters()
-		 	setState(2589)
-		 	try match(Java8Parser.Tokens.ARROW.rawValue)
-		 	setState(2590)
+		 	setState(2371)
+		 	try match(Java8Parser.ARROW)
+		 	setState(2372)
 		 	try lambdaBody()
 
 		}
@@ -18253,7 +16532,7 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class LambdaParametersContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Tokens.Identifier.rawValue, 0) }
+		open func Identifier() -> TerminalNode? { return getToken(Java8Parser.Identifier, 0) }
 		open func formalParameterList() -> FormalParameterListContext? {
 			return getRuleContext(FormalParameterListContext.self,0)
 		}
@@ -18288,54 +16567,54 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func lambdaParameters() throws -> LambdaParametersContext {
 		var _localctx: LambdaParametersContext = LambdaParametersContext(_ctx, getState())
-		try enterRule(_localctx, 418, Java8Parser.RULE_lambdaParameters)
+		try enterRule(_localctx, 364, Java8Parser.RULE_lambdaParameters)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2602)
+		 	setState(2384)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,295, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,284, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2592)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2374)
+		 		try match(Java8Parser.Identifier)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2593)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2595)
+		 		setState(2375)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2377)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Java8Parser.Tokens.BOOLEAN.rawValue,Java8Parser.Tokens.BYTE.rawValue,Java8Parser.Tokens.CHAR.rawValue,Java8Parser.Tokens.DOUBLE.rawValue,Java8Parser.Tokens.FINAL.rawValue,Java8Parser.Tokens.FLOAT.rawValue,Java8Parser.Tokens.INT.rawValue,Java8Parser.Tokens.LONG.rawValue,Java8Parser.Tokens.SHORT.rawValue]
+		 		   let testArray: [Int] = [_la, Java8Parser.BOOLEAN,Java8Parser.BYTE,Java8Parser.CHAR,Java8Parser.DOUBLE,Java8Parser.FINAL,Java8Parser.FLOAT,Java8Parser.INT,Java8Parser.LONG,Java8Parser.SHORT]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
-		 		          testSet = testSet || _la == Java8Parser.Tokens.Identifier.rawValue || _la == Java8Parser.Tokens.AT.rawValue
+		 		          testSet = testSet || _la == Java8Parser.Identifier || _la == Java8Parser.AT
 		 		      return testSet
 		 		 }()) {
-		 			setState(2594)
+		 			setState(2376)
 		 			try formalParameterList()
 
 		 		}
 
-		 		setState(2597)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2379)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2598)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2599)
+		 		setState(2380)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2381)
 		 		try inferredFormalParameterList()
-		 		setState(2600)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
+		 		setState(2382)
+		 		try match(Java8Parser.RPAREN)
 
 		 		break
 		 	default: break
@@ -18350,9 +16629,9 @@ open class Java8Parser: Parser {
 		return _localctx
 	}
 	open class InferredFormalParameterListContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Tokens.Identifier.rawValue) }
+		open func Identifier() -> Array<TerminalNode> { return getTokens(Java8Parser.Identifier) }
 		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Java8Parser.Tokens.Identifier.rawValue, i)
+			return getToken(Java8Parser.Identifier, i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_inferredFormalParameterList }
 		override
@@ -18382,30 +16661,30 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func inferredFormalParameterList() throws -> InferredFormalParameterListContext {
 		var _localctx: InferredFormalParameterListContext = InferredFormalParameterListContext(_ctx, getState())
-		try enterRule(_localctx, 420, Java8Parser.RULE_inferredFormalParameterList)
+		try enterRule(_localctx, 366, Java8Parser.RULE_inferredFormalParameterList)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2604)
-		 	try match(Java8Parser.Tokens.Identifier.rawValue)
-		 	setState(2609)
+		 	setState(2386)
+		 	try match(Java8Parser.Identifier)
+		 	setState(2391)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Java8Parser.Tokens.COMMA.rawValue
+		 	      let testSet: Bool = _la == Java8Parser.COMMA
 		 	      return testSet
 		 	 }()) {
-		 		setState(2605)
-		 		try match(Java8Parser.Tokens.COMMA.rawValue)
-		 		setState(2606)
-		 		try match(Java8Parser.Tokens.Identifier.rawValue)
+		 		setState(2387)
+		 		try match(Java8Parser.COMMA)
+		 		setState(2388)
+		 		try match(Java8Parser.Identifier)
 
 
-		 		setState(2611)
+		 		setState(2393)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -18454,121 +16733,55 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func lambdaBody() throws -> LambdaBodyContext {
 		var _localctx: LambdaBodyContext = LambdaBodyContext(_ctx, getState())
-		try enterRule(_localctx, 422, Java8Parser.RULE_lambdaBody)
+		try enterRule(_localctx, 368, Java8Parser.RULE_lambdaBody)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2614)
+		 	setState(2396)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .BOOLEAN:fallthrough
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .NEW:fallthrough
-		 	case .SHORT:fallthrough
-		 	case .SUPER:fallthrough
-		 	case .THIS:fallthrough
-		 	case .VOID:fallthrough
-		 	case .IntegerLiteral:fallthrough
-		 	case .FloatingPointLiteral:fallthrough
-		 	case .BooleanLiteral:fallthrough
-		 	case .CharacterLiteral:fallthrough
-		 	case .StringLiteral:fallthrough
-		 	case .NullLiteral:fallthrough
-		 	case .LPAREN:fallthrough
-		 	case .BANG:fallthrough
-		 	case .TILDE:fallthrough
-		 	case .INC:fallthrough
-		 	case .DEC:fallthrough
-		 	case .ADD:fallthrough
-		 	case .SUB:fallthrough
-		 	case .Identifier:fallthrough
-		 	case .AT:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.BOOLEAN:fallthrough
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.NEW:fallthrough
+		 	case Java8Parser.SHORT:fallthrough
+		 	case Java8Parser.SUPER:fallthrough
+		 	case Java8Parser.THIS:fallthrough
+		 	case Java8Parser.VOID:fallthrough
+		 	case Java8Parser.IntegerLiteral:fallthrough
+		 	case Java8Parser.FloatingPointLiteral:fallthrough
+		 	case Java8Parser.BooleanLiteral:fallthrough
+		 	case Java8Parser.CharacterLiteral:fallthrough
+		 	case Java8Parser.StringLiteral:fallthrough
+		 	case Java8Parser.NullLiteral:fallthrough
+		 	case Java8Parser.LPAREN:fallthrough
+		 	case Java8Parser.BANG:fallthrough
+		 	case Java8Parser.TILDE:fallthrough
+		 	case Java8Parser.INC:fallthrough
+		 	case Java8Parser.DEC:fallthrough
+		 	case Java8Parser.ADD:fallthrough
+		 	case Java8Parser.SUB:fallthrough
+		 	case Java8Parser.Identifier:fallthrough
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2612)
+		 		setState(2394)
 		 		try expression()
 
 		 		break
 
-		 	case .LBRACE:
+		 	case Java8Parser.LBRACE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2613)
+		 		setState(2395)
 		 		try block()
 
 		 		break
 		 	default:
 		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
-		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class AssignmentExpressionContext:ParserRuleContext {
-		open func conditionalExpression() -> ConditionalExpressionContext? {
-			return getRuleContext(ConditionalExpressionContext.self,0)
-		}
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_assignmentExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterAssignmentExpression(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitAssignmentExpression(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitAssignmentExpression(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitAssignmentExpression(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func assignmentExpression() throws -> AssignmentExpressionContext {
-		var _localctx: AssignmentExpressionContext = AssignmentExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 424, Java8Parser.RULE_assignmentExpression)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	setState(2618)
-		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,298, _ctx)) {
-		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2616)
-		 		try conditionalExpression()
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2617)
-		 		try assignment()
-
-		 		break
-		 	default: break
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18617,17 +16830,17 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func assignment() throws -> AssignmentContext {
 		var _localctx: AssignmentContext = AssignmentContext(_ctx, getState())
-		try enterRule(_localctx, 426, Java8Parser.RULE_assignment)
+		try enterRule(_localctx, 370, Java8Parser.RULE_assignment)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2620)
+		 	setState(2398)
 		 	try leftHandSide()
-		 	setState(2621)
+		 	setState(2399)
 		 	try assignmentOperator()
-		 	setState(2622)
+		 	setState(2400)
 		 	try expression()
 
 		}
@@ -18677,29 +16890,29 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func leftHandSide() throws -> LeftHandSideContext {
 		var _localctx: LeftHandSideContext = LeftHandSideContext(_ctx, getState())
-		try enterRule(_localctx, 428, Java8Parser.RULE_leftHandSide)
+		try enterRule(_localctx, 372, Java8Parser.RULE_leftHandSide)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2627)
+		 	setState(2405)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,299, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,287, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2624)
+		 		setState(2402)
 		 		try expressionName()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2625)
+		 		setState(2403)
 		 		try fieldAccess()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2626)
+		 		setState(2404)
 		 		try arrayAccess()
 
 		 		break
@@ -18743,27 +16956,25 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func assignmentOperator() throws -> AssignmentOperatorContext {
 		var _localctx: AssignmentOperatorContext = AssignmentOperatorContext(_ctx, getState())
-		try enterRule(_localctx, 430, Java8Parser.RULE_assignmentOperator)
+		try enterRule(_localctx, 374, Java8Parser.RULE_assignmentOperator)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2629)
+		 	setState(2407)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Java8Parser.Tokens.ASSIGN.rawValue,Java8Parser.Tokens.ADD_ASSIGN.rawValue,Java8Parser.Tokens.SUB_ASSIGN.rawValue,Java8Parser.Tokens.MUL_ASSIGN.rawValue,Java8Parser.Tokens.DIV_ASSIGN.rawValue,Java8Parser.Tokens.AND_ASSIGN.rawValue,Java8Parser.Tokens.OR_ASSIGN.rawValue,Java8Parser.Tokens.XOR_ASSIGN.rawValue,Java8Parser.Tokens.MOD_ASSIGN.rawValue,Java8Parser.Tokens.LSHIFT_ASSIGN.rawValue,Java8Parser.Tokens.RSHIFT_ASSIGN.rawValue,Java8Parser.Tokens.URSHIFT_ASSIGN.rawValue]
+		 	   let testArray: [Int] = [_la, Java8Parser.ASSIGN,Java8Parser.ADD_ASSIGN,Java8Parser.SUB_ASSIGN,Java8Parser.MUL_ASSIGN,Java8Parser.DIV_ASSIGN,Java8Parser.AND_ASSIGN,Java8Parser.OR_ASSIGN,Java8Parser.XOR_ASSIGN,Java8Parser.MOD_ASSIGN,Java8Parser.LSHIFT_ASSIGN,Java8Parser.RSHIFT_ASSIGN,Java8Parser.URSHIFT_ASSIGN]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 66)
 		 	}()
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
+		 	} else {
 		 		try consume()
 		 	}
 
@@ -18814,31 +17025,31 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func conditionalExpression() throws -> ConditionalExpressionContext {
 		var _localctx: ConditionalExpressionContext = ConditionalExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 432, Java8Parser.RULE_conditionalExpression)
+		try enterRule(_localctx, 376, Java8Parser.RULE_conditionalExpression)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2638)
+		 	setState(2416)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,300, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,288, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2631)
+		 		setState(2409)
 		 		try conditionalOrExpression(0)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2632)
+		 		setState(2410)
 		 		try conditionalOrExpression(0)
-		 		setState(2633)
-		 		try match(Java8Parser.Tokens.QUESTION.rawValue)
-		 		setState(2634)
+		 		setState(2411)
+		 		try match(Java8Parser.QUESTION)
+		 		setState(2412)
 		 		try expression()
-		 		setState(2635)
-		 		try match(Java8Parser.Tokens.COLON.rawValue)
-		 		setState(2636)
+		 		setState(2413)
+		 		try match(Java8Parser.COLON)
+		 		setState(2414)
 		 		try conditionalExpression()
 
 		 		break
@@ -18896,21 +17107,21 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: ConditionalOrExpressionContext = ConditionalOrExpressionContext(_ctx, _parentState)
 		var  _prevctx: ConditionalOrExpressionContext = _localctx
-		var _startState: Int = 434
-		try enterRecursionRule(_localctx, 434, Java8Parser.RULE_conditionalOrExpression, _p)
+		var _startState: Int = 378
+		try enterRecursionRule(_localctx, 378, Java8Parser.RULE_conditionalOrExpression, _p)
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2641)
+			setState(2419)
 			try conditionalAndExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2648)
+			setState(2426)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,301,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,289,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
@@ -18919,20 +17130,20 @@ open class Java8Parser: Parser {
 					_prevctx = _localctx
 					_localctx = ConditionalOrExpressionContext(_parentctx, _parentState);
 					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_conditionalOrExpression)
-					setState(2643)
+					setState(2421)
 					if (!(precpred(_ctx, 1))) {
 					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
-					setState(2644)
-					try match(Java8Parser.Tokens.OR.rawValue)
-					setState(2645)
+					setState(2422)
+					try match(Java8Parser.OR)
+					setState(2423)
 					try conditionalAndExpression(0)
 
 			 
 				}
-				setState(2650)
+				setState(2428)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,301,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,289,_ctx)
 			}
 
 		}
@@ -18987,21 +17198,21 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: ConditionalAndExpressionContext = ConditionalAndExpressionContext(_ctx, _parentState)
 		var  _prevctx: ConditionalAndExpressionContext = _localctx
-		var _startState: Int = 436
-		try enterRecursionRule(_localctx, 436, Java8Parser.RULE_conditionalAndExpression, _p)
+		var _startState: Int = 380
+		try enterRecursionRule(_localctx, 380, Java8Parser.RULE_conditionalAndExpression, _p)
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2652)
+			setState(2430)
 			try inclusiveOrExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2659)
+			setState(2437)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,302,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,290,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
@@ -19010,20 +17221,20 @@ open class Java8Parser: Parser {
 					_prevctx = _localctx
 					_localctx = ConditionalAndExpressionContext(_parentctx, _parentState);
 					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_conditionalAndExpression)
-					setState(2654)
+					setState(2432)
 					if (!(precpred(_ctx, 1))) {
 					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
-					setState(2655)
-					try match(Java8Parser.Tokens.AND.rawValue)
-					setState(2656)
+					setState(2433)
+					try match(Java8Parser.AND)
+					setState(2434)
 					try inclusiveOrExpression(0)
 
 			 
 				}
-				setState(2661)
+				setState(2439)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,302,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,290,_ctx)
 			}
 
 		}
@@ -19078,21 +17289,21 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: InclusiveOrExpressionContext = InclusiveOrExpressionContext(_ctx, _parentState)
 		var  _prevctx: InclusiveOrExpressionContext = _localctx
-		var _startState: Int = 438
-		try enterRecursionRule(_localctx, 438, Java8Parser.RULE_inclusiveOrExpression, _p)
+		var _startState: Int = 382
+		try enterRecursionRule(_localctx, 382, Java8Parser.RULE_inclusiveOrExpression, _p)
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2663)
+			setState(2441)
 			try exclusiveOrExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2670)
+			setState(2448)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,303,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,291,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
@@ -19101,20 +17312,20 @@ open class Java8Parser: Parser {
 					_prevctx = _localctx
 					_localctx = InclusiveOrExpressionContext(_parentctx, _parentState);
 					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_inclusiveOrExpression)
-					setState(2665)
+					setState(2443)
 					if (!(precpred(_ctx, 1))) {
 					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
-					setState(2666)
-					try match(Java8Parser.Tokens.BITOR.rawValue)
-					setState(2667)
+					setState(2444)
+					try match(Java8Parser.BITOR)
+					setState(2445)
 					try exclusiveOrExpression(0)
 
 			 
 				}
-				setState(2672)
+				setState(2450)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,303,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,291,_ctx)
 			}
 
 		}
@@ -19169,21 +17380,21 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: ExclusiveOrExpressionContext = ExclusiveOrExpressionContext(_ctx, _parentState)
 		var  _prevctx: ExclusiveOrExpressionContext = _localctx
-		var _startState: Int = 440
-		try enterRecursionRule(_localctx, 440, Java8Parser.RULE_exclusiveOrExpression, _p)
+		var _startState: Int = 384
+		try enterRecursionRule(_localctx, 384, Java8Parser.RULE_exclusiveOrExpression, _p)
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2674)
+			setState(2452)
 			try andExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2681)
+			setState(2459)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,304,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,292,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
@@ -19192,20 +17403,20 @@ open class Java8Parser: Parser {
 					_prevctx = _localctx
 					_localctx = ExclusiveOrExpressionContext(_parentctx, _parentState);
 					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_exclusiveOrExpression)
-					setState(2676)
+					setState(2454)
 					if (!(precpred(_ctx, 1))) {
 					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
-					setState(2677)
-					try match(Java8Parser.Tokens.CARET.rawValue)
-					setState(2678)
+					setState(2455)
+					try match(Java8Parser.CARET)
+					setState(2456)
 					try andExpression(0)
 
 			 
 				}
-				setState(2683)
+				setState(2461)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,304,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,292,_ctx)
 			}
 
 		}
@@ -19260,21 +17471,21 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: AndExpressionContext = AndExpressionContext(_ctx, _parentState)
 		var  _prevctx: AndExpressionContext = _localctx
-		var _startState: Int = 442
-		try enterRecursionRule(_localctx, 442, Java8Parser.RULE_andExpression, _p)
+		var _startState: Int = 386
+		try enterRecursionRule(_localctx, 386, Java8Parser.RULE_andExpression, _p)
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2685)
+			setState(2463)
 			try equalityExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2692)
+			setState(2470)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,305,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,293,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
@@ -19283,20 +17494,20 @@ open class Java8Parser: Parser {
 					_prevctx = _localctx
 					_localctx = AndExpressionContext(_parentctx, _parentState);
 					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_andExpression)
-					setState(2687)
+					setState(2465)
 					if (!(precpred(_ctx, 1))) {
 					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
-					setState(2688)
-					try match(Java8Parser.Tokens.BITAND.rawValue)
-					setState(2689)
+					setState(2466)
+					try match(Java8Parser.BITAND)
+					setState(2467)
 					try equalityExpression(0)
 
 			 
 				}
-				setState(2694)
+				setState(2472)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,305,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,293,_ctx)
 			}
 
 		}
@@ -19310,6 +17521,7 @@ open class Java8Parser: Parser {
 	}
 
 	open class EqualityExpressionContext:ParserRuleContext {
+		public var op: Token!
 		open func relationalExpression() -> RelationalExpressionContext? {
 			return getRuleContext(RelationalExpressionContext.self,0)
 		}
@@ -19351,63 +17563,54 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: EqualityExpressionContext = EqualityExpressionContext(_ctx, _parentState)
 		var  _prevctx: EqualityExpressionContext = _localctx
-		var _startState: Int = 444
-		try enterRecursionRule(_localctx, 444, Java8Parser.RULE_equalityExpression, _p)
+		var _startState: Int = 388
+		try enterRecursionRule(_localctx, 388, Java8Parser.RULE_equalityExpression, _p)
+		var _la: Int = 0
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2696)
+			setState(2474)
 			try relationalExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2706)
+			setState(2481)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,307,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,294,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
 					   try triggerExitRuleEvent()
 					}
 					_prevctx = _localctx
-					setState(2704)
-					try _errHandler.sync(self)
-					switch(try getInterpreter().adaptivePredict(_input,306, _ctx)) {
-					case 1:
-						_localctx = EqualityExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_equalityExpression)
-						setState(2698)
-						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
-						}
-						setState(2699)
-						try match(Java8Parser.Tokens.EQUAL.rawValue)
-						setState(2700)
-						try relationalExpression(0)
-
-						break
-					case 2:
-						_localctx = EqualityExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_equalityExpression)
-						setState(2701)
-						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-						}
-						setState(2702)
-						try match(Java8Parser.Tokens.NOTEQUAL.rawValue)
-						setState(2703)
-						try relationalExpression(0)
-
-						break
-					default: break
+					_localctx = EqualityExpressionContext(_parentctx, _parentState);
+					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_equalityExpression)
+					setState(2476)
+					if (!(precpred(_ctx, 1))) {
+					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
+					setState(2477)
+					_localctx.castdown(EqualityExpressionContext.self).op = try _input.LT(1)
+					_la = try _input.LA(1)
+					if (!(//closure
+					 { () -> Bool in
+					      let testSet: Bool = _la == Java8Parser.EQUAL || _la == Java8Parser.NOTEQUAL
+					      return testSet
+					 }())) {
+						_localctx.castdown(EqualityExpressionContext.self).op = try _errHandler.recoverInline(self) as Token
+					} else {
+						try consume()
+					}
+					setState(2478)
+					try relationalExpression(0)
+
 			 
 				}
-				setState(2708)
+				setState(2483)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,307,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,294,_ctx)
 			}
 
 		}
@@ -19421,6 +17624,7 @@ open class Java8Parser: Parser {
 	}
 
 	open class RelationalExpressionContext:ParserRuleContext {
+		public var op: Token!
 		open func shiftExpression() -> ShiftExpressionContext? {
 			return getRuleContext(ShiftExpressionContext.self,0)
 		}
@@ -19465,92 +17669,71 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: RelationalExpressionContext = RelationalExpressionContext(_ctx, _parentState)
 		var  _prevctx: RelationalExpressionContext = _localctx
-		var _startState: Int = 446
-		try enterRecursionRule(_localctx, 446, Java8Parser.RULE_relationalExpression, _p)
+		var _startState: Int = 390
+		try enterRecursionRule(_localctx, 390, Java8Parser.RULE_relationalExpression, _p)
+		var _la: Int = 0
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2710)
+			setState(2485)
 			try shiftExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2729)
+			setState(2495)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,309,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,296,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
 					   try triggerExitRuleEvent()
 					}
 					_prevctx = _localctx
-					setState(2727)
+					setState(2493)
 					try _errHandler.sync(self)
-					switch(try getInterpreter().adaptivePredict(_input,308, _ctx)) {
+					switch(try getInterpreter().adaptivePredict(_input,295, _ctx)) {
 					case 1:
 						_localctx = RelationalExpressionContext(_parentctx, _parentState);
 						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_relationalExpression)
-						setState(2712)
-						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						setState(2487)
+						if (!(precpred(_ctx, 2))) {
+						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
-						setState(2713)
-						try match(Java8Parser.Tokens.LT.rawValue)
-						setState(2714)
+						setState(2488)
+						_localctx.castdown(RelationalExpressionContext.self).op = try _input.LT(1)
+						_la = try _input.LA(1)
+						if (!(//closure
+						 { () -> Bool in
+						      let testSet: Bool = {  () -> Bool in
+						   let testArray: [Int] = [_la, Java8Parser.GT,Java8Parser.LT,Java8Parser.LE,Java8Parser.GE]
+						    return  Utils.testBitLeftShiftArray(testArray, 67)
+						}()
+						      return testSet
+						 }())) {
+							_localctx.castdown(RelationalExpressionContext.self).op = try _errHandler.recoverInline(self) as Token
+						} else {
+							try consume()
+						}
+						setState(2489)
 						try shiftExpression(0)
 
 						break
 					case 2:
 						_localctx = RelationalExpressionContext(_parentctx, _parentState);
 						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_relationalExpression)
-						setState(2715)
-						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
-						}
-						setState(2716)
-						try match(Java8Parser.Tokens.GT.rawValue)
-						setState(2717)
-						try shiftExpression(0)
-
-						break
-					case 3:
-						_localctx = RelationalExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_relationalExpression)
-						setState(2718)
-						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
-						}
-						setState(2719)
-						try match(Java8Parser.Tokens.LE.rawValue)
-						setState(2720)
-						try shiftExpression(0)
-
-						break
-					case 4:
-						_localctx = RelationalExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_relationalExpression)
-						setState(2721)
-						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
-						}
-						setState(2722)
-						try match(Java8Parser.Tokens.GE.rawValue)
-						setState(2723)
-						try shiftExpression(0)
-
-						break
-					case 5:
-						_localctx = RelationalExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_relationalExpression)
-						setState(2724)
+						setState(2490)
 						if (!(precpred(_ctx, 1))) {
 						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
-						setState(2725)
-						try match(Java8Parser.Tokens.INSTANCEOF.rawValue)
-						setState(2726)
+						setState(2491)
+						try {
+								let assignmentValue = try match(Java8Parser.INSTANCEOF)
+								_localctx.castdown(RelationalExpressionContext.self).op = assignmentValue
+						     }()
+
+						setState(2492)
 						try referenceType()
 
 						break
@@ -19558,9 +17741,9 @@ open class Java8Parser: Parser {
 					}
 			 
 				}
-				setState(2731)
+				setState(2497)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,309,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,296,_ctx)
 			}
 
 		}
@@ -19615,84 +17798,69 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: ShiftExpressionContext = ShiftExpressionContext(_ctx, _parentState)
 		var  _prevctx: ShiftExpressionContext = _localctx
-		var _startState: Int = 448
-		try enterRecursionRule(_localctx, 448, Java8Parser.RULE_shiftExpression, _p)
+		var _startState: Int = 392
+		try enterRecursionRule(_localctx, 392, Java8Parser.RULE_shiftExpression, _p)
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2733)
+			setState(2499)
 			try additiveExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2750)
+			setState(2514)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,311,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,298,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
 					   try triggerExitRuleEvent()
 					}
 					_prevctx = _localctx
-					setState(2748)
+					_localctx = ShiftExpressionContext(_parentctx, _parentState);
+					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_shiftExpression)
+					setState(2501)
+					if (!(precpred(_ctx, 1))) {
+					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					}
+					setState(2509)
 					try _errHandler.sync(self)
-					switch(try getInterpreter().adaptivePredict(_input,310, _ctx)) {
+					switch(try getInterpreter().adaptivePredict(_input,297, _ctx)) {
 					case 1:
-						_localctx = ShiftExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_shiftExpression)
-						setState(2735)
-						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
-						}
-						setState(2736)
-						try match(Java8Parser.Tokens.LT.rawValue)
-						setState(2737)
-						try match(Java8Parser.Tokens.LT.rawValue)
-						setState(2738)
-						try additiveExpression(0)
+						setState(2502)
+						try match(Java8Parser.LT)
+						setState(2503)
+						try match(Java8Parser.LT)
 
 						break
 					case 2:
-						_localctx = ShiftExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_shiftExpression)
-						setState(2739)
-						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
-						}
-						setState(2740)
-						try match(Java8Parser.Tokens.GT.rawValue)
-						setState(2741)
-						try match(Java8Parser.Tokens.GT.rawValue)
-						setState(2742)
-						try additiveExpression(0)
+						setState(2504)
+						try match(Java8Parser.GT)
+						setState(2505)
+						try match(Java8Parser.GT)
 
 						break
 					case 3:
-						_localctx = ShiftExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_shiftExpression)
-						setState(2743)
-						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-						}
-						setState(2744)
-						try match(Java8Parser.Tokens.GT.rawValue)
-						setState(2745)
-						try match(Java8Parser.Tokens.GT.rawValue)
-						setState(2746)
-						try match(Java8Parser.Tokens.GT.rawValue)
-						setState(2747)
-						try additiveExpression(0)
+						setState(2506)
+						try match(Java8Parser.GT)
+						setState(2507)
+						try match(Java8Parser.GT)
+						setState(2508)
+						try match(Java8Parser.GT)
 
 						break
 					default: break
 					}
+					setState(2511)
+					try additiveExpression(0)
+
 			 
 				}
-				setState(2752)
+				setState(2516)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,311,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,298,_ctx)
 			}
 
 		}
@@ -19706,6 +17874,7 @@ open class Java8Parser: Parser {
 	}
 
 	open class AdditiveExpressionContext:ParserRuleContext {
+		public var op: Token!
 		open func multiplicativeExpression() -> MultiplicativeExpressionContext? {
 			return getRuleContext(MultiplicativeExpressionContext.self,0)
 		}
@@ -19747,63 +17916,54 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: AdditiveExpressionContext = AdditiveExpressionContext(_ctx, _parentState)
 		var  _prevctx: AdditiveExpressionContext = _localctx
-		var _startState: Int = 450
-		try enterRecursionRule(_localctx, 450, Java8Parser.RULE_additiveExpression, _p)
+		var _startState: Int = 394
+		try enterRecursionRule(_localctx, 394, Java8Parser.RULE_additiveExpression, _p)
+		var _la: Int = 0
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2754)
+			setState(2518)
 			try multiplicativeExpression(0)
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2764)
+			setState(2525)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,313,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,299,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
 					   try triggerExitRuleEvent()
 					}
 					_prevctx = _localctx
-					setState(2762)
-					try _errHandler.sync(self)
-					switch(try getInterpreter().adaptivePredict(_input,312, _ctx)) {
-					case 1:
-						_localctx = AdditiveExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_additiveExpression)
-						setState(2756)
-						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
-						}
-						setState(2757)
-						try match(Java8Parser.Tokens.ADD.rawValue)
-						setState(2758)
-						try multiplicativeExpression(0)
-
-						break
-					case 2:
-						_localctx = AdditiveExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_additiveExpression)
-						setState(2759)
-						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-						}
-						setState(2760)
-						try match(Java8Parser.Tokens.SUB.rawValue)
-						setState(2761)
-						try multiplicativeExpression(0)
-
-						break
-					default: break
+					_localctx = AdditiveExpressionContext(_parentctx, _parentState);
+					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_additiveExpression)
+					setState(2520)
+					if (!(precpred(_ctx, 1))) {
+					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
+					setState(2521)
+					_localctx.castdown(AdditiveExpressionContext.self).op = try _input.LT(1)
+					_la = try _input.LA(1)
+					if (!(//closure
+					 { () -> Bool in
+					      let testSet: Bool = _la == Java8Parser.ADD || _la == Java8Parser.SUB
+					      return testSet
+					 }())) {
+						_localctx.castdown(AdditiveExpressionContext.self).op = try _errHandler.recoverInline(self) as Token
+					} else {
+						try consume()
+					}
+					setState(2522)
+					try multiplicativeExpression(0)
+
 			 
 				}
-				setState(2766)
+				setState(2527)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,313,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,299,_ctx)
 			}
 
 		}
@@ -19817,6 +17977,7 @@ open class Java8Parser: Parser {
 	}
 
 	open class MultiplicativeExpressionContext:ParserRuleContext {
+		public var op: Token!
 		open func unaryExpression() -> UnaryExpressionContext? {
 			return getRuleContext(UnaryExpressionContext.self,0)
 		}
@@ -19858,76 +18019,57 @@ open class Java8Parser: Parser {
 		var _parentState: Int = getState()
 		var _localctx: MultiplicativeExpressionContext = MultiplicativeExpressionContext(_ctx, _parentState)
 		var  _prevctx: MultiplicativeExpressionContext = _localctx
-		var _startState: Int = 452
-		try enterRecursionRule(_localctx, 452, Java8Parser.RULE_multiplicativeExpression, _p)
+		var _startState: Int = 396
+		try enterRecursionRule(_localctx, 396, Java8Parser.RULE_multiplicativeExpression, _p)
+		var _la: Int = 0
 		defer {
 	    		try! unrollRecursionContexts(_parentctx)
 	    }
 		do {
 			var _alt: Int
 			try enterOuterAlt(_localctx, 1)
-			setState(2768)
+			setState(2529)
 			try unaryExpression()
 
 			_ctx!.stop = try _input.LT(-1)
-			setState(2781)
+			setState(2536)
 			try _errHandler.sync(self)
-			_alt = try getInterpreter().adaptivePredict(_input,315,_ctx)
+			_alt = try getInterpreter().adaptivePredict(_input,300,_ctx)
 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 				if ( _alt==1 ) {
 					if _parseListeners != nil {
 					   try triggerExitRuleEvent()
 					}
 					_prevctx = _localctx
-					setState(2779)
-					try _errHandler.sync(self)
-					switch(try getInterpreter().adaptivePredict(_input,314, _ctx)) {
-					case 1:
-						_localctx = MultiplicativeExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_multiplicativeExpression)
-						setState(2770)
-						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
-						}
-						setState(2771)
-						try match(Java8Parser.Tokens.MUL.rawValue)
-						setState(2772)
-						try unaryExpression()
-
-						break
-					case 2:
-						_localctx = MultiplicativeExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_multiplicativeExpression)
-						setState(2773)
-						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
-						}
-						setState(2774)
-						try match(Java8Parser.Tokens.DIV.rawValue)
-						setState(2775)
-						try unaryExpression()
-
-						break
-					case 3:
-						_localctx = MultiplicativeExpressionContext(_parentctx, _parentState);
-						try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_multiplicativeExpression)
-						setState(2776)
-						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
-						}
-						setState(2777)
-						try match(Java8Parser.Tokens.MOD.rawValue)
-						setState(2778)
-						try unaryExpression()
-
-						break
-					default: break
+					_localctx = MultiplicativeExpressionContext(_parentctx, _parentState);
+					try pushNewRecursionContext(_localctx, _startState, Java8Parser.RULE_multiplicativeExpression)
+					setState(2531)
+					if (!(precpred(_ctx, 1))) {
+					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
+					setState(2532)
+					_localctx.castdown(MultiplicativeExpressionContext.self).op = try _input.LT(1)
+					_la = try _input.LA(1)
+					if (!(//closure
+					 { () -> Bool in
+					      let testSet: Bool = {  () -> Bool in
+					   let testArray: [Int] = [_la, Java8Parser.MUL,Java8Parser.DIV,Java8Parser.MOD]
+					    return  Utils.testBitLeftShiftArray(testArray, 83)
+					}()
+					      return testSet
+					 }())) {
+						_localctx.castdown(MultiplicativeExpressionContext.self).op = try _errHandler.recoverInline(self) as Token
+					} else {
+						try consume()
+					}
+					setState(2533)
+					try unaryExpression()
+
 			 
 				}
-				setState(2783)
+				setState(2538)
 				try _errHandler.sync(self)
-				_alt = try getInterpreter().adaptivePredict(_input,315,_ctx)
+				_alt = try getInterpreter().adaptivePredict(_input,300,_ctx)
 			}
 
 		}
@@ -19940,11 +18082,8 @@ open class Java8Parser: Parser {
 		return _localctx;
 	}
 	open class UnaryExpressionContext:ParserRuleContext {
-		open func preIncrementExpression() -> PreIncrementExpressionContext? {
-			return getRuleContext(PreIncrementExpressionContext.self,0)
-		}
-		open func preDecrementExpression() -> PreDecrementExpressionContext? {
-			return getRuleContext(PreDecrementExpressionContext.self,0)
+		open func preIncDecExpression() -> PreIncDecExpressionContext? {
+			return getRuleContext(PreIncDecExpressionContext.self,0)
 		}
 		open func unaryExpression() -> UnaryExpressionContext? {
 			return getRuleContext(UnaryExpressionContext.self,0)
@@ -19980,70 +18119,65 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unaryExpression() throws -> UnaryExpressionContext {
 		var _localctx: UnaryExpressionContext = UnaryExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 454, Java8Parser.RULE_unaryExpression)
+		try enterRule(_localctx, 398, Java8Parser.RULE_unaryExpression)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2791)
+		 	setState(2543)
 		 	try _errHandler.sync(self)
-		 	switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .INC:
+		 	switch (try _input.LA(1)) {
+		 	case Java8Parser.INC:fallthrough
+		 	case Java8Parser.DEC:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2784)
-		 		try preIncrementExpression()
+		 		setState(2539)
+		 		try preIncDecExpression()
 
 		 		break
-
-		 	case .DEC:
+		 	case Java8Parser.ADD:fallthrough
+		 	case Java8Parser.SUB:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2785)
-		 		try preDecrementExpression()
+		 		setState(2540)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Java8Parser.ADD || _la == Java8Parser.SUB
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		} else {
+		 			try consume()
+		 		}
+		 		setState(2541)
+		 		try unaryExpression()
 
 		 		break
-
-		 	case .ADD:
+		 	case Java8Parser.BOOLEAN:fallthrough
+		 	case Java8Parser.BYTE:fallthrough
+		 	case Java8Parser.CHAR:fallthrough
+		 	case Java8Parser.DOUBLE:fallthrough
+		 	case Java8Parser.FLOAT:fallthrough
+		 	case Java8Parser.INT:fallthrough
+		 	case Java8Parser.LONG:fallthrough
+		 	case Java8Parser.NEW:fallthrough
+		 	case Java8Parser.SHORT:fallthrough
+		 	case Java8Parser.SUPER:fallthrough
+		 	case Java8Parser.THIS:fallthrough
+		 	case Java8Parser.VOID:fallthrough
+		 	case Java8Parser.IntegerLiteral:fallthrough
+		 	case Java8Parser.FloatingPointLiteral:fallthrough
+		 	case Java8Parser.BooleanLiteral:fallthrough
+		 	case Java8Parser.CharacterLiteral:fallthrough
+		 	case Java8Parser.StringLiteral:fallthrough
+		 	case Java8Parser.NullLiteral:fallthrough
+		 	case Java8Parser.LPAREN:fallthrough
+		 	case Java8Parser.BANG:fallthrough
+		 	case Java8Parser.TILDE:fallthrough
+		 	case Java8Parser.Identifier:fallthrough
+		 	case Java8Parser.AT:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2786)
-		 		try match(Java8Parser.Tokens.ADD.rawValue)
-		 		setState(2787)
-		 		try unaryExpression()
-
-		 		break
-
-		 	case .SUB:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2788)
-		 		try match(Java8Parser.Tokens.SUB.rawValue)
-		 		setState(2789)
-		 		try unaryExpression()
-
-		 		break
-		 	case .BOOLEAN:fallthrough
-		 	case .BYTE:fallthrough
-		 	case .CHAR:fallthrough
-		 	case .DOUBLE:fallthrough
-		 	case .FLOAT:fallthrough
-		 	case .INT:fallthrough
-		 	case .LONG:fallthrough
-		 	case .NEW:fallthrough
-		 	case .SHORT:fallthrough
-		 	case .SUPER:fallthrough
-		 	case .THIS:fallthrough
-		 	case .VOID:fallthrough
-		 	case .IntegerLiteral:fallthrough
-		 	case .FloatingPointLiteral:fallthrough
-		 	case .BooleanLiteral:fallthrough
-		 	case .CharacterLiteral:fallthrough
-		 	case .StringLiteral:fallthrough
-		 	case .NullLiteral:fallthrough
-		 	case .LPAREN:fallthrough
-		 	case .BANG:fallthrough
-		 	case .TILDE:fallthrough
-		 	case .Identifier:fallthrough
-		 	case .AT:
-		 		try enterOuterAlt(_localctx, 5)
-		 		setState(2790)
+		 		setState(2542)
 		 		try unaryExpressionNotPlusMinus()
 
 		 		break
@@ -20059,29 +18193,29 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
-	open class PreIncrementExpressionContext:ParserRuleContext {
-		open func unaryExpression() -> UnaryExpressionContext? {
-			return getRuleContext(UnaryExpressionContext.self,0)
+	open class PreIncDecExpressionContext:ParserRuleContext {
+		open func postfixExpression() -> PostfixExpressionContext? {
+			return getRuleContext(PostfixExpressionContext.self,0)
 		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_preIncrementExpression }
+		open override func getRuleIndex() -> Int { return Java8Parser.RULE_preIncDecExpression }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
 			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPreIncrementExpression(self)
+			 	(listener as! Java8Listener).enterPreIncDecExpression(self)
 			}
 		}
 		override
 		open func exitRule(_ listener: ParseTreeListener) {
 			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPreIncrementExpression(self)
+			 	(listener as! Java8Listener).exitPreIncDecExpression(self)
 			}
 		}
 		override
 		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
 			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPreIncrementExpression(self)
+			     return (visitor as! Java8Visitor<T>).visitPreIncDecExpression(self)
 			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPreIncrementExpression(self)
+		    	 return (visitor as! Java8BaseVisitor<T>).visitPreIncDecExpression(self)
 		    }
 			else {
 			     return visitor.visitChildren(self)
@@ -20089,18 +18223,28 @@ open class Java8Parser: Parser {
 		}
 	}
 	@discardableResult
-	open func preIncrementExpression() throws -> PreIncrementExpressionContext {
-		var _localctx: PreIncrementExpressionContext = PreIncrementExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 456, Java8Parser.RULE_preIncrementExpression)
+	open func preIncDecExpression() throws -> PreIncDecExpressionContext {
+		var _localctx: PreIncDecExpressionContext = PreIncDecExpressionContext(_ctx, getState())
+		try enterRule(_localctx, 400, Java8Parser.RULE_preIncDecExpression)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2793)
-		 	try match(Java8Parser.Tokens.INC.rawValue)
-		 	setState(2794)
-		 	try unaryExpression()
+		 	setState(2545)
+		 	_la = try _input.LA(1)
+		 	if (!(//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.INC || _la == Java8Parser.DEC
+		 	      return testSet
+		 	 }())) {
+		 	try _errHandler.recoverInline(self)
+		 	} else {
+		 		try consume()
+		 	}
+		 	setState(2546)
+		 	try postfixExpression()
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -20111,29 +18255,29 @@ open class Java8Parser: Parser {
 
 		return _localctx
 	}
-	open class PreDecrementExpressionContext:ParserRuleContext {
-		open func unaryExpression() -> UnaryExpressionContext? {
-			return getRuleContext(UnaryExpressionContext.self,0)
+	open class PostIncDecExpressionContext:ParserRuleContext {
+		open func postfixExpression() -> PostfixExpressionContext? {
+			return getRuleContext(PostfixExpressionContext.self,0)
 		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_preDecrementExpression }
+		open override func getRuleIndex() -> Int { return Java8Parser.RULE_postIncDecExpression }
 		override
 		open func enterRule(_ listener: ParseTreeListener) {
 			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPreDecrementExpression(self)
+			 	(listener as! Java8Listener).enterPostIncDecExpression(self)
 			}
 		}
 		override
 		open func exitRule(_ listener: ParseTreeListener) {
 			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPreDecrementExpression(self)
+			 	(listener as! Java8Listener).exitPostIncDecExpression(self)
 			}
 		}
 		override
 		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
 			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPreDecrementExpression(self)
+			     return (visitor as! Java8Visitor<T>).visitPostIncDecExpression(self)
 			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPreDecrementExpression(self)
+		    	 return (visitor as! Java8BaseVisitor<T>).visitPostIncDecExpression(self)
 		    }
 			else {
 			     return visitor.visitChildren(self)
@@ -20141,18 +18285,28 @@ open class Java8Parser: Parser {
 		}
 	}
 	@discardableResult
-	open func preDecrementExpression() throws -> PreDecrementExpressionContext {
-		var _localctx: PreDecrementExpressionContext = PreDecrementExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 458, Java8Parser.RULE_preDecrementExpression)
+	open func postIncDecExpression() throws -> PostIncDecExpressionContext {
+		var _localctx: PostIncDecExpressionContext = PostIncDecExpressionContext(_ctx, getState())
+		try enterRule(_localctx, 402, Java8Parser.RULE_postIncDecExpression)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2796)
-		 	try match(Java8Parser.Tokens.DEC.rawValue)
-		 	setState(2797)
-		 	try unaryExpression()
+		 	setState(2548)
+		 	try postfixExpression()
+		 	setState(2549)
+		 	_la = try _input.LA(1)
+		 	if (!(//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Java8Parser.INC || _la == Java8Parser.DEC
+		 	      return testSet
+		 	 }())) {
+		 	try _errHandler.recoverInline(self)
+		 	} else {
+		 		try consume()
+		 	}
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -20167,8 +18321,8 @@ open class Java8Parser: Parser {
 		open func postfixExpression() -> PostfixExpressionContext? {
 			return getRuleContext(PostfixExpressionContext.self,0)
 		}
-		open func unaryExpression() -> UnaryExpressionContext? {
-			return getRuleContext(UnaryExpressionContext.self,0)
+		open func conditionalExpression() -> ConditionalExpressionContext? {
+			return getRuleContext(ConditionalExpressionContext.self,0)
 		}
 		open func castExpression() -> CastExpressionContext? {
 			return getRuleContext(CastExpressionContext.self,0)
@@ -20201,39 +18355,41 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func unaryExpressionNotPlusMinus() throws -> UnaryExpressionNotPlusMinusContext {
 		var _localctx: UnaryExpressionNotPlusMinusContext = UnaryExpressionNotPlusMinusContext(_ctx, getState())
-		try enterRule(_localctx, 460, Java8Parser.RULE_unaryExpressionNotPlusMinus)
+		try enterRule(_localctx, 404, Java8Parser.RULE_unaryExpressionNotPlusMinus)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2805)
+		 	setState(2555)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,317, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,302, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2799)
+		 		setState(2551)
 		 		try postfixExpression()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2800)
-		 		try match(Java8Parser.Tokens.TILDE.rawValue)
-		 		setState(2801)
-		 		try unaryExpression()
+		 		setState(2552)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Java8Parser.BANG || _la == Java8Parser.TILDE
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		} else {
+		 			try consume()
+		 		}
+		 		setState(2553)
+		 		try conditionalExpression()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2802)
-		 		try match(Java8Parser.Tokens.BANG.rawValue)
-		 		setState(2803)
-		 		try unaryExpression()
-
-		 		break
-		 	case 4:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(2804)
+		 		setState(2554)
 		 		try castExpression()
 
 		 		break
@@ -20254,18 +18410,6 @@ open class Java8Parser: Parser {
 		}
 		open func expressionName() -> ExpressionNameContext? {
 			return getRuleContext(ExpressionNameContext.self,0)
-		}
-		open func postIncrementExpression_lf_postfixExpression() -> Array<PostIncrementExpression_lf_postfixExpressionContext> {
-			return getRuleContexts(PostIncrementExpression_lf_postfixExpressionContext.self)
-		}
-		open func postIncrementExpression_lf_postfixExpression(_ i: Int) -> PostIncrementExpression_lf_postfixExpressionContext? {
-			return getRuleContext(PostIncrementExpression_lf_postfixExpressionContext.self,i)
-		}
-		open func postDecrementExpression_lf_postfixExpression() -> Array<PostDecrementExpression_lf_postfixExpressionContext> {
-			return getRuleContexts(PostDecrementExpression_lf_postfixExpressionContext.self)
-		}
-		open func postDecrementExpression_lf_postfixExpression(_ i: Int) -> PostDecrementExpression_lf_postfixExpressionContext? {
-			return getRuleContext(PostDecrementExpression_lf_postfixExpressionContext.self,i)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_postfixExpression }
 		override
@@ -20295,254 +18439,52 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func postfixExpression() throws -> PostfixExpressionContext {
 		var _localctx: PostfixExpressionContext = PostfixExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 462, Java8Parser.RULE_postfixExpression)
+		try enterRule(_localctx, 406, Java8Parser.RULE_postfixExpression)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2809)
+		 	setState(2559)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,318, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,303, _ctx)) {
 		 	case 1:
-		 		setState(2807)
+		 		setState(2557)
 		 		try primary()
 
 		 		break
 		 	case 2:
-		 		setState(2808)
+		 		setState(2558)
 		 		try expressionName()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(2815)
+		 	setState(2564)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,320,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,304,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(2813)
-		 			try _errHandler.sync(self)
-		 			switch (Java8Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 			case .INC:
-		 				setState(2811)
-		 				try postIncrementExpression_lf_postfixExpression()
-
-		 				break
-
-		 			case .DEC:
-		 				setState(2812)
-		 				try postDecrementExpression_lf_postfixExpression()
-
-		 				break
-		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			setState(2561)
+		 			_la = try _input.LA(1)
+		 			if (!(//closure
+		 			 { () -> Bool in
+		 			      let testSet: Bool = _la == Java8Parser.INC || _la == Java8Parser.DEC
+		 			      return testSet
+		 			 }())) {
+		 			try _errHandler.recoverInline(self)
+		 			} else {
+		 				try consume()
 		 			}
+
 		 	 
 		 		}
-		 		setState(2817)
+		 		setState(2566)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,320,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,304,_ctx)
 		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PostIncrementExpressionContext:ParserRuleContext {
-		open func postfixExpression() -> PostfixExpressionContext? {
-			return getRuleContext(PostfixExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_postIncrementExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPostIncrementExpression(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPostIncrementExpression(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPostIncrementExpression(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPostIncrementExpression(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func postIncrementExpression() throws -> PostIncrementExpressionContext {
-		var _localctx: PostIncrementExpressionContext = PostIncrementExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 464, Java8Parser.RULE_postIncrementExpression)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2818)
-		 	try postfixExpression()
-		 	setState(2819)
-		 	try match(Java8Parser.Tokens.INC.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PostIncrementExpression_lf_postfixExpressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_postIncrementExpression_lf_postfixExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPostIncrementExpression_lf_postfixExpression(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPostIncrementExpression_lf_postfixExpression(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPostIncrementExpression_lf_postfixExpression(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPostIncrementExpression_lf_postfixExpression(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func postIncrementExpression_lf_postfixExpression() throws -> PostIncrementExpression_lf_postfixExpressionContext {
-		var _localctx: PostIncrementExpression_lf_postfixExpressionContext = PostIncrementExpression_lf_postfixExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 466, Java8Parser.RULE_postIncrementExpression_lf_postfixExpression)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2821)
-		 	try match(Java8Parser.Tokens.INC.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PostDecrementExpressionContext:ParserRuleContext {
-		open func postfixExpression() -> PostfixExpressionContext? {
-			return getRuleContext(PostfixExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_postDecrementExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPostDecrementExpression(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPostDecrementExpression(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPostDecrementExpression(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPostDecrementExpression(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func postDecrementExpression() throws -> PostDecrementExpressionContext {
-		var _localctx: PostDecrementExpressionContext = PostDecrementExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 468, Java8Parser.RULE_postDecrementExpression)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2823)
-		 	try postfixExpression()
-		 	setState(2824)
-		 	try match(Java8Parser.Tokens.DEC.rawValue)
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class PostDecrementExpression_lf_postfixExpressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Java8Parser.RULE_postDecrementExpression_lf_postfixExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).enterPostDecrementExpression_lf_postfixExpression(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Java8Listener {
-			 	(listener as! Java8Listener).exitPostDecrementExpression_lf_postfixExpression(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Java8Visitor {
-			     return (visitor as! Java8Visitor<T>).visitPostDecrementExpression_lf_postfixExpression(self)
-			}else if visitor is Java8BaseVisitor {
-		    	 return (visitor as! Java8BaseVisitor<T>).visitPostDecrementExpression_lf_postfixExpression(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func postDecrementExpression_lf_postfixExpression() throws -> PostDecrementExpression_lf_postfixExpressionContext {
-		var _localctx: PostDecrementExpression_lf_postfixExpressionContext = PostDecrementExpression_lf_postfixExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 470, Java8Parser.RULE_postDecrementExpression_lf_postfixExpression)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(2826)
-		 	try match(Java8Parser.Tokens.DEC.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -20566,14 +18508,14 @@ open class Java8Parser: Parser {
 		open func unaryExpressionNotPlusMinus() -> UnaryExpressionNotPlusMinusContext? {
 			return getRuleContext(UnaryExpressionNotPlusMinusContext.self,0)
 		}
+		open func lambdaExpression() -> LambdaExpressionContext? {
+			return getRuleContext(LambdaExpressionContext.self,0)
+		}
 		open func additionalBound() -> Array<AdditionalBoundContext> {
 			return getRuleContexts(AdditionalBoundContext.self)
 		}
 		open func additionalBound(_ i: Int) -> AdditionalBoundContext? {
 			return getRuleContext(AdditionalBoundContext.self,i)
-		}
-		open func lambdaExpression() -> LambdaExpressionContext? {
-			return getRuleContext(LambdaExpressionContext.self,0)
 		}
 		open override func getRuleIndex() -> Int { return Java8Parser.RULE_castExpression }
 		override
@@ -20603,81 +18545,66 @@ open class Java8Parser: Parser {
 	@discardableResult
 	open func castExpression() throws -> CastExpressionContext {
 		var _localctx: CastExpressionContext = CastExpressionContext(_ctx, getState())
-		try enterRule(_localctx, 472, Java8Parser.RULE_castExpression)
+		try enterRule(_localctx, 408, Java8Parser.RULE_castExpression)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(2855)
+		 	setState(2585)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,323, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,307, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(2828)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2829)
+		 		setState(2567)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2568)
 		 		try primitiveType()
-		 		setState(2830)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2831)
+		 		setState(2569)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(2570)
 		 		try unaryExpression()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(2833)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2834)
+		 		setState(2572)
+		 		try match(Java8Parser.LPAREN)
+		 		setState(2573)
 		 		try referenceType()
-		 		setState(2838)
+		 		setState(2577)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.BITAND.rawValue
+		 		      let testSet: Bool = _la == Java8Parser.BITAND
 		 		      return testSet
 		 		 }()) {
-		 			setState(2835)
+		 			setState(2574)
 		 			try additionalBound()
 
 
-		 			setState(2840)
+		 			setState(2579)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(2841)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2842)
-		 		try unaryExpressionNotPlusMinus()
-
-		 		break
-		 	case 3:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(2844)
-		 		try match(Java8Parser.Tokens.LPAREN.rawValue)
-		 		setState(2845)
-		 		try referenceType()
-		 		setState(2849)
+		 		setState(2580)
+		 		try match(Java8Parser.RPAREN)
+		 		setState(2583)
 		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		while (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Java8Parser.Tokens.BITAND.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(2846)
-		 			try additionalBound()
+		 		switch(try getInterpreter().adaptivePredict(_input,306, _ctx)) {
+		 		case 1:
+		 			setState(2581)
+		 			try unaryExpressionNotPlusMinus()
 
+		 			break
+		 		case 2:
+		 			setState(2582)
+		 			try lambdaExpression()
 
-		 			setState(2851)
-		 			try _errHandler.sync(self)
-		 			_la = try _input.LA(1)
+		 			break
+		 		default: break
 		 		}
-		 		setState(2852)
-		 		try match(Java8Parser.Tokens.RPAREN.rawValue)
-		 		setState(2853)
-		 		try lambdaExpression()
 
 		 		break
 		 	default: break
@@ -20695,120 +18622,87 @@ open class Java8Parser: Parser {
     override
 	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
-		case  26:
-			return try packageName_sempred(_localctx?.castdown(PackageNameContext.self), predIndex)
-		case  28:
-			return try packageOrTypeName_sempred(_localctx?.castdown(PackageOrTypeNameContext.self), predIndex)
-		case  31:
-			return try ambiguousName_sempred(_localctx?.castdown(AmbiguousNameContext.self), predIndex)
-		case  217:
+		case  189:
 			return try conditionalOrExpression_sempred(_localctx?.castdown(ConditionalOrExpressionContext.self), predIndex)
-		case  218:
+		case  190:
 			return try conditionalAndExpression_sempred(_localctx?.castdown(ConditionalAndExpressionContext.self), predIndex)
-		case  219:
+		case  191:
 			return try inclusiveOrExpression_sempred(_localctx?.castdown(InclusiveOrExpressionContext.self), predIndex)
-		case  220:
+		case  192:
 			return try exclusiveOrExpression_sempred(_localctx?.castdown(ExclusiveOrExpressionContext.self), predIndex)
-		case  221:
+		case  193:
 			return try andExpression_sempred(_localctx?.castdown(AndExpressionContext.self), predIndex)
-		case  222:
+		case  194:
 			return try equalityExpression_sempred(_localctx?.castdown(EqualityExpressionContext.self), predIndex)
-		case  223:
+		case  195:
 			return try relationalExpression_sempred(_localctx?.castdown(RelationalExpressionContext.self), predIndex)
-		case  224:
+		case  196:
 			return try shiftExpression_sempred(_localctx?.castdown(ShiftExpressionContext.self), predIndex)
-		case  225:
+		case  197:
 			return try additiveExpression_sempred(_localctx?.castdown(AdditiveExpressionContext.self), predIndex)
-		case  226:
+		case  198:
 			return try multiplicativeExpression_sempred(_localctx?.castdown(MultiplicativeExpressionContext.self), predIndex)
 	    default: return true
 		}
 	}
-	private func packageName_sempred(_ _localctx: PackageNameContext!,  _ predIndex: Int) throws -> Bool {
+	private func conditionalOrExpression_sempred(_ _localctx: ConditionalOrExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
 		    case 0:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
-	private func packageOrTypeName_sempred(_ _localctx: PackageOrTypeNameContext!,  _ predIndex: Int) throws -> Bool {
+	private func conditionalAndExpression_sempred(_ _localctx: ConditionalAndExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
 		    case 1:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
-	private func ambiguousName_sempred(_ _localctx: AmbiguousNameContext!,  _ predIndex: Int) throws -> Bool {
+	private func inclusiveOrExpression_sempred(_ _localctx: InclusiveOrExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
 		    case 2:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
-	private func conditionalOrExpression_sempred(_ _localctx: ConditionalOrExpressionContext!,  _ predIndex: Int) throws -> Bool {
+	private func exclusiveOrExpression_sempred(_ _localctx: ExclusiveOrExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
 		    case 3:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
-	private func conditionalAndExpression_sempred(_ _localctx: ConditionalAndExpressionContext!,  _ predIndex: Int) throws -> Bool {
+	private func andExpression_sempred(_ _localctx: AndExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
 		    case 4:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
-	private func inclusiveOrExpression_sempred(_ _localctx: InclusiveOrExpressionContext!,  _ predIndex: Int) throws -> Bool {
+	private func equalityExpression_sempred(_ _localctx: EqualityExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
 		    case 5:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
-	private func exclusiveOrExpression_sempred(_ _localctx: ExclusiveOrExpressionContext!,  _ predIndex: Int) throws -> Bool {
-		switch (predIndex) {
-		    case 6:return precpred(_ctx, 1)
-		    default: return true
-		}
-	}
-	private func andExpression_sempred(_ _localctx: AndExpressionContext!,  _ predIndex: Int) throws -> Bool {
-		switch (predIndex) {
-		    case 7:return precpred(_ctx, 1)
-		    default: return true
-		}
-	}
-	private func equalityExpression_sempred(_ _localctx: EqualityExpressionContext!,  _ predIndex: Int) throws -> Bool {
-		switch (predIndex) {
-		    case 8:return precpred(_ctx, 2)
-		    case 9:return precpred(_ctx, 1)
-		    default: return true
-		}
-	}
 	private func relationalExpression_sempred(_ _localctx: RelationalExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 10:return precpred(_ctx, 5)
-		    case 11:return precpred(_ctx, 4)
-		    case 12:return precpred(_ctx, 3)
-		    case 13:return precpred(_ctx, 2)
-		    case 14:return precpred(_ctx, 1)
+		    case 6:return precpred(_ctx, 2)
+		    case 7:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
 	private func shiftExpression_sempred(_ _localctx: ShiftExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 15:return precpred(_ctx, 3)
-		    case 16:return precpred(_ctx, 2)
-		    case 17:return precpred(_ctx, 1)
+		    case 8:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
 	private func additiveExpression_sempred(_ _localctx: AdditiveExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 18:return precpred(_ctx, 2)
-		    case 19:return precpred(_ctx, 1)
+		    case 9:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}
 	private func multiplicativeExpression_sempred(_ _localctx: MultiplicativeExpressionContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 20:return precpred(_ctx, 3)
-		    case 21:return precpred(_ctx, 2)
-		    case 22:return precpred(_ctx, 1)
+		    case 10:return precpred(_ctx, 1)
 		    default: return true
 		}
 	}

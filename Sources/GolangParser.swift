@@ -157,7 +157,7 @@ open class GolangParser: Parser {
 	     * either is a line terminator, or is a multi line comment that
 	     * contains a line terminator.
 	     */
-	    private boolean lineTerminatorAhead() {
+	    func lineTerminatorAhead() -> Bool{
 	        // Get the token ahead of the current index.
 	        int possibleIndexEosToken = this.getCurrentToken().getTokenIndex() - 1;
 	        Token ahead = _input.get(possibleIndexEosToken);

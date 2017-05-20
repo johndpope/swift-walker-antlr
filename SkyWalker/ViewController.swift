@@ -23,7 +23,7 @@ class ViewController: NSViewController {
                 let tokens =  CommonTokenStream(lexer)
                 let parser = try CParser(tokens)
                 
-                let tree = try parser.primaryExpression()
+                let tree = try parser.genericSelection() // this corresponds to ruleIndex  in  Parser.
                 print("tree:",tree.toStringTree(parser))
                 
                 let walker = ParseTreeWalker()
@@ -43,7 +43,7 @@ class ViewController: NSViewController {
         }
     }
     
-    
+    /*
     func runGolangHelloWalker() {
         do {
             
@@ -111,7 +111,7 @@ class ViewController: NSViewController {
         }catch {
             print("error occur")
         }
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,8 +120,8 @@ class ViewController: NSViewController {
         
         
         runCHelloWalker()
-        runGolangHelloWalker()
-        runJavaHelloWalker()
+//        runGolangHelloWalker()
+  //      runJavaHelloWalker()
         
 
     }
